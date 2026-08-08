@@ -1,4 +1,22 @@
 {
+  "mainLayout": {
+    "title": "Masarah HR Recruitment | مسرة للاستقدام",
+    "description": "A licensed Saudi HR recruitment company bringing vetted domestic staff — housekeepers, drivers, home nurses, and cooks — and qualified commercial workers from abroad to households and companies across the Kingdom, with a formal, transparent process and follow-up that continues after arrival.",
+    "keywords": [
+      "Saudi recruitment",
+      "recruitment company Saudi Arabia",
+      "domestic worker recruitment",
+      "housekeeper recruitment",
+      "nanny recruitment",
+      "home nurse recruitment",
+      "private driver recruitment",
+      "recruit domestic workers KSA",
+      "labor recruitment Saudi Arabia",
+      "HR recruitment company"
+    ],
+    "ogImageAlt": "Masarah — licensed Saudi HR recruitment company for domestic and commercial staff"
+  },
+
   "header": {
     "title": "Masarrah",
     "tagline": "HR Recruitment",

@@ -1,11 +1,14 @@
-const url = process.env.NEXT_PUBLIC_SITE_URL;
+const url =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://masrrah.vercel.app";
 
 export const getSharedMetadata = (
   locale: string,
   title: string,
   description: string,
+  ogImageAlt?: string,
+  keywords?: string[],
 ) => ({
-  keywords: [
+  keywords: keywords ?? [
     "Masarrah",
     "مسرة",
     "مسرة للاستقدام",
@@ -31,13 +34,12 @@ export const getSharedMetadata = (
     siteName: "Masarrah - مسرة للاستقدام",
     images: [
       {
-        url: `${url}/logo.png`,
-        width: 1200,
-        height: 630,
+        url: `${url}/logo.webp`,
         alt:
-          locale === "ar"
+          ogImageAlt ??
+          (locale === "ar"
             ? "مسرة للاستقدام - حلول توظيف العمالة المنزلية في المملكة"
-            : "Masarrah - Saudi HR Recruitment Company for Domestic Workers",
+            : "Masarrah - Saudi HR Recruitment Company for Domestic Workers"),
       },
     ],
     type: "website",
@@ -46,6 +48,6 @@ export const getSharedMetadata = (
     card: "summary_large_image",
     title: title,
     description: description,
-    images: [`${url}/logo.png`],
+    images: [`${url}/logo.webp`],
   },
 });
