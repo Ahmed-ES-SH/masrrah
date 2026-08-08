@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
-import type { Metadata } from "next";
 import { Inter, Amiri } from "next/font/google";
 import Navbar from "../components/global/Navbar";
 import Footer from "../components/global/Footer";
 import FloatingContactActions from "../components/global/FloatingContactActions";
-import { getTranslations } from "../helpers/getTranslations";
 import { getSharedMetadata } from "../helpers/getSharedMetadata";
+import { getTranslations } from "../helpers/getTranslations";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const amiri = Amiri({
@@ -19,23 +18,15 @@ interface MainLayoutProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: MainLayoutProps): Promise<Metadata> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata({ params }: any) {
   const { locale } = await params;
-
-  const copy = getTranslations(locale, "mainLayout");
-
+  const t = getTranslations(locale, "mainLayout");
+  const sharedMetadata = getSharedMetadata(locale, t.title, t.description);
   return {
-    title: copy.title,
-    description: copy.description,
-    ...getSharedMetadata(
-      locale,
-      copy.title,
-      copy.description,
-      copy.ogImageAlt,
-      copy.keywords,
-    ),
+    title: t.title,
+    description: t.description,
+    ...sharedMetadata,
   };
 }
 

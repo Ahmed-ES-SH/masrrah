@@ -77,6 +77,15 @@ const SECTORS: Record<
 
 const SECTOR_ORDER: readonly SectorKey[] = ["individual", "business"];
 
+// Home catalog items that have a dedicated service detail page. The remaining
+// items keep the direct request-form link.
+const SERVICE_DETAIL_SLUG: Partial<Record<ServiceKey, string>> = {
+  domesticWorker: "domestic-staffing",
+  privateDriver: "private-drivers",
+  homeNurse: "nannies-and-home-care",
+  business: "business-recruitment",
+};
+
 export default function ServicesSection() {
   const locale = useLocale() ?? "ar";
   const t = useTranslation("services");
@@ -312,7 +321,11 @@ export default function ServicesSection() {
                       </div>
 
                       <Link
-                        href={`/${locale}/request?package=${activeSector === "business" ? "business" : "household"}&service=${item.key}`}
+                        href={
+                          SERVICE_DETAIL_SLUG[item.key]
+                            ? `/${locale}/services/${SERVICE_DETAIL_SLUG[item.key]}`
+                            : `/${locale}/request?package=${activeSector === "business" ? "business" : "household"}&service=${item.key}`
+                        }
                         className="group mt-auto inline-flex min-h-12 w-fit items-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
                       >
                         <span>{t.requestService}</span>

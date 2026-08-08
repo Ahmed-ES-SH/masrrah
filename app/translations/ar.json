@@ -422,5 +422,27 @@
     "cta": "اطلب هذه الباقة",
     "scrollHint": "مرّر إلى نموذج الطلب",
     "scrollAria": "الانتقال إلى نموذج الطلب"
+  },
+  "serviceDetail": {
+    "ariaLabel": "تفاصيل الخدمة",
+    "apronMeta": "يُعدّ بخصوصية",
+    "back": "كل الخدمات",
+    "backAria": "العودة إلى كل الخدمات",
+    "eyebrow": "سجل الخدمة",
+    "ledgerLabel": "في السجل",
+    "suitedForLabel": "مناسب لـ",
+    "corridorLabel": "مسارات الاستقدام",
+    "corridorNote": "المسارات لا تُحدد مسبقاً، ويتفق على الاختيار النهائي معك.",
+    "outcomeLabel": "النتيجة",
+    "cta": "اطلب هذه الخدمة",
+    "whatsappFallback": "متابعة عبر واتساب",
+    "whatsappMessage": "مرحباً، أرغب بالاستفسار عن خدمة {service} لدى مسرة.",
+    "note": "يتّفق على السعر بخصوصية، ولا يُطبع أي سعر في هذا السجل.",
+    "scrollHint": "مرّر إلى نموذج الطلب",
+    "scrollAria": "الانتقال إلى نموذج الطلب",
+    "factsLabel": "بيانات الخدمة",
+    "factsRecordLabel": "التزامات مسجلة",
+    "factsSuitedLabel": "يُطلب عادة لـ",
+    "factsOutcomeLabel": "النتيجة"
   }
 }

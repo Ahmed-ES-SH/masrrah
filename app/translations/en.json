@@ -422,5 +422,27 @@
     "cta": "Request this package",
     "scrollHint": "Scroll to the request form",
     "scrollAria": "Continue to the request form"
+  },
+  "serviceDetail": {
+    "ariaLabel": "Service details",
+    "apronMeta": "Prepared privately",
+    "back": "All services",
+    "backAria": "Back to all services",
+    "eyebrow": "The service record",
+    "ledgerLabel": "On the record",
+    "suitedForLabel": "Suited for",
+    "corridorLabel": "Recruitment corridors",
+    "corridorNote": "Corridors are not fixed in advance — the final choice is agreed with you.",
+    "outcomeLabel": "The outcome",
+    "cta": "Request this service",
+    "whatsappFallback": "Continue on WhatsApp",
+    "whatsappMessage": "Hello, I would like to ask about the {service} service at Masarrah.",
+    "note": "Pricing is agreed privately. No price is printed in this record.",
+    "scrollHint": "Scroll to the request form",
+    "scrollAria": "Continue to the request form",
+    "factsLabel": "Service facts",
+    "factsRecordLabel": "Recorded commitments",
+    "factsSuitedLabel": "You often request it for",
+    "factsOutcomeLabel": "The outcome"
   }
 }
