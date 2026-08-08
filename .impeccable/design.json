@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-07T00:00:00.000Z",
+  "title": "Design System: Masarrah — مسرة للاستقدام",
+  "extensions": {
+    "colorMeta": {
+      "embassy": {
+        "role": "primary",
+        "displayName": "The Embassy",
+        "canonical": "#0B1B3A",
+        "tonalRamp": ["#04091A", "#070F2C", "#0B1B3A", "#122451", "#1B335E", "#2A4380", "#46609F", "#6E84BE", "#A7B6D6", "#E6EBF5"]
+      },
+      "chancery": {
+        "role": "primary",
+        "displayName": "The Chancellery",
+        "canonical": "#122451",
+        "tonalRamp": ["#07102B", "#0B1A44", "#122451", "#1B335E", "#25416F", "#33538C", "#4A6CA8", "#6D8CBE", "#A0B6D6", "#E2EAF5"]
+      },
+      "diplomacy": {
+        "role": "primary",
+        "displayName": "Diplomatic Station",
+        "canonical": "#1B335E",
+        "tonalRamp": ["#0A1A36", "#112649", "#1B335E", "#264174", "#34518E", "#4864A6", "#6680BC", "#8FA3D0", "#C2CCE6", "#EEF2FA"]
+      },
+      "court-gold": {
+        "role": "secondary",
+        "displayName": "Court Gold",
+        "canonical": "#C9A227",
+        "tonalRamp": ["#33280B", "#5C4B13", "#8A701A", "#B28E20", "#C9A227", "#D8B44A", "#E1BE5E", "#EACF7F", "#F0D889", "#F7EED0"]
+      },
+      "gilded-light": {
+        "role": "secondary",
+        "displayName": "Gilded Light",
+        "canonical": "#E1BE5E",
+        "tonalRamp": ["#6A5414", "#8A6E1B", "#A98823", "#C39A2E", "#D8AC42", "#E1BE5E", "#E9CB78", "#F0D889", "#F6E6B1", "#FBF3DC"]
+      },
+      "champagne-gilt": {
+        "role": "secondary",
+        "displayName": "Champagne Gilt",
+        "canonical": "#F0D889",
+        "tonalRamp": ["#7A621A", "#9A7D22", "#B8972D", "#D1AE3D", "#E3C356", "#EFD578", "#F0D889", "#F5E2A5", "#FAEDC8", "#FDF8EB"]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#F5EFDD",
+        "tonalRamp": ["#6B654F", "#8C8569", "#A8A083", "#C2B99A", "#D9D0B4", "#EAE2C8", "#F0E9D0", "#F5EFDD", "#FAF6EC", "#FDFCF7"]
+      },
+      "marble": {
+        "role": "neutral",
+        "displayName": "Marble",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#3A3A3A", "#555555", "#707070", "#8A8A8A", "#A5A5A5", "#C0C0C0", "#DBDBDB", "#EDEDED", "#F8F8F8", "#FFFFFF"]
+      },
+      "ink-deep": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#111318",
+        "tonalRamp": ["#05060A", "#0A0C10", "#111318", "#1C1F27", "#2A2E3A", "#3D4354", "#565D73", "#788096", "#A3A9BB", "#D9DCE6"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#4A4E5A",
+        "tonalRamp": ["#181A22", "#252936", "#343A49", "#464C5F", "#4A4E5A", "#5D6375", "#7C8294", "#A1A6B5", "#C9CCD6", "#EBECF1"]
+      },
+      "success": {
+        "role": "neutral",
+        "displayName": "In Order",
+        "canonical": "#2E7D5B",
+        "tonalRamp": ["#0A2E1E", "#12472F", "#1A5F40", "#24704D", "#2E7D5B", "#3F9370", "#5EAB8A", "#8AC6AE", "#C0E3D6", "#EAF7F2"]
+      },
+      "amendment": {
+        "role": "neutral",
+        "displayName": "Under Review",
+        "canonical": "#B8862E",
+        "tonalRamp": ["#3A2A0C", "#5C4212", "#825D18", "#A0711F", "#B8862E", "#CE9C46", "#DEB368", "#EBCF9B", "#F4E6CB", "#FBF6EE"]
+      },
+      "cerise": {
+        "role": "neutral",
+        "displayName": "Needs Attention",
+        "canonical": "#B3403A",
+        "tonalRamp": ["#3D100E", "#5E1A16", "#822720", "#9D312A", "#B3403A", "#C65B55", "#D57E79", "#E3A6A2", "#F0D3D1", "#FAF0EF"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display — Amiri / Cormorant",
+        "purpose": "Hero lead-ins and major section opens on navy. One serif crown per page."
+      },
+      "headline": {
+        "displayName": "Headline — Amiri / Cormorant",
+        "purpose": "Sub-sections, service-detail headers."
+      },
+      "title": {
+        "displayName": "Title — Inter / IBM Plex Sans Arabic",
+        "purpose": "Card titles, accordion questions, nav items."
+      },
+      "body": {
+        "displayName": "Body — Inter / IBM Plex Sans Arabic",
+        "purpose": "Page voice. Ink on parchment, parchment on navy. Max 65–75ch."
+      },
+      "label": {
+        "displayName": "Label Caps — Inter / IBM Plex Sans Arabic",
+        "purpose": "Eyebrows flanked by ◆ diamond dividers, nav meta, button labels (600)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "Float",
+        "value": "0 8px 24px rgba(11,27,58,0.12)",
+        "purpose": "The one elevation for floating panels, menus, dialogs; hover lift becomes a gentle float."
+      },
+      {
+        "name": "Apparatus",
+        "value": "0 6px 16px rgba(11,27,58,0.25)",
+        "purpose": "The WhatsApp call-to-action, the single floating brand seal on every page."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "Default easing for state transitions (hovers, active states)."
+      },
+      {
+        "name": "ease-panel",
+        "value": "cubic-bezier(0.33, 1, 0.68, 1)",
+        "purpose": "Accordion/panel expand and collapse."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Hover and state transitions — restrained and formal."
+      },
+      {
+        "name": "duration-base",
+        "value": "250ms",
+        "purpose": "Panel/accordion expand and page fades."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px", "purpose": "Mobile → tablet: 1-column grid → 2-column, stat band 2×2 → row." },
+      { "name": "md", "value": "1024px", "purpose": "Tablet → desktop: 2-column grid → 3–4 columns, full nav visible." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single Court Gold seal per screen; the ask of the embassy.",
+      "html": "<button class=\"ds-btn-primary\">اطلب الخدمة <span class=\"ds-btn-arrow\" aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; background: #C9A227; color: #0B1B3A; font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; font-weight: 600; padding: 14px 32px; min-height: 48px; border: none; border-radius: 10px; cursor: pointer; transition: background 150ms cubic-bezier(0.2, 0, 0, 1); } .ds-btn-primary:hover { background: #E1BE5E; } .ds-btn-primary:active { background: #B28E20; } .ds-btn-primary:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The measured outline alternative; secondary path on light surfaces.",
+      "html": "<button class=\"ds-btn-secondary\">تصفح الخدمات</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; background: transparent; color: #0B1B3A; font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; font-weight: 600; padding: 13px 30px; min-height: 48px; border: 1.5px solid #C9A227; border-radius: 10px; cursor: pointer; transition: background 150ms cubic-bezier(0.2, 0, 0, 1); } .ds-btn-secondary:hover { background: rgba(240, 216, 137, 0.15); } .ds-btn-secondary:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Marble face, hairline ink border, gold focus ring — form fields for the request form.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">الاسم الكامل</span><input class=\"ds-input\" type=\"text\" placeholder=\"اكتب اسمك\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; } .ds-field-label { font-size: 13px; font-weight: 500; color: #4A4E5A; letter-spacing: 0.02em; } .ds-input { background: #FFFFFF; color: #111318; font-size: 16px; padding: 12px 16px; min-height: 48px; border: 1px solid rgba(17, 19, 24, 0.15); border-radius: 6px; outline: none; transition: border-color 150ms, box-shadow 150ms; } .ds-input::placeholder { color: #A1A6B5; } .ds-input:focus { border-color: #C9A227; box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.4); } .ds-input:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Whole-card tap target in the service grid; flat at rest, one-step hover lift.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"#0B1B3A\" stroke-width=\"1.5\"><path d=\"M12 2l2.4 7.4H22l-6 4.4 2.3 7.4-6.3-4.5-6.3 4.5L8 13.8l-6-4.4h7.6z\"/></svg></span><span class=\"ds-card-title\">استقدام العمالة المنزلية</span><span class=\"ds-card-meta\">منزلية · مكتبية</span></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #FFFFFF; border: 1px solid rgba(17, 19, 24, 0.12); border-radius: 12px; text-decoration: none; transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), box-shadow 150ms; } .ds-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,27,58,0.12); } .ds-card:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; } .ds-card-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 10px; background: #F5EFDD; } .ds-card-title { font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; font-size: 17px; font-weight: 600; color: #111318; } .ds-card-meta { font-size: 13px; color: #4A4E5A; }"
+    },
+    {
+      "name": "FAQ Accordion",
+      "kind": "card",
+      "refersTo": "accordion-faq",
+      "description": "Exclusive accordion; navy chevron turns Court Gold when open.",
+      "html": "<div class=\"ds-accordion\"><button class=\"ds-accordion-q\" aria-expanded=\"false\"><span>ما هي مدة العقد؟</span><svg class=\"ds-chevron\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#0B1B3A\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg></button><div class=\"ds-accordion-a\"><p>مدة العقد القياسية سنتان، مع إمكانية التجديد.</p></div></div>",
+      "css": ".ds-accordion { border-bottom: 1px solid rgba(17, 19, 24, 0.12); font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; } .ds-accordion-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 4px; background: none; border: none; cursor: pointer; font-size: 17px; font-weight: 600; color: #111318; text-align: start; } .ds-accordion-q:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; } .ds-chevron { transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), stroke 150ms; } .ds-accordion-q[aria-expanded=\"true\"] .ds-chevron { transform: rotate(180deg); stroke: #C9A227; } .ds-accordion-a { max-height: 0; overflow: hidden; transition: max-height 250ms cubic-bezier(0.33, 1, 0.68, 1); } .ds-accordion-q[aria-expanded=\"true\"] + .ds-accordion-a { max-height: 300px; } .ds-accordion-a p { margin: 0 0 20px; font-size: 15px; line-height: 1.7; color: #4A4E5A; }"
+    },
+    {
+      "name": "Stat Number",
+      "kind": "card",
+      "refersTo": "stat-number",
+      "description": "Court Gold Latin numerals with an Ink Soft uppercase caption; trust band.",
+      "html": "<div class=\"ds-stat\"><span class=\"ds-stat-num\">+12</span><span class=\"ds-stat-cap\">سنة خبرة</span></div>",
+      "css": ".ds-stat { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-family: 'Amiri', 'Noto Naskh Arabic', serif; } .ds-stat-num { font-size: 44px; font-weight: 700; line-height: 1.1; color: #C9A227; font-family: 'Cormorant', 'Amiri', serif; } .ds-stat-cap { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #4A4E5A; font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; }"
+    },
+    {
+      "name": "WhatsApp Floating Button",
+      "kind": "card",
+      "refersTo": "fab-whatsapp",
+      "description": "The Apparatus-shadowed gold seal, fixed bottom-end on every page; zero-dependency.",
+      "html": "<a class=\"ds-fab\" href=\"https://wa.me/966500000000\" aria-label=\"تواصل عبر واتساب\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" fill=\"#0B1B3A\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z\"/></svg></a>",
+      "css": ".ds-fab { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 56px; height: 56px; display: grid; place-items: center; background: #C9A227; border-radius: 50%; box-shadow: 0 6px 16px rgba(11,27,58,0.25); transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), background 150ms; } .ds-fab:hover { background: #E1BE5E; transform: translateY(-2px); } .ds-fab:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Embassy Hall",
+    "overview": "Masarrah is not a startup polished white. It is a sovereign room — a place of record where foreign workers are brought into Saudi homes and companies with formality, ceremony, and absolute legal assurance. The brand wears the dress uniform of an embassy: walls of deep mission navy, beading of restrained gold, and a staff that speaks in full, unhurried sentences. Every surface below exists to make a visitor feel on hallowed ground — that their household, their employee, and their contract are being handled by an institution, not a middleman. The system is monumental but quiet: one navy canvas, one gold accent, generous white space, hairline borders instead of shadows, and typography that carries the state's word. The relationship between navy and gold is deliberate and ritualistic: navy is the estate itself, gold is the signature that seals decisions.",
+    "keyCharacteristics": [
+      "A single navy estate (deep navy surfaces) with gold used as a seal, never a palette — ≤10% of any screen.",
+      "Borders over shadows: 1px hairline is the depth language; shadows are reserved for floating elements.",
+      "Formal stillness: restrained 150–250ms transitions, no bounce, no scale-on-hover, no parallax in page chrome.",
+      "Arabic first (RTL), English as a faithful mirror via logical properties — never two hand-built layouts.",
+      "Accessible by default: 44px touch targets, small gold text banned, full prefers-reduced-motion support.",
+      "The ◆ diamond and the necktie silhouette are the only recurring brand motifs — used as ceremony, never as filler."
+    ],
+    "rules": [
+      { "name": "The Gilding Rule", "body": "Gold is a seal, not a wash. On any screen, gold covers at most ~10% of the visible area: one primary CTA, an eyebrow, a stat numeral. If a section starts to look 'gold-themed', gold has been overused.", "section": "colors" },
+      { "name": "The Flat Gilding Rule", "body": "The metallic gradient in the logo is a brand-mark-only effect. In UI, always flat gold 500 (#C9A227) for buttons, links, icons, and numerals. Gradients at small sizes are illegible and fail contrast.", "section": "colors" },
+      { "name": "The Latin Numerals Rule", "body": "Arabic sentences use Western numerals — '27 عاماً' not '٢٧'. Phone numbers, prices, stats always appear with Latin digits.", "section": "typography" },
+      { "name": "The One Display Rule", "body": "The serif voice is for hero and section openings only. It must never appear in dense UI copy, labels, or multiple headings on one screen — one serif crown per page.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Depth is carried by tonal layering — navy on parchment, chancellery on embassy — never by shadow. Surfaces are flat at rest; elevation and shadow appear only as a response to state (hover, an open dialog), never as ambient decoration.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do reserve Court Gold for the one primary CTA per screen; gold is a seal, and more gold makes it less important gold.",
+      "Do set body paragraphs in Ink on parchment and white on navy — gold never appears under 18px as body text.",
+      "Do lead the page's emotional rhythm with the light/dark banding (marble → parchment → navy → marble).",
+      "Do keep Arabic default and RTL with logical properties; English is the mirror.",
+      "Do give every tappable a 44×44px touch area and respect prefers-reduced-motion (disable lifts, fades, and the accordion animation)."
+    ],
+    "donts": [
+      "Don't use full-pill radius, glassmorphism, heavy gradients — the embassy is not tech-startup retail.",
+      "Don't put a necktie motif on every other block; it's the signature stamp, mark of the mark only.",
+      "Don't use shadows as background depth; shadow means 'this floats now' (dialog, FAB), nothing else.",
+      "Don't hand-build a separate English layout — mirror Arabic with logical props.",
+      "Don't ship gold text on parchment and don't set small-caps gold anywhere below 18px. Contrast is the seal of the contract."
+    ]
+  }
+}

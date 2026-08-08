@@ -3,24 +3,101 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --color-embassy: #0b1b3a;
+  --color-chancery: #122451;
+  --color-diplomacy: #1b335e;
+  --color-court-gold: #c9a227;
+  --color-gilded-light: #e1be5e;
+  --color-champagne-gilt: #f0d889;
+  --color-parchment: #f5efdd;
+  --color-marble: #ffffff;
+  --color-ink-deep: #111318;
+  --color-ink-soft: #4a4e5a;
+  --color-success: #2e7d5b;
+  --color-amendment: #b8862e;
+  --color-cerise: #b3403a;
+
+  --font-display: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --font-headline: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --font-title: "Inter", "IBM Plex Sans Arabic", sans-serif;
+  --font-body: "Inter", "IBM Plex Sans Arabic", sans-serif;
+  --font-label: "Inter", "IBM Plex Sans Arabic", sans-serif;
+
+  --text-display: clamp(1.75rem, 5vw, 3rem);
+  --text-headline: clamp(1.375rem, 2.8vw, 2.125rem);
+  --text-title: clamp(1.125rem, 1.4vw, 1.5rem);
+  --text-body: clamp(0.9375rem, 1vw, 1rem);
+  --text-label: 0.8125rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+
+  --shadow-float: 0 8px 24px rgba(11, 27, 58, 0.12);
+  --shadow-apparatus: 0 6px 16px rgba(11, 27, 58, 0.25);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-embassy: var(--color-embassy);
+  --color-chancery: var(--color-chancery);
+  --color-diplomacy: var(--color-diplomacy);
+  --color-court-gold: var(--color-court-gold);
+  --color-gilded-light: var(--color-gilded-light);
+  --color-champagne-gilt: var(--color-champagne-gilt);
+  --color-parchment: var(--color-parchment);
+  --color-marble: var(--color-marble);
+  --color-ink-deep: var(--color-ink-deep);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-success: var(--color-success);
+  --color-amendment: var(--color-amendment);
+  --color-cerise: var(--color-cerise);
+
+  --font-display: var(--font-display);
+  --font-headline: var(--font-headline);
+  --font-title: var(--font-title);
+  --font-body: var(--font-body);
+  --font-label: var(--font-label);
+
+  --text-display: var(--text-display);
+  --text-headline: var(--text-headline);
+  --text-title: var(--text-title);
+  --text-body: var(--text-body);
+  --text-label: var(--text-label);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --spacing-xxs: var(--spacing-xxs);
+  --spacing-xs: var(--spacing-xs);
+  --spacing-sm: var(--spacing-sm);
+  --spacing-md: var(--spacing-md);
+  --spacing-lg: var(--spacing-lg);
+  --spacing-xl: var(--spacing-xl);
+  --spacing-xxl: var(--spacing-xxl);
+
+  --shadow-float: var(--shadow-float);
+  --shadow-apparatus: var(--shadow-apparatus);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }

@@ -1,0 +1,408 @@
+{
+  "header": {
+    "title": "Masarrah",
+    "tagline": "HR Recruitment",
+    "nav": {
+      "primaryButton": "Request a Service",
+      "home": "Home",
+      "services": "Services",
+      "contact": "Contact",
+      "about": "About"
+    },
+    "contact": {
+      "call": "Call us",
+      "whatsapp": "WhatsApp"
+    },
+    "actions": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
+  },
+  "footer": {
+    "title": "Masarrah HR Recruitment",
+    "tagline": "Licensed Saudi recruitment company",
+    "about": "Masarrah is a Saudi recruitment house bringing vetted domestic and commercial staff from abroad to households and companies across the Kingdom, with a clear, formal and trusted process.",
+    "nav": {
+      "heading": "Quick Links",
+      "home": "Home",
+      "services": "Services",
+      "contact": "Contact Us"
+    },
+    "contact": {
+      "heading": "Get in Touch",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "address": "Address"
+    },
+    "phones": {
+      "unified": "Unified number",
+      "mobile": "Mobile"
+    },
+    "newsletter": {
+      "eyebrow": "The Masarrah brief",
+      "title": "A clear note when the next step matters.",
+      "body": "Receive occasional guidance on recruitment routes, preparation and the details worth knowing before you request a service.",
+      "emailLabel": "Your email address",
+      "placeholder": "name@example.com",
+      "submit": "Subscribe",
+      "success": "You are on the list. We will be in touch with the next brief."
+    },
+    "socials": {
+      "heading": "Follow Masarrah",
+      "whatsapp": "Masarrah on WhatsApp",
+      "instagram": "Masarrah on Instagram",
+      "x": "Masarrah on X",
+      "snapchat": "Masarrah on Snapchat",
+      "tiktok": "Masarrah on TikTok",
+      "linkedin": "Masarrah on LinkedIn"
+    },
+    "legal": {
+      "rights": "All rights reserved",
+      "madeWith": "Made with"
+    },
+    "backToTop": "Back to top"
+  },
+  "hero": {
+    "ariaLabel": "Masarrah recruitment services introduction",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "pause": "Pause automatic playback",
+    "resume": "Resume automatic playback",
+    "slidesLabel": "Navigate Masarrah services",
+    "slides": {
+      "trust": {
+        "eyebrow": "Trusted recruitment",
+        "headline": "A trusted worker starts with a clear first step",
+        "body": "We review documents and licenses before the process begins, so you have a formal path from your first request to arrival.",
+        "primaryCta": "Start a recruitment request",
+        "secondaryCta": "See how it works",
+        "metric": "From request to arrival",
+        "imageAlt": "A team of workers arriving in the Kingdom through a formal recruitment journey"
+      },
+      "contracts": {
+        "eyebrow": "Clear contracts",
+        "headline": "Every clause understood. Every right protected.",
+        "body": "We review the contract with you in plain language, so you know what you commit to and receive before signing.",
+        "primaryCta": "Review the contract",
+        "secondaryCta": "Talk to an advisor",
+        "metric": "Clarity before signing",
+        "imageAlt": "Organized contract documents on a formal desk with a stamp and pen"
+      },
+      "support": {
+        "eyebrow": "Support that stays",
+        "headline": "Our work does not end at the signature",
+        "body": "The Masarrah team follows the trial period and helps with administrative issues, so both sides can settle with confidence.",
+        "primaryCta": "Talk to the support team",
+        "secondaryCta": "Frequently asked questions",
+        "metric": "Support after arrival",
+        "imageAlt": "A family and work team sharing a scene of arrival and settling in the Kingdom"
+      }
+    }
+  },
+  "navbar": {
+    "brand": "Masarrah",
+    "brandSub": "مسرة للاستقدام",
+    "brandLabel": "Masarrah — home",
+    "cta": "Contact us",
+    "ctaMobile": "Call us now",
+    "menuLabel": "Menu",
+    "whatsappLabel": "WhatsApp",
+    "langLabel": "Switch language",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "whyUs": "Why Masarrah",
+      "faq": "FAQ"
+    },
+    "socials": {
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram",
+      "x": "X",
+      "snapchat": "Snapchat",
+      "tiktok": "TikTok",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "platform": {
+    "ariaLabel": "How the Masarrah recruitment platform works",
+    "eyebrow": "The Masarrah platform",
+    "title": "A formal path from first request to settled support.",
+    "body": "Masarrah brings each recruitment step into one clear journey, so households and companies always know what happens next and who is responsible.",
+    "promise": "One request. One accountable team. A process you can follow.",
+    "action": "Speak with a Masarrah advisor",
+    "panel": {
+      "label": "The Masarrah route",
+      "title": "Your recruitment file, kept in view",
+      "note": "No public pricing or marketplace browsing. We start with your needs, then prepare a private recommendation."
+    },
+    "steps": {
+      "request": {
+        "label": "Request",
+        "title": "Start with the need, not a catalogue",
+        "body": "Tell us about your home or business, the role you need, and the timing that works for you."
+      },
+      "screening": {
+        "label": "Review",
+        "title": "Requirements become a clear brief",
+        "body": "Our team reviews the details with you and explains the next requirements before any commitment."
+      },
+      "arrival": {
+        "label": "Arrival",
+        "title": "A documented route to the Kingdom",
+        "body": "We keep the recruitment path organized from selection and contracts through the worker’s arrival."
+      },
+      "support": {
+        "label": "Support",
+        "title": "Follow-up that continues after arrival",
+        "body": "The relationship stays open for the practical questions that help both sides settle with confidence."
+      }
+    }
+  },
+  "services": {
+    "ariaLabel": "Masarrah recruitment services",
+    "title": "Find the right route for your next request.",
+    "body": "Choose a sector, browse its services, and tell us what you need. Every request is prepared privately around your household or business.",
+    "catalogueNote": "Private requests, prepared around your needs.",
+    "categoryLabel": "Choose a service sector",
+    "serviceLabel": "Available service",
+    "detailLabel": "Prepared around",
+    "sliderLabel": "Browse services",
+    "previous": "Previous service",
+    "next": "Next service",
+    "requestService": "Request this service",
+    "categories": {
+      "individual": {
+        "title": "Individual Sector",
+        "description": "Services for homes and personal needs."
+      },
+      "business": {
+        "title": "Business Sector",
+        "description": "Workforce solutions for growing operations."
+      }
+    },
+    "items": {
+      "hourlyWorkers": {
+        "title": "Hourly Workers",
+        "description": "Flexible hourly support for homes and personal routines, arranged around the hours and duties you need.",
+        "detail": "Short-term support, recurring visits, and practical everyday tasks."
+      },
+      "domesticWorker": {
+        "title": "Domestic Worker",
+        "description": "Reliable household support matched to the role, routine, and practical requirements of your home.",
+        "detail": "Household duties, schedules, and the way your home runs."
+      },
+      "privateDriver": {
+        "title": "Private Driver",
+        "description": "A private driver selected around your schedule, travel patterns, and daily requirements.",
+        "detail": "Daily travel, family routines, and the routes that matter."
+      },
+      "homeNurse": {
+        "title": "Home Nurse",
+        "description": "Home nursing support shaped around the care needs, routines, and preferences of your family.",
+        "detail": "Care routines, supervision needs, and family preferences."
+      },
+      "homeCook": {
+        "title": "Home Cook",
+        "description": "Household cooking support planned around your kitchen, menu preferences, and daily rhythm.",
+        "detail": "Menus, preparation, kitchen routines, and dietary preferences."
+      },
+      "personalCareProvider": {
+        "title": "Personal Care Provider",
+        "description": "Practical personal care support arranged with attention to comfort, dignity, and everyday needs.",
+        "detail": "Personal routines, mobility support, and everyday comfort."
+      },
+      "emergingProfessions": {
+        "title": "Emerging Professions",
+        "description": "A clear starting point for new or specialized personal roles as your needs evolve.",
+        "detail": "A tailored brief for roles that do not fit a standard route."
+      },
+      "retail": {
+        "title": "Retail Sector",
+        "description": "Recruitment support for customer-facing, store, and retail operations.",
+        "detail": "Store teams, customer service, sales support, and daily operations."
+      },
+      "hospitality": {
+        "title": "Hospitality and Entertainment Sector",
+        "description": "People and support roles for hospitality, events, guest experience, and entertainment operations.",
+        "detail": "Guest service, events, venue teams, and hospitality operations."
+      },
+      "medical": {
+        "title": "Medical Sector",
+        "description": "Workforce support for medical environments and the roles that keep them operating.",
+        "detail": "Clinical support, facility roles, and day-to-day medical operations."
+      },
+      "industrial": {
+        "title": "Industrial and Operational Sector",
+        "description": "Operational and industrial recruitment shaped around the requirements of your workplace.",
+        "detail": "Site teams, production support, logistics, and operational continuity."
+      },
+      "business": {
+        "title": "Business Sector",
+        "description": "A broader recruitment route for companies defining a role or building an operating team.",
+        "detail": "A private recruitment brief shaped around your team and objectives."
+      },
+      "commercialBanking": {
+        "title": "Commercial and Banking Sector",
+        "description": "Professional workforce support for commercial, financial, and banking environments.",
+        "detail": "Professional roles, client service, and structured office operations."
+      }
+    }
+  },
+  "countries": {
+    "ariaLabel": "Countries Masarrah recruits from",
+    "eyebrow": "Recruitment corridor",
+    "title": "Trusted routes into the Kingdom.",
+    "body": "We work across established recruitment corridors, bringing each request into a clear, private process built around the role and the household or business behind it.",
+    "registryLabel": "Active corridors",
+    "registryNote": "A focused starting register for the launch phase.",
+    "regions": {
+      "southAsia": "South Asia",
+      "northAfrica": "North Africa",
+      "southeastAsia": "Southeast Asia"
+    },
+    "items": {
+      "india": {
+        "name": "India",
+        "description": "A long-standing corridor for domestic and skilled recruitment needs."
+      },
+      "egypt": {
+        "name": "Egypt",
+        "description": "A nearby Arabic-speaking market for household and business roles."
+      },
+      "pakistan": {
+        "name": "Pakistan",
+        "description": "A familiar source market for dependable domestic and operational roles."
+      },
+      "bangladesh": {
+        "name": "Bangladesh",
+        "description": "A well-established corridor for practical household support roles."
+      },
+      "philippines": {
+        "name": "Philippines",
+        "description": "A trusted route for care, hospitality, and domestic support needs."
+      },
+      "indonesia": {
+        "name": "Indonesia",
+        "description": "A familiar recruitment market for carefully matched household roles."
+      }
+    }
+  },
+  "request": {
+    "ariaLabel": "Masarrah recruitment request",
+    "eyebrow": "Private request",
+    "title": "Tell us what you need, and we will shape the next step.",
+    "body": "Share the essentials of your household or business need. We will review the request with you before discussing a private recommendation or pricing.",
+    "routeLabel": "Route you are asking about",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Full name",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "05X XXX XXXX",
+    "messageLabel": "What do you need help with?",
+    "messagePlaceholder": "Tell us about the role, timing, and any details that matter.",
+    "submit": "Prepare my request",
+    "privateNote": "Your request stays private. We will clarify the requirements before any pricing is discussed.",
+    "whatsappFallback": "Prefer WhatsApp?",
+    "whatsappMessage": "Hello, I would like to ask about the {route} route at Masarrah.",
+    "emailSubject": "Masarrah recruitment request — {route}"
+  },
+  "packages": {
+    "ariaLabel": "Masarrah recruitment packages",
+    "eyebrow": "Recruitment packages",
+    "title": "See the price — and everything the package brings.",
+    "body": "Every path is laid out with its starting price and its full contents. No hidden items: the details are set in a private request, and the final price is confirmed with you before anything moves.",
+    "catalogTitle": "Five paths",
+    "catalogNote": "Pick the closest package and we will refine the details with you.",
+    "popularLabel": "Most requested",
+    "previous": "Previous package",
+    "next": "Next package",
+    "priceFrom": "Starting",
+    "currency": "SAR",
+    "includedLabel": "Everything included",
+    "action": "Start this request",
+    "whatsappFallback": "Continue on WhatsApp",
+    "whatsappMessage": "Hello, I would like to ask about the {package} package at Masarrah.",
+    "note": "These are starting points. The final price is agreed privately after we understand the role and schedule you need.",
+    "items": {
+      "household": {
+        "label": "Household",
+        "shortDescription": "Domestic staffing",
+        "title": "Domestic staffing, shaped around your home",
+        "description": "A complete household path — visa, travel, and follow-up handled from one place.",
+        "price": "9,900",
+        "features": [
+          "Visa and residence under a licensed authority",
+          "Travel arranged and met at your door",
+          "Medical screenings before arrival",
+          "Replacement support in the first months",
+          "Guided support on WhatsApp after arrival"
+        ]
+      },
+      "care": {
+        "label": "Care & support",
+        "shortDescription": "Nannies and home care",
+        "title": "Care support with a brief you can trust",
+        "description": "Childcare and home care with verified references before anyone arrives.",
+        "price": "11,900",
+        "features": [
+          "Careworker with verified references",
+          "Child-safety and first-aid readiness",
+          "Visa, ticket, and residence handled",
+          "Home orientation call in the first days",
+          "Replacement support in the first year"
+        ]
+      },
+      "business": {
+        "label": "Business",
+        "shortDescription": "Workforce recruitment",
+        "title": "Recruitment aligned with your operation",
+        "description": "Role, contracts, and onboarding on one line — with a dedicated consultant.",
+        "price": "12,900",
+        "features": [
+          "Dedicated consultant and hiring brief",
+          "Contracting and labor-law compliance",
+          "Visa, tickets, and onboarding handled",
+          "Role-specific screening before arrival",
+          "Ongoing follow-up after arrival"
+        ]
+      },
+      "driver": {
+        "label": "Driver",
+        "shortDescription": "Private driver",
+        "title": "A private driver, vetted and ready",
+        "description": "Qualified drivers with clean records and valid licenses, ready to serve your household.",
+        "price": "13,900",
+        "features": [
+          "Clean driving record and valid license",
+          "Route and schedule orientation before you start",
+          "Visa, ticket, and residence handled",
+          "Road-safety and city-familiarity checks",
+          "Replacement support in the first months"
+        ]
+      },
+      "nurse": {
+        "label": "Nursing",
+        "shortDescription": "Home nursing",
+        "title": "Home nursing with certified care",
+        "description": "Licensed nurses for elder care and medical follow-up inside your home.",
+        "price": "15,900",
+        "features": [
+          "Licensed nurse with verified credentials",
+          "Elder-care and post-illness support plans",
+          "Visa, ticket, and residence handled",
+          "Medication and follow-up guidance",
+          "Replacement support in the first year"
+        ]
+      }
+    }
+  },
+  "packageDetail": {
+    "ariaLabel": "Package details",
+    "back": "All packages",
+    "backAria": "Back to all packages",
+    "eyebrow": "Recruitment package",
+    "cta": "Request this package",
+    "scrollHint": "Scroll to the request form",
+    "scrollAria": "Continue to the request form"
+  }
+}
