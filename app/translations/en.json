@@ -310,6 +310,8 @@
     "messageLabel": "What do you need help with?",
     "messagePlaceholder": "Tell us about the role, timing, and any details that matter.",
     "submit": "Prepare my request",
+    "sending": "Preparing your request...",
+    "error": "Something went wrong while sending your request. Please try again or continue on WhatsApp.",
     "privateNote": "Your request stays private. We will clarify the requirements before any pricing is discussed.",
     "whatsappFallback": "Prefer WhatsApp?",
     "whatsappMessage": "Hello, I would like to ask about the {route} route at Masarrah HR.",

@@ -50,12 +50,14 @@ export async function generateMetadata({
 export default async function ServiceDetailsPage({
   params,
 }: ServiceDetailsPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
 
   const service = getServiceDetail(slug);
   if (!service) {
     notFound();
   }
+
+  const copy = service.copy[locale as ServiceLocale];
 
   return (
     <>
@@ -65,7 +67,7 @@ export default async function ServiceDetailsPage({
         aria-label="request"
         className="scroll-mt-16 lg:scroll-mt-20"
       >
-        <RequestForm initialPackage={service.packageKey} />
+        <RequestForm initialPackage={service.packageKey} serviceTitle={copy.title} />
       </section>
     </>
   );

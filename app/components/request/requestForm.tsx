@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { FiArrowUpRight, FiCheck, FiMessageCircle } from "react-icons/fi";
-import { SITE_EMAIL, SITE_WHATSAPP } from "@/app/constants/site";
+import { SITE_WHATSAPP } from "@/app/constants/site";
 import {
   RECRUITMENT_PACKAGES,
   RecruitmentPackageKey,
@@ -12,34 +12,72 @@ import { useTranslation } from "@/app/hooks/useTranslations";
 
 interface RequestFormProps {
   initialPackage: RecruitmentPackageKey;
+  /** Translated service title, shown as the route when the page is a service page. */
+  serviceTitle?: string;
 }
 
-export default function RequestForm({ initialPackage }: RequestFormProps) {
+export default function RequestForm({
+  initialPackage,
+  serviceTitle,
+}: RequestFormProps) {
   const t = useTranslation("request");
   const packages = useTranslation("packages");
   const [activePackage, setActivePackage] =
     useState<RecruitmentPackageKey>(initialPackage);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
-  const routeLabel = packages.items[activePackage].label;
+  const routeLabel =
+    serviceTitle && activePackage === initialPackage
+      ? serviceTitle
+      : packages.items[activePackage].label;
   const whatsappUrl = `https://wa.me/${SITE_WHATSAPP}?text=${encodeURIComponent(
     t.whatsappMessage.replace("{route}", routeLabel),
   )}`;
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const subject = t.emailSubject.replace("{route}", routeLabel);
-    const body = [
-      `${t.routeLabel}: ${routeLabel}`,
-      `${t.nameLabel}: ${formData.get("name") ?? ""}`,
-      `${t.phoneLabel}: ${formData.get("phone") ?? ""}`,
-      `${t.messageLabel}: ${formData.get("message") ?? ""}`,
-    ].join("\n\n");
+    const name = String(formData.get("name") ?? "");
+    const phone = String(formData.get("phone") ?? "");
+    const message = String(formData.get("message") ?? "");
 
-    window.location.href = `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
+    setIsSubmitting(true);
+    setSubmitError(false);
+
+    try {
+      const response = await fetch("/api/request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          route: routeLabel,
+          name,
+          phone,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      const whatsappText = [
+        t.whatsappMessage.replace("{route}", routeLabel),
+        "",
+        `${t.routeLabel}: ${routeLabel}`,
+        `${t.nameLabel}: ${name}`,
+        `${t.phoneLabel}: ${phone}`,
+        `${t.messageLabel}: ${message}`,
+      ].join("\n");
+
+      window.location.href = `https://wa.me/${SITE_WHATSAPP}?text=${encodeURIComponent(
+        whatsappText,
+      )}`;
+    } catch {
+      setSubmitError(true);
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -160,10 +198,11 @@ export default function RequestForm({ initialPackage }: RequestFormProps) {
             <div className="mt-lg flex flex-col items-start gap-sm border-t border-embassy/15 pt-md sm:flex-row sm:items-center sm:justify-between">
               <button
                 type="submit"
-                className="inline-flex min-h-12 items-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                disabled={isSubmitting}
+                className="inline-flex min-h-12 items-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <FiCheck className="h-4 w-4" aria-hidden="true" />
-                <span>{t.submit}</span>
+                <span>{isSubmitting ? t.sending : t.submit}</span>
               </button>
 
               <Link
@@ -180,6 +219,15 @@ export default function RequestForm({ initialPackage }: RequestFormProps) {
                 />
               </Link>
             </div>
+
+            {submitError && (
+              <p
+                role="alert"
+                className="mt-md rounded-sm border border-court-gold/30 bg-parchment px-sm py-sm text-body text-embassy"
+              >
+                {t.error}
+              </p>
+            )}
           </form>
         </div>
       </div>
