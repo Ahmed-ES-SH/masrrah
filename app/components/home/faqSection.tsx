@@ -57,7 +57,7 @@ export default function FaqSection() {
       id="faq"
       aria-labelledby="faq-title"
       aria-label={content.ariaLabel}
-      className="bg-parchment"
+      className="scroll-mt-24 bg-parchment"
     >
       <div className="mx-auto grid w-full max-w-7xl gap-xl px-sm py-xxl sm:px-md lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-xxl lg:px-xl">
         <motion.div

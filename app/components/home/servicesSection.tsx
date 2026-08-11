@@ -102,8 +102,8 @@ export default function ServicesSection() {
     <section
       id="services"
       aria-labelledby="services-title"
+      className="relative scroll-mt-24 overflow-hidden bg-parchment text-ink-deep"
       aria-label={t.ariaLabel}
-      className="relative overflow-hidden bg-parchment text-ink-deep"
     >
       <div className="mx-auto flex items-start max-xl:flex-col  w-full gap-xl px-sm py-xxl sm:px-md  lg:items-start lg:gap-xxl lg:px-xl">
         <motion.div

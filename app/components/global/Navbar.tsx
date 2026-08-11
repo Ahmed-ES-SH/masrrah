@@ -11,16 +11,6 @@ import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLocale } from "@/app/hooks/useLocale";
 
-const NAV_LINKS: {
-  href: string;
-  key: "home" | "services" | "whyUs" | "faq";
-}[] = [
-  { href: "/", key: "home" },
-  { href: "/#services", key: "services" },
-  { href: "/#why-us", key: "whyUs" },
-  { href: "/#faq", key: "faq" },
-];
-
 const PHONE_URL = `tel:+${SITE_PHONE}`;
 
 export default function Navbar() {
@@ -31,6 +21,16 @@ export default function Navbar() {
   const shouldReduceMotion = useReducedMotion();
   const pathname = usePathname();
   const isSolid = scrolled || pathname.includes("/request");
+
+  const NAV_LINKS: {
+    href: string;
+    key: "home" | "services" | "whyUs" | "faq";
+  }[] = [
+    { href: `/${locale}`, key: "home" },
+    { href: `/${locale}#services`, key: "services" },
+    { href: `/${locale}#why-us`, key: "whyUs" },
+    { href: `/${locale}#faq`, key: "faq" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -111,7 +111,7 @@ export default function Navbar() {
                   }
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <Link href={"/"}>
+                  <Link href={`/${locale}`}>
                     <Image
                       width={360}
                       height={360}

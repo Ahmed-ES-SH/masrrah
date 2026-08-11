@@ -43,7 +43,7 @@ export default function PlatformSection() {
       id="why-us"
       aria-labelledby="platform-title"
       aria-label={t.ariaLabel}
-      className="relative isolate overflow-hidden bg-embassy text-parchment"
+      className="relative isolate scroll-mt-24 overflow-hidden bg-embassy text-parchment"
     >
       <div
         className="pointer-events-none absolute inset-y-0 start-0 w-1/2 bg-chancery/20"
