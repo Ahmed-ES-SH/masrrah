@@ -9,9 +9,9 @@ export const getSharedMetadata = (
   keywords?: string[],
 ) => ({
   keywords: keywords ?? [
-    "Masarrah",
-    "مسرة",
-    "مسرة للاستقدام",
+    "Masarrah HR",
+    "مسرة إتش أر",
+    "مسرة إتش أر للاستقدام",
     "استقدام",
     "استقدام العمالة المنزلية",
     "تأجير العمالة المنزلية",
@@ -31,15 +31,15 @@ export const getSharedMetadata = (
     title: title,
     description: description,
     url: `${url}/${locale}`,
-    siteName: "Masarrah - مسرة للاستقدام",
+    siteName: "Masarrah HR - مسرة إتش أر للاستقدام",
     images: [
       {
         url: `${url}/logo.webp`,
         alt:
           ogImageAlt ??
           (locale === "ar"
-            ? "مسرة للاستقدام - حلول توظيف العمالة المنزلية في المملكة"
-            : "Masarrah - Saudi HR Recruitment Company for Domestic Workers"),
+            ? "مسرة إتش أر للاستقدام - حلول توظيف العمالة المنزلية في المملكة"
+            : "Masarrah HR - Saudi HR Recruitment Company for Domestic Workers"),
       },
     ],
     type: "website",

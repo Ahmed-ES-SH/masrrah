@@ -32,11 +32,14 @@ export const COMPANY_PHONES = [
 ] as const;
 
 // Brand-level email shown in the footer contact block.
-export const SITE_EMAIL = "contact@masarrah.sa";
+export const SITE_EMAIL = "contact@Masarrah HR.sa";
 
-// Address line shown in the footer contact block.
-export const SITE_ADDRESS = "Riyadh, Kingdom of Saudi Arabia";
+// Address line shown in the footer contact block — bilingual (Arabic first).
+export const SITE_ADDRESS = {
+  ar: "طريق الصحابة - حى اليرموك - الرياض - 8022",
+  en: "Al-Sahaba Road, Al Yarmouk District, Riyadh 8022",
+} as const;
 
 // Pre-filled WhatsApp inquiry message (plain text; wa.me encodes it).
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "مرحباً، أرغب بالاستفسار عن خدمة لدى مسرة للاستقدام.";
+  "مرحباً، أرغب بالاستفسار عن خدمة لدى مسرة إتش أر للاستقدام.";

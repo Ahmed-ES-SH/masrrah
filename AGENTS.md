@@ -12,7 +12,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# Project Rules (Masarrah — مسرة للاستقدام)
+# Project Rules (Masarrah HR — مسرة إتش أر للاستقدام)
 
 ## Tailwind CSS v4 — modern variable-first configuration
 

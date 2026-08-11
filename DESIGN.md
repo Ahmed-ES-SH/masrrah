@@ -1,5 +1,5 @@
 ---
-name: Masarrah — مسرة للاستقدام
+name: Masarrah HR — مسرة إتش أر للاستقدام
 description: Embassy-grade navy-and-gold trust for a Saudi recruitment house — formal, institutional, ceremonial.
 colors:
   embassy: "#0B1B3A"
@@ -92,13 +92,13 @@ components:
     size: "56px"
 ---
 
-# Design System: Masarrah — مسرة للاستقدام
+# Design System: Masarrah HR — مسرة إتش أر للاستقدام
 
 ## Overview
 
 **Creative North Star: "The Embassy Hall"**
 
-Masarrah is not a startup polished white. It is a sovereign room — a place of record where foreign workers are brought into Saudi homes and companies with formality, ceremony, and absolute legal assurance. The brand wears the dress uniform of an embassy: walls of deep mission navy, beading of restrained gold, and a staff that speaks in full, unhurried sentences. Every surface below exists to make a visitor feel *on hallowed ground* — that their household, their employee, and their contract are being handled by an institution, not a middleman.
+Masarrah HR is not a startup polished white. It is a sovereign room — a place of record where foreign workers are brought into Saudi homes and companies with formality, ceremony, and absolute legal assurance. The brand wears the dress uniform of an embassy: walls of deep mission navy, beading of restrained gold, and a staff that speaks in full, unhurried sentences. Every surface below exists to make a visitor feel *on hallowed ground* — that their household, their employee, and their contract are being handled by an institution, not a middleman.
 
 The system is **monumental but quiet**: one navy canvas, one gold accent, generous white space, hairline borders instead of shadows, and typography that carries the state's word. Density is spare — the recruitment catalog never feels like a marketplace. Depth is conveyed by tonal layering rather than elevation; a card floats only when it must call for attention (a hover, a floating WhatsApp button, a dialog).
 

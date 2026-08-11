@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { FiGlobe } from "react-icons/fi";
-import { BD, EG, ID, IN, PH, PK } from "country-flag-icons/react/3x2";
+import { BD, ET, ID, KE, LK, PH } from "country-flag-icons/react/3x2";
 import type { IconType } from "react-icons";
 import {
   RECRUITMENT_COUNTRIES,
@@ -10,19 +10,19 @@ import {
 } from "@/app/constants/countries";
 import { useTranslation } from "@/app/hooks/useTranslations";
 
-const COUNTRY_FLAGS: Record<string, typeof IN> = {
-  IN,
-  EG,
-  PK,
+const COUNTRY_FLAGS: Record<string, typeof LK> = {
+  LK,
+  ET,
+  KE,
   BD,
   PH,
   ID,
 };
 
 const COUNTRY_MARKS: Record<RecruitmentCountryKey, IconType> = {
-  india: FiGlobe,
-  egypt: FiGlobe,
-  pakistan: FiGlobe,
+  sriLanka: FiGlobe,
+  ethiopia: FiGlobe,
+  kenya: FiGlobe,
   bangladesh: FiGlobe,
   philippines: FiGlobe,
   indonesia: FiGlobe,
@@ -70,9 +70,7 @@ export default function CountriesSection() {
           </div>
 
           <div className="flex items-end gap-sm border-s border-court-gold ps-md lg:justify-self-end">
-            <span className="font-headline text-display font-bold leading-none text-court-gold">
-              {String(RECRUITMENT_COUNTRIES.length).padStart(2, "0")}
-            </span>
+
             <div className="pb-xxs">
               <p className="text-label font-label uppercase tracking-[0.1em] text-embassy">
                 {t.registryLabel}
@@ -133,6 +131,17 @@ export default function CountriesSection() {
                   </h3>
                   <p className="mt-sm text-pretty text-body leading-7 text-ink-soft">
                     {copy.description}
+                  </p>
+                  <p className="mt-md flex flex-wrap items-baseline gap-xs border-t border-embassy/10 pt-md">
+                    <span className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+                      {t.priceFrom}
+                    </span>
+                    <span className="font-headline text-[2rem] font-bold leading-none tracking-tight text-court-gold">
+                      {copy.price}
+                    </span>
+                    <span className="text-label font-semibold text-ink-soft">
+                      {t.currency}
+                    </span>
                   </p>
                 </div>
               </motion.article>

@@ -14,7 +14,7 @@ web
 
 ## Product Purpose
 
-Masarrah ("مسرة للاستقدام", Masarrah HR Recruitment) is a Saudi HR recruitment brand that helps households and companies obtain workers recruited from abroad. This phase is a single-domain, two-page marketing website whose job is to present the brand, list the launch service catalog, and turn a visitor into a contact/inquiry. Success = a visitor understands who Masarrah is within 5 seconds, can open any service in ≤ 2 clicks, and reaches a single unambiguous next step (request form, call, or WhatsApp).
+Masarrah HR ("مسرة إتش أر للاستقدام", Masarrah HR HR Recruitment) is a Saudi HR recruitment brand that helps households and companies obtain workers recruited from abroad. This phase is a single-domain, two-page marketing website whose job is to present the brand, list the launch service catalog, and turn a visitor into a contact/inquiry. Success = a visitor understands who Masarrah HR is within 5 seconds, can open any service in ≤ 2 clicks, and reaches a single unambiguous next step (request form, call, or WhatsApp).
 
 ## Positioning
 
@@ -43,22 +43,22 @@ A formal, institutional, trust-first KSA labor-recruitment brand (navy + gold id
 
 ## Brand Commitments
 
-- Name: **Masarrah (مسرة)** — "Masarrah HR Recruitment Company", tagline "للاستقدام".
-- Logo (confirmed, an existing asset): a gold negative-space "M" rendered as two sweeping arcs that read as a person in a necktie, on deep navy, with "HR" small-caps, diamond (◆) dividers, and the Arabic wordmark "مسرة". The visual world derived from the mark is recorded in DESIGN.md (navy `#0B1B3A` + gold `#C9A227` institutional system). This world is binding.
+- Name: **Masarrah HR (مسرة إتش أر)** — "Masarrah HR HR Recruitment Company", tagline "للاستقدام".
+- Logo (confirmed, an existing asset): a gold negative-space "M" rendered as two sweeping arcs that read as a person in a necktie, on deep navy, with "HR" small-caps, diamond (◆) dividers, and the Arabic wordmark "مسرة إتش أر". The visual world derived from the mark is recorded in DESIGN.md (navy `#0B1B3A` + gold `#C9A227` institutional system). This world is binding.
 - Voice register: formal, institutional, premium — a regulated, trust-driven business, not a startup.
 - (Open) A vector/SVG logo and exact logo file are not yet supplied; the raster asset is referenced in PRD.md.
 
 ## Evidence on Hand
 
 - `PRD.md` — the explicit product brief for this phase (read at session start).
-- `DESIGN.md` — visual system derived from the Masarrah logo and a maharah.com UX walkthrough; contains the committed color/typography/component tokens.
+- `DESIGN.md` — visual system derived from the Masarrah HR logo and a maharah.com UX walkthrough; contains the committed color/typography/component tokens.
 - Placeholder bilingual (Arabic + English) copy is being used for the ~4 initial services pending real content — placeholder is marked as such.
 - No public pricing is confirmed or fabricated anywhere; pricing lives behind the private request form.
 - Do **not** invent licensing numbers, client counts, years of experience, or testimonials; the trust band must use only client-supplied content.
 
 ## Product Principles
 
-1. **Trust before lead** — credibility (who Masarrah is, licensing, process) comes before the ask; the ask is a single unambiguous contact step.
+1. **Trust before lead** — credibility (who Masarrah HR is, licensing, process) comes before the ask; the ask is a single unambiguous contact step.
 2. **Private pricing, fast contact** — no public prices; the request form is the primary mechanism, WhatsApp and call the unbreakable fallback.
 3. **Mobile Arabic first** — 360px RTL is the baseline; English is a faithful mirror, not a second layout.
 4. **Data-driven services** — one detail template driven by structured service data, ready for a future admin surface.

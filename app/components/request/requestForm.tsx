@@ -46,7 +46,7 @@ export default function RequestForm({ initialPackage }: RequestFormProps) {
     <section
       aria-labelledby="request-title"
       aria-label={t.ariaLabel}
-      className="bg-parchment text-ink-deep"
+      className="flex pt-20 h-screen flex-col justify-center bg-parchment text-ink-deep"
     >
       <div className="mx-auto grid w-full gap-xl px-sm py-xxl sm:px-md lg:grid-cols-[minmax(220px,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-xxl lg:px-xl">
         <div className="lg:sticky lg:top-28">

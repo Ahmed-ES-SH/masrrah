@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { SITE_PHONE } from "@/app/constants/site";
@@ -28,6 +29,8 @@ export default function Navbar() {
   const locale = useLocale() ?? "ar";
   const t = useTranslation("navbar");
   const shouldReduceMotion = useReducedMotion();
+  const pathname = usePathname();
+  const isSolid = scrolled || pathname.includes("/request");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -54,7 +57,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed inset-x-0  z-50 border-b pb-2 shadow-none transition-[background-color,border-color,backdrop-filter,box-shadow] duration-300 ease-out motion-reduce:transition-none ${
-          scrolled
+          isSolid
             ? "border-champagne-gilt/20 top-0 bg-embassy/90 shadow-float backdrop-blur-md"
             : "border-transparent top-2 bg-transparent"
         }`}
@@ -85,8 +88,8 @@ export default function Navbar() {
             <motion.div
               className="relative"
               animate={{
-                width: scrolled ? 64 : 96,
-                height: scrolled ? 64 : 96,
+                width: isSolid ? 64 : 96,
+                height: isSolid ? 64 : 96,
               }}
               transition={
                 shouldReduceMotion
@@ -96,7 +99,7 @@ export default function Navbar() {
             >
               <AnimatePresence initial={false} mode="wait">
                 <motion.div
-                  key={scrolled ? "small" : "full"}
+                  key={isSolid ? "small" : "full"}
                   className="absolute inset-0"
                   initial={
                     shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }
@@ -113,7 +116,7 @@ export default function Navbar() {
                     <Image
                       width={360}
                       height={360}
-                      src={scrolled ? "/small-logo.webp" : "/logo.webp"}
+                      src={isSolid ? "/small-logo.webp" : "/logo.webp"}
                       alt={t.brandLabel}
                       className="h-full lg:w-full w-14 object-contain"
                     />

@@ -103,9 +103,6 @@ export default function PackagesSection() {
           </div>
 
           <div className="flex items-end gap-sm border-s border-court-gold/50 ps-md lg:justify-self-end">
-            <span className="font-headline text-display font-bold leading-none text-court-gold">
-              {String(total).padStart(2, "0")}
-            </span>
             <div className="pb-xxs">
               <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt">
                 {t.catalogTitle}

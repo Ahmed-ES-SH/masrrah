@@ -4,7 +4,9 @@ import PlatformSection from "../components/home/platformSection";
 import PackagesSection from "../components/home/packagesSection";
 import FaqSection from "../components/home/faqSection";
 import BlogSection from "../components/home/blogSection";
+import GovermentsLogos from "../components/home/govermentsLogos";
 import HeroSwiper from "../components/home/heroSwiper";
+import TestimonialsSection from "../components/home/testimonialsSection";
 
 export default async function Home() {
   return (
@@ -15,6 +17,8 @@ export default async function Home() {
       <CountriesSection />
       <PlatformSection />
       <FaqSection />
+      <GovermentsLogos />
+      <TestimonialsSection />
       <BlogSection />
     </>
   );

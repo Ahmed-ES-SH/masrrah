@@ -50,7 +50,7 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
     icon: "home",
     packageKey: "household",
     featured: true,
-    corridors: ["india", "philippines", "bangladesh", "indonesia"],
+    corridors: ["sriLanka", "philippines", "bangladesh", "indonesia"],
     copy: {
       ar: {
         eyebrow: "للأسر",
@@ -98,7 +98,7 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
     slug: "private-drivers",
     icon: "truck",
     packageKey: "driver",
-    corridors: ["india", "pakistan", "egypt"],
+    corridors: ["sriLanka", "ethiopia", "bangladesh"],
     copy: {
       ar: {
         eyebrow: "سائقون خاصون",
@@ -146,7 +146,7 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
     slug: "nannies-and-home-care",
     icon: "heart",
     packageKey: "care",
-    corridors: ["philippines", "indonesia", "india"],
+    corridors: ["philippines", "indonesia", "sriLanka"],
     copy: {
       ar: {
         eyebrow: "رعاية منزلية",
@@ -196,7 +196,7 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
     slug: "business-recruitment",
     icon: "briefcase",
     packageKey: "business",
-    corridors: ["india", "egypt", "philippines"],
+    corridors: ["philippines", "ethiopia", "kenya"],
     copy: {
       ar: {
         eyebrow: "للشركات",

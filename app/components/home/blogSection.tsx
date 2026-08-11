@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { useRef, useState } from "react";
 import { FiArrowUpRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -10,12 +9,16 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { BLOG_CONTENT } from "@/app/constants/blog";
 import { useLocale } from "@/app/hooks/useLocale";
+import { useTranslation } from "@/app/hooks/useTranslations";
+import Toast from "@/app/components/global/Toast";
 
 export default function BlogSection() {
   const locale = useLocale() ?? "ar";
   const content = BLOG_CONTENT[locale];
+  const toastContent = useTranslation("toast");
   const shouldReduceMotion = useReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [toastOpen, setToastOpen] = useState(false);
   const swiperRef = useRef<SwiperType | null>(null);
 
   const total = content.posts.length;
@@ -135,9 +138,10 @@ export default function BlogSection() {
           >
             {content.posts.map((post) => (
               <SwiperSlide key={post.id} className="h-full">
-                <Link
-                  href={`/${locale}/blog/${post.slug}`}
-                  className="group relative flex h-full min-h-[24rem] flex-col overflow-hidden rounded-lg border border-champagne-gilt/25 bg-chancery hover:border-champagne-gilt/50 motion-safe:transition-all motion-safe:duration-150 motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-float focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+                <button
+                  type="button"
+                  onClick={() => setToastOpen(true)}
+                  className="group relative flex h-full w-full min-h-[24rem] flex-col overflow-hidden rounded-lg border border-champagne-gilt/25 bg-chancery text-start hover:border-champagne-gilt/50 motion-safe:transition-all motion-safe:duration-150 motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-float focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
                 >
                   <span
                     className="pointer-events-none absolute -top-5 start-2 select-none font-headline text-[9rem] font-bold leading-[0.8] text-court-gold/[0.08]"
@@ -179,12 +183,19 @@ export default function BlogSection() {
                       </span>
                     </div>
                   </div>
-                </Link>
+                </button>
               </SwiperSlide>
             ))}
           </Swiper>
         </motion.div>
       </div>
+
+      <Toast
+        open={toastOpen}
+        onClose={() => setToastOpen(false)}
+        title={toastContent.journalComingSoon.title}
+        message={toastContent.journalComingSoon.message}
+      />
     </section>
   );
 }

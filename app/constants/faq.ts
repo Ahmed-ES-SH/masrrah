@@ -45,12 +45,7 @@ export const FAQ_CONTENT: Record<FaqLocale, FaqContent> = {
         answer:
           "تختلف المدة بحسب المهنة والجنسية والمستندات والإجراءات المطلوبة. بعد فهم طلبك، نشاركك تقديرًا واقعيًا للخطوات والمدة المتوقعة.",
       },
-      {
-        id: "pricing",
-        question: "هل الأسعار معلنة؟",
-        answer:
-          "نقدم الأسعار بشكل خاص بعد معرفة تفاصيل الطلب، لأن التكلفة تتأثر بنوع الخدمة والمتطلبات والإجراءات المرتبطة بها. لا توجد أسعار عامة مخفية في الموقع.",
-      },
+
       {
         id: "follow-up",
         question: "هل تتابعون الطلب بعد وصول العامل؟",
@@ -85,12 +80,7 @@ export const FAQ_CONTENT: Record<FaqLocale, FaqContent> = {
         answer:
           "Timing depends on the role, nationality, documents, and required procedures. Once we understand your request, we share a realistic view of the steps and expected timing.",
       },
-      {
-        id: "pricing",
-        question: "Are your prices published?",
-        answer:
-          "We provide pricing privately after understanding your request. The cost depends on the service, requirements, and related procedures, so the website does not display public prices.",
-      },
+
       {
         id: "follow-up",
         question: "Do you support the request after arrival?",

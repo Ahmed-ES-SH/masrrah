@@ -32,12 +32,12 @@ export async function generateMetadata({
 
   const service = getServiceDetail(slug);
   if (!service) {
-    return { title: "Masarrah - مسرة للاستقدام" };
+    return { title: "Masarrah HR - مسرة إتش أر للاستقدام" };
   }
 
   const copy = service.copy[locale as ServiceLocale];
 
-  const title = `${copy.title} — Masarrah مسرة`;
+  const title = `${copy.title} — Masarrah HR مسرة إتش أر`;
   const description = `${copy.description} ${copy.clauses.join(" ")}`;
 
   return {

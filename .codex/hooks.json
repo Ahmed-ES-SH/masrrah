@@ -11,6 +11,17 @@
             "statusMessage": "Checking UI changes"
           }
         ]
+      },
+      {
+        "matcher": "Edit|Write|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -f \"/home/adev/.agents/skills/impeccable/scripts/hook.mjs\" ] || node \"/home/adev/.agents/skills/impeccable/scripts/hook.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Checking UI changes"
+          }
+        ]
       }
     ],
     "Stop": [
@@ -19,6 +30,16 @@
           {
             "type": "command",
             "command": "[ ! -f \"C:\\\\Users\\\\faill\\\\.agents\\\\skills\\\\impeccable\\\\scripts\\\\hook.mjs\" ] || node \"C:\\\\Users\\\\faill\\\\.agents\\\\skills\\\\impeccable\\\\scripts\\\\hook.mjs\"",
+            "timeout": 30,
+            "statusMessage": "Design deep pass"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -f \"/home/adev/.agents/skills/impeccable/scripts/hook.mjs\" ] || node \"/home/adev/.agents/skills/impeccable/scripts/hook.mjs\"",
             "timeout": 30,
             "statusMessage": "Design deep pass"
           }

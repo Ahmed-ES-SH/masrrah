@@ -28,7 +28,7 @@ slug: app-components-home-packagessection-tsx
 
 ## Design Specificity Verdict
 
-This feels authored for Masarrah rather than category-interchangeable. The “recruitment dossier” panel, restrained navy/parchment/gold palette, diamond marker, and route-based information architecture support the embassy-grade institutional brief. The main loss of specificity is not visual; it is behavioral: the section currently behaves like a generic tabbed product selector while the product promises a guided private request.
+This feels authored for Masarrah HR rather than category-interchangeable. The “recruitment dossier” panel, restrained navy/parchment/gold palette, diamond marker, and route-based information architecture support the embassy-grade institutional brief. The main loss of specificity is not visual; it is behavioral: the section currently behaves like a generic tabbed product selector while the product promises a guided private request.
 
 The deterministic detector reported no findings for `app/components/home/packagesSection.tsx` (`[]`). That is a clean scan, but it does not catch the missing `grid` display utility, incomplete tab focus management, or the unused translation keys. No false positives were identified.
 

@@ -35,6 +35,13 @@ export default function Footer() {
     setSubscribed(true);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: shouldReduceMotion ? "auto" : "smooth",
+    });
+  };
+
   return (
     <footer
       id="footer"
@@ -267,21 +274,22 @@ export default function Footer() {
                     className="h-4 w-4 shrink-0 text-amendment"
                     aria-hidden="true"
                   />
-                  <span>{SITE_ADDRESS}</span>
+                  <span>{SITE_ADDRESS[locale]}</span>
                 </span>
               </li>
             </ul>
           </div>
 
           <div className="flex flex-col justify-between gap-lg sm:col-span-2 lg:col-span-1 lg:items-end">
-            <Link
-              href="#home"
+            <button
+              type="button"
+              onClick={scrollToTop}
               aria-label={t.backToTop}
               className="inline-flex min-h-11 items-center gap-xs self-start border-b border-court-gold/30 pb-xs text-label font-label text-ink-soft transition-colors duration-200 hover:border-amendment hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amendment lg:self-end"
             >
               <FiArrowUp className="h-4 w-4" aria-hidden="true" />
               <span>{t.backToTop}</span>
-            </Link>
+            </button>
           </div>
         </div>
 

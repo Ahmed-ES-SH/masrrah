@@ -3,21 +3,21 @@ import { HeroSlide } from "../types/hero-slide";
 export const heroSlides: HeroSlide[] = [
   {
     id: "trust",
-    image: "/hero/slide-1.webp",
+    image: "/hero-v2/slide-1.png",
     copyKey: "trust",
     primaryHref: "/request",
     secondaryHref: "/process",
   },
   {
     id: "contracts",
-    image: "/hero/slide-2.webp",
+    image: "/hero-v2/slide-2.png",
     copyKey: "contracts",
     primaryHref: "/contract",
     secondaryHref: "/contact",
   },
   {
     id: "support",
-    image: "/hero/slide-3.webp",
+    image: "/hero-v2/slide-3.png",
     copyKey: "support",
     primaryHref: "/support",
     secondaryHref: "/faq",

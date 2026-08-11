@@ -26,10 +26,10 @@ export interface BlogContent {
 // licensing numbers, client counts, or testimonials.
 export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
   ar: {
-    ariaLabel: "مجلة مسرة",
-    eyebrow: "مجلة مسرة",
+    ariaLabel: "مجلة مسرة إتش أر",
+    eyebrow: "مجلة مسرة إتش أر",
     title: "ملاحظات من مكتب الاستقدام",
-    body: "مقالات تكتبها مسرة لتوفر عليك قراءة عشرات المصادر: ماذا تجهز قبل الطلب، وما المستندات المطلوبة، وكيف تسير الأيام الأولى بعد الوصول.",
+    body: "مقالات تكتبها مسرة إتش أر لتوفر عليك قراءة عشرات المصادر: ماذا تجهز قبل الطلب، وما المستندات المطلوبة، وكيف تسير الأيام الأولى بعد الوصول.",
     previous: "المقالة السابقة",
     next: "المقالة التالية",
     posts: [
@@ -102,10 +102,10 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
     ],
   },
   en: {
-    ariaLabel: "Masarrah journal",
-    eyebrow: "Masarrah Journal",
+    ariaLabel: "Masarrah HR journal",
+    eyebrow: "Masarrah HR Journal",
     title: "Notes from the recruitment desk",
-    body: "Short articles Masarrah writes so you don't have to read a dozen sources: what to prepare before a request, which documents matter, and how the first days after arrival should go.",
+    body: "Short articles Masarrah HR writes so you don't have to read a dozen sources: what to prepare before a request, which documents matter, and how the first days after arrival should go.",
     previous: "Previous article",
     next: "Next article",
     posts: [

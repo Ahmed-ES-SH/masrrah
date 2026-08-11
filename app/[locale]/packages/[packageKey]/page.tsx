@@ -37,13 +37,13 @@ export async function generateMetadata({
   const { locale, packageKey } = await params;
 
   if (!isPackageKey(packageKey)) {
-    return { title: "Masarrah - مسرة للاستقدام" };
+    return { title: "Masarrah HR - مسرة إتش أر للاستقدام" };
   }
 
   const translations = getTranslations(locale);
   const copy = translations.packages.items[packageKey];
 
-  const title = `${copy.label} — ${copy.title} | Masarrah مسرة`;
+  const title = `${copy.label} — ${copy.title} | Masarrah HR مسرة إتش أر`;
   const description = `${copy.shortDescription}. ${copy.description}.`;
 
   return {

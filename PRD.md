@@ -1,4 +1,4 @@
-# PRD — مسرة للاستقدام (Masarrah HR Recruitment Company)
+# PRD — مسرة إتش أر للاستقدام (Masarrah HR HR Recruitment Company)
 
 **Product Requirements Document**
 **Scope:** Simple 2-page marketing platform — Home Page + Single Service/Package Detail Page.
@@ -9,13 +9,13 @@
 
 ## 1. Overview
 
-Masarrah is a Saudi HR recruitment brand that helps households and companies obtain workers/labor recruited from abroad (housekeepers, drivers, nannies, elder care, and similar categories). This phase of the product is intentionally minimal: a **single-domain, two-page website** whose sole job is to present the brand, list the available services/packages, and let a visitor open one service to see its full details and take a contact/inquiry action. There is no login, no dashboard, no booking engine, and no payment flow in this scope.
+Masarrah HR is a Saudi HR recruitment brand that helps households and companies obtain workers/labor recruited from abroad (housekeepers, drivers, nannies, elder care, and similar categories). This phase of the product is intentionally minimal: a **single-domain, two-page website** whose sole job is to present the brand, list the available services/packages, and let a visitor open one service to see its full details and take a contact/inquiry action. There is no login, no dashboard, no booking engine, and no payment flow in this scope.
 
 ## 2. Goals
 
 | Goal | Success looks like |
 |---|---|
-| Establish brand trust and legitimacy | Visitor understands who Masarrah is and what it does within 5 seconds of landing on the home page |
+| Establish brand trust and legitimacy | Visitor understands who Masarrah HR is and what it does within 5 seconds of landing on the home page |
 | Present the service/package catalog clearly | Visitor can scan all offered services and open the one relevant to them in ≤ 2 clicks |
 | Drive a contact/inquiry action | Every service detail page ends in a single, unambiguous next step (call, WhatsApp, or inquiry form) |
 | Fast, mobile-first, bilingual experience | Home + detail page both load quickly on mobile and read correctly in Arabic (RTL, default) and English (LTR) |
@@ -56,7 +56,7 @@ Two page types only. Every service card on the home page links to its own instan
 | Section | Requirement |
 |---|---|
 | Header | Logo, phone number (tap-to-call), WhatsApp icon, language switcher (AR/EN). No mega-menu needed — nav is minimal since there are only two page types. |
-| Hero | Headline + short supporting sentence stating what Masarrah does, one primary CTA ("Browse services" — scrolls to service grid) and one secondary CTA (WhatsApp/call). |
+| Hero | Headline + short supporting sentence stating what Masarrah HR does, one primary CTA ("Browse services" — scrolls to service grid) and one secondary CTA (WhatsApp/call). |
 | Trust band | 3–4 short trust stats or credibility statements (e.g., years of experience, licensing/registration statement, number of clients served) — text-only is acceptable for MVP; no dynamic counters required. |
 | Service/Package grid | Card per service: icon or image, title, one-line description, "starting from" price if applicable, entire card links to `/services/[slug]`. Grid must work as single-column on mobile. |
 | FAQ (optional, recommended) | 3–6 short Q&As addressing common concerns (contract basics, how the process works, what's included) — static content, accordion UI. |
@@ -70,7 +70,7 @@ Two page types only. Every service card on the home page links to its own instan
 
 ### 6.2 Service / Package Detail Page (`/services/[slug]`)
 
-**Purpose**: Give a visitor everything they need to decide to contact Masarrah about *this specific* service/package, and make that contact action obvious.
+**Purpose**: Give a visitor everything they need to decide to contact Masarrah HR about *this specific* service/package, and make that contact action obvious.
 
 | Section | Requirement |
 |---|---|
@@ -117,7 +117,7 @@ Two page types only. Every service card on the home page links to its own instan
 1. **Pricing disclosure**: will service/package prices be shown publicly on the detail page, or should every page say "contact us for pricing"? This changes both the design and the sales conversation.
 2. **Contact method**: WhatsApp-only, or also an on-page inquiry form? A form requires a backend endpoint and a place to review submissions.
 3. **Initial service list**: how many services/packages exist at launch, and do you have final Arabic + English copy, pricing (if public), and images for each?
-4. **Domain/hosting**: is `masarrah.com` (or equivalent) available/owned, and is there an existing logo asset in vector (SVG) form beyond the raster image already supplied?
+4. **Domain/hosting**: is `Masarrah HR.com` (or equivalent) available/owned, and is there an existing logo asset in vector (SVG) form beyond the raster image already supplied?
 5. **Legal content**: is a Privacy Policy or Terms page required at launch (even a simple one), given this is a labor-recruitment business collecting inquiry contact details?
 
 ## 11. Suggested Build Order

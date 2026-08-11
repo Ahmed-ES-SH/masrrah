@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-08-07T00:00:00.000Z",
-  "title": "Design System: Masarrah — مسرة للاستقدام",
+  "title": "Design System: Masarrah HR — مسرة إتش أر للاستقدام",
   "extensions": {
     "colorMeta": {
       "embassy": {
@@ -204,7 +204,7 @@
   ],
   "narrative": {
     "northStar": "The Embassy Hall",
-    "overview": "Masarrah is not a startup polished white. It is a sovereign room — a place of record where foreign workers are brought into Saudi homes and companies with formality, ceremony, and absolute legal assurance. The brand wears the dress uniform of an embassy: walls of deep mission navy, beading of restrained gold, and a staff that speaks in full, unhurried sentences. Every surface below exists to make a visitor feel on hallowed ground — that their household, their employee, and their contract are being handled by an institution, not a middleman. The system is monumental but quiet: one navy canvas, one gold accent, generous white space, hairline borders instead of shadows, and typography that carries the state's word. The relationship between navy and gold is deliberate and ritualistic: navy is the estate itself, gold is the signature that seals decisions.",
+    "overview": "Masarrah HR is not a startup polished white. It is a sovereign room — a place of record where foreign workers are brought into Saudi homes and companies with formality, ceremony, and absolute legal assurance. The brand wears the dress uniform of an embassy: walls of deep mission navy, beading of restrained gold, and a staff that speaks in full, unhurried sentences. Every surface below exists to make a visitor feel on hallowed ground — that their household, their employee, and their contract are being handled by an institution, not a middleman. The system is monumental but quiet: one navy canvas, one gold accent, generous white space, hairline borders instead of shadows, and typography that carries the state's word. The relationship between navy and gold is deliberate and ritualistic: navy is the estate itself, gold is the signature that seals decisions.",
     "keyCharacteristics": [
       "A single navy estate (deep navy surfaces) with gold used as a seal, never a palette — ≤10% of any screen.",
       "Borders over shadows: 1px hairline is the depth language; shadows are reserved for floating elements.",

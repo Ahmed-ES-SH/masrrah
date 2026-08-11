@@ -2,8 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { FiArrowUpRight, FiPause, FiPlay } from "react-icons/fi";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  type PanInfo,
+} from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { heroSlides } from "@/app/constants/hero-sliders";
 import { useTranslation } from "@/app/hooks/useTranslations";
@@ -33,12 +38,11 @@ export default function HeroSwiper() {
   const shouldReduceMotion = useReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [pausedByUser, setPausedByUser] = useState(false);
   const [pausedByPointer, setPausedByPointer] = useState(false);
 
   const activeSlide = heroSlides[activeIndex];
   const activeCopy = t.slides[activeSlide.copyKey];
-  const autoplayActive = !shouldReduceMotion && !pausedByUser && !pausedByPointer;
+  const autoplayActive = !shouldReduceMotion && !pausedByPointer;
   const slideTransition = shouldReduceMotion
     ? { duration: 0 }
     : { duration: 0.8, ease: "easeOut" as const };
@@ -61,6 +65,28 @@ export default function HeroSwiper() {
     setActiveIndex(index);
   };
 
+  const goNext = () => {
+    setDirection(1);
+    setActiveIndex((current) => (current + 1) % heroSlides.length);
+  };
+
+  const goPrev = () => {
+    setDirection(-1);
+    setActiveIndex(
+      (current) => (current - 1 + heroSlides.length) % heroSlides.length
+    );
+  };
+
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
+    const swipedRight = info.offset.x > 60 || info.velocity.x > 400;
+    const swipedLeft = info.offset.x < -60 || info.velocity.x < -400;
+    if (swipedLeft) goNext();
+    else if (swipedRight) goPrev();
+  };
+
   return (
     <section
       id="home"
@@ -81,7 +107,12 @@ export default function HeroSwiper() {
           animate="center"
           exit="exit"
           transition={slideTransition}
-          className="absolute inset-0"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.35}
+          dragSnapToOrigin
+          onDragEnd={handleDragEnd}
+          className="absolute inset-0 cursor-grab active:cursor-grabbing"
           aria-hidden="true"
         >
           <Image
@@ -93,7 +124,7 @@ export default function HeroSwiper() {
             className="object-cover  object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-embassy via-embassy/80 to-embassy/25 rtl:lg:bg-gradient-to-l ltr:lg:bg-gradient-to-r" />
-          <div className="absolute inset-0 bg-embassy/10" />
+          <div className="absolute inset-0 bg-embassy/5" />
         </motion.div>
       </AnimatePresence>
 
@@ -128,7 +159,7 @@ export default function HeroSwiper() {
 
             <div className="mt-lg flex flex-col gap-sm sm:flex-row sm:gap-sm">
               <Link
-                href={activeSlide.primaryHref}
+                href="#services"
                 className="group inline-flex min-h-12 flex-1 items-center justify-center gap-xs rounded-md bg-court-gold px-md text-title font-semibold text-embassy shadow-apparatus transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt"
               >
                 <span>{activeCopy.primaryCta}</span>
@@ -138,7 +169,7 @@ export default function HeroSwiper() {
                 />
               </Link>
               <Link
-                href={activeSlide.secondaryHref}
+                href="#packages"
                 className="inline-flex min-h-12 flex-1 items-center justify-center rounded-md border border-champagne-gilt/35 px-md text-title font-semibold text-parchment transition-colors duration-200 hover:border-champagne-gilt hover:bg-chancery/75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt"
               >
                 {activeCopy.secondaryCta}
@@ -205,22 +236,6 @@ export default function HeroSwiper() {
               );
             })}
           </div>
-
-          {!shouldReduceMotion && (
-            <button
-              type="button"
-              aria-pressed={pausedByUser}
-              aria-label={pausedByUser ? t.resume : t.pause}
-              onClick={() => setPausedByUser((current) => !current)}
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-champagne-gilt/30 text-parchment/80 transition-colors duration-200 hover:border-champagne-gilt hover:bg-chancery/60 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne-gilt"
-            >
-              {pausedByUser ? (
-                <FiPlay className="h-4 w-4" aria-hidden="true" />
-              ) : (
-                <FiPause className="h-4 w-4" aria-hidden="true" />
-              )}
-            </button>
-          )}
         </div>
       </div>
     </section>
