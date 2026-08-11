@@ -162,7 +162,7 @@ export default function HeroSwiper() {
                 href="#services"
                 className="group inline-flex min-h-12 flex-1 items-center justify-center gap-xs rounded-md bg-court-gold px-md text-title font-semibold text-embassy shadow-apparatus transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt"
               >
-                <span>{activeCopy.primaryCta}</span>
+                <span className="whitespace-nowrap">{activeCopy.primaryCta}</span>
                 <FiArrowUpRight
                   className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:scale-x-[-1]"
                   aria-hidden="true"
@@ -170,7 +170,7 @@ export default function HeroSwiper() {
               </Link>
               <Link
                 href="#packages"
-                className="inline-flex min-h-12 flex-1 items-center justify-center rounded-md border border-champagne-gilt/35 px-md text-title font-semibold text-parchment transition-colors duration-200 hover:border-champagne-gilt hover:bg-chancery/75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt"
+                className="inline-flex min-h-12 whitespace-nowrap flex-1 items-center justify-center rounded-md border border-champagne-gilt/35 px-md text-title font-semibold text-parchment transition-colors duration-200 hover:border-champagne-gilt hover:bg-chancery/75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt"
               >
                 {activeCopy.secondaryCta}
               </Link>
