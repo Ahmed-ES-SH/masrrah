@@ -36,19 +36,19 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
   },
   {
     key: "instagram",
-    href: "https://instagram.com/Masarrah HR",
+    href: "https://instagram.com/MasarrahHR",
     icon: FaInstagram,
   },
-  { key: "x", href: "https://x.com/Masarrah HR", icon: FaXTwitter },
+  { key: "x", href: "https://x.com/MasarrahHR", icon: FaXTwitter },
   {
     key: "snapchat",
-    href: "https://snapchat.com/add/Masarrah HR",
+    href: "https://snapchat.com/add/MasarrahHR",
     icon: FaSnapchat,
   },
-  { key: "tiktok", href: "https://tiktok.com/@Masarrah HR", icon: FaTiktok },
+  { key: "tiktok", href: "https://tiktok.com/@MasarrahHR", icon: FaTiktok },
   {
     key: "linkedin",
-    href: "https://linkedin.com/company/Masarrah HR",
+    href: "https://linkedin.com/company/MasarrahHR",
     icon: FaLinkedinIn,
   },
 ];

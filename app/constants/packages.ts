@@ -24,5 +24,4 @@ export const RECRUITMENT_PACKAGES: readonly RecruitmentPackage[] = [
   { key: "care", icon: FiHeart },
   { key: "business", icon: FiBriefcase },
   { key: "driver", icon: FiTruck },
-  { key: "nurse", icon: FiActivity },
 ];

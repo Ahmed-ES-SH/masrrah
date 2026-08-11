@@ -80,8 +80,7 @@ export default function Navbar() {
           </div>
 
           {/* Center — the crest */}
-          <Link
-            href="#home"
+          <div
             aria-label={t.brandLabel}
             className="flex justify-self-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
           >
@@ -124,7 +123,7 @@ export default function Navbar() {
                 </motion.div>
               </AnimatePresence>
             </motion.div>
-          </Link>
+          </div>
 
           {/* End cluster — logical end */}
           <div className="flex items-center justify-self-end gap-3.5 ">
