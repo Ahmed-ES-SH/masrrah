@@ -2,7 +2,8 @@ name: Deploy to VPS
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 concurrency:
   group: deploy-production
@@ -11,6 +12,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Deploy over SSH
         uses: appleboy/ssh-action@v1
@@ -21,10 +23,23 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             set -e
+
             cd "${{ secrets.VPS_APP_DIR }}"
+
+            echo "Current directory:"
+            pwd
+
+            echo "Checking Git repository:"
+            git status
+
+            echo "Updating repository:"
             git fetch origin main
             git reset --hard origin/main
+
+            echo "Building and starting containers:"
             docker compose up -d --build
+
+            echo "Removing unused Docker images:"
             docker image prune -f
 
       - name: Verify containers are running
@@ -36,7 +51,16 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             set -e
+
             cd "${{ secrets.VPS_APP_DIR }}"
+
+            echo "Docker Compose status:"
             docker compose ps
-            docker compose ps --format '{{.Service}} {{.State}} {{.Status}}' | grep -q "Up" \
-              || { echo "::error::Container is not running"; exit 1; }
+
+            if ! docker compose ps --format '{{.Service}} {{.State}} {{.Status}}' | grep -q "Up"; then
+              echo "::error::Container is not running"
+              docker compose logs --tail=100
+              exit 1
+            fi
+
+            echo "Deployment verification successful."س
