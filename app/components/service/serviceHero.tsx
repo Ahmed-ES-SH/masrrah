@@ -65,7 +65,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={reveal()}
-          className="flex items-center justify-between gap-md border-b border-champagne-gilt/15 px-sm pb-lg pt-20 sm:px-md lg:px-xl"
+          className="flex flex-wrap items-center justify-between gap-x-md gap-y-xs border-b border-champagne-gilt/15 px-sm pb-lg pt-20 sm:px-md lg:px-xl"
         >
           <Link
             href={`/${locale}/#services`}
@@ -87,7 +87,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           </p>
         </motion.div>
 
-        <div className="relative mx-auto grid w-full gap-xl px-sm pb-lg pt-lg sm:px-md lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-stretch lg:gap-xxl lg:px-xl lg:pt-xl">
+        <div className="relative mx-auto grid w-full gap-xl px-sm pb-lg pt-lg sm:px-md xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] xl:items-stretch xl:gap-xxl lg:px-xl xl:pt-xl">
           {/* ===== The record — parchment letter with the seal stamp ===== */}
           <motion.article
             initial={shouldReduceMotion ? false : { opacity: 0, y: 22 }}
@@ -123,7 +123,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
 
             <h1
               id="service-detail-title"
-              className="mt-md max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.1] text-embassy"
+              className="mt-md max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.1] text-embassy lg:max-w-[22ch]"
             >
               {copy.title}
             </h1>
