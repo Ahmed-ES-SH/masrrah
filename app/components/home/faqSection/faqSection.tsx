@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, useState, type KeyboardEvent } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { FiChevronDown } from "react-icons/fi";
+import { motion, useReducedMotion } from "framer-motion";
 import { FAQ_CONTENT } from "@/app/constants/faq";
 import { useLocale } from "@/app/hooks/useLocale";
+import FaqItem from "./faqItem";
 
 export default function FaqSection() {
   const locale = useLocale() ?? "ar";
@@ -93,71 +93,25 @@ export default function FaqSection() {
           transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.08 }}
           className="overflow-hidden rounded-lg border border-embassy/15 bg-marble"
         >
-          {content.items.map((item, index) => {
-            const isOpen = activeIndex === index;
-            const answerId = `faq-answer-${item.id}`;
-
-            return (
-              <div
-                key={item.id}
-                className="border-b border-embassy/15 last:border-b-0"
-              >
-                <button
-                  type="button"
-                  ref={(element) => {
-                    buttonRefs.current[index] = element;
-                  }}
-                  aria-expanded={isOpen}
-                  aria-controls={answerId}
-                  tabIndex={
-                    (activeIndex === null ? index === 0 : isOpen) ? 0 : -1
-                  }
-                  onClick={() => setActiveIndex(isOpen ? null : index)}
-                  onKeyDown={(event) => handleKeyDown(event, index)}
-                  className={`flex min-h-16 w-full items-center gap-md px-md py-sm text-start transition-colors duration-200 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-court-gold sm:min-h-[72px] sm:px-lg ${isOpen ? "bg-parchment/60" : "hover:bg-parchment/45 active:bg-parchment/60"}`}
-                >
-                  <span className="min-w-0 flex-1 font-title text-title font-semibold leading-7 text-ink-deep">
-                    {item.question}
-                  </span>
-                  <span className="sr-only">
-                    {isOpen ? content.closeLabel : content.openLabel}
-                  </span>
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={transition}
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border ${isOpen ? "border-court-gold/60 text-court-gold" : "border-embassy/15 text-embassy"}`}
-                    aria-hidden="true"
-                  >
-                    <FiChevronDown className="h-5 w-5" />
-                  </motion.span>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen ? (
-                    <motion.div
-                      key={answerId}
-                      initial={
-                        shouldReduceMotion ? false : { height: 0, opacity: 0 }
-                      }
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={transition}
-                      className="overflow-hidden"
-                    >
-                      <div
-                        id={answerId}
-                        className="border-t border-embassy/10 px-md pb-lg pt-sm sm:px-lg"
-                      >
-                        <p className="max-w-[65ch] text-body leading-7 text-ink-soft">
-                          {item.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ) : null}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+          {content.items.map((item, index) => (
+            <FaqItem
+              key={item.id}
+              item={item}
+              index={index}
+              activeIndex={activeIndex}
+              openLabel={content.openLabel}
+              closeLabel={content.closeLabel}
+              shouldReduceMotion={shouldReduceMotion}
+              transition={transition}
+              onToggle={() =>
+                setActiveIndex(activeIndex === index ? null : index)
+              }
+              onKeyDown={(event) => handleKeyDown(event, index)}
+              registerButton={(element) => {
+                buttonRefs.current[index] = element;
+              }}
+            />
+          ))}
         </motion.div>
       </div>
     </section>

@@ -12,7 +12,9 @@ import {
   FiSearch,
 } from "react-icons/fi";
 import { SITE_WHATSAPP } from "@/app/constants/site";
+import { revealTransition } from "@/app/helpers/transitions";
 import { useTranslation } from "@/app/hooks/useTranslations";
+import { StepItem } from "./stepItem";
 
 type PlatformStepKey = "request" | "screening" | "arrival" | "support";
 
@@ -33,11 +35,6 @@ export default function PlatformSection() {
   const t = useTranslation("platform");
   const shouldReduceMotion = useReducedMotion();
 
-  const revealTransition = (delay = 0) =>
-    shouldReduceMotion
-      ? { duration: 0 }
-      : { duration: 0.55, delay, ease: "easeOut" as const };
-
   return (
     <section
       id="why-us"
@@ -55,7 +52,7 @@ export default function PlatformSection() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={revealTransition()}
+          transition={revealTransition(shouldReduceMotion)}
         >
           <div className="mb-md flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
             <span className="text-court-gold" aria-hidden="true">
@@ -98,7 +95,7 @@ export default function PlatformSection() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={revealTransition(0.12)}
+          transition={revealTransition(shouldReduceMotion, 0.12)}
           className="relative rounded-lg border border-champagne-gilt/20 bg-chancery/80 p-md sm:p-lg"
         >
           <div className="flex items-start justify-between gap-md border-b border-champagne-gilt/15 pb-md">
@@ -123,47 +120,21 @@ export default function PlatformSection() {
               initial={{ scaleY: shouldReduceMotion ? 1 : 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={revealTransition(0.18)}
+              transition={revealTransition(shouldReduceMotion, 0.18)}
               className="absolute bottom-6 start-md top-14 w-px origin-top bg-court-gold/45"
               aria-hidden="true"
             />
 
             <div className="relative space-y-lg">
-              {PLATFORM_STEPS.map((step, index) => {
-                const copy = t.steps[step.key];
-                const Icon = step.icon;
-
-                return (
-                  <motion.div
-                    key={step.key}
-                    initial={shouldReduceMotion ? false : { opacity: 0, x: 18 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.25 }}
-                    transition={revealTransition(0.22 + index * 0.08)}
-                    className="relative flex gap-md"
-                  >
-                    <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-champagne-gilt/25 bg-chancery text-court-gold">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </div>
-                    <div className="min-w-0 pt-xxs">
-                      <div className="flex flex-wrap items-baseline gap-xs">
-                        <span className="text-label font-label tracking-[0.12em] text-champagne-gilt">
-                          {step.number}
-                        </span>
-                        <p className="text-label font-label uppercase tracking-[0.1em] text-court-gold">
-                          {copy.label}
-                        </p>
-                      </div>
-                      <h4 className="mt-xs font-title text-title font-semibold text-parchment">
-                        {copy.title}
-                      </h4>
-                      <p className="mt-xs max-w-[48ch] text-body leading-7 text-parchment/65">
-                        {copy.body}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+              {PLATFORM_STEPS.map((step, index) => (
+                <StepItem
+                  key={step.key}
+                  step={step}
+                  copy={t.steps[step.key]}
+                  shouldReduceMotion={shouldReduceMotion}
+                  transition={revealTransition(shouldReduceMotion, 0.22 + index * 0.08)}
+                />
+              ))}
             </div>
           </div>
 
