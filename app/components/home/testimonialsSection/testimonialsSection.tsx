@@ -1,47 +1,18 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { FiCheck, FiStar } from "react-icons/fi";
+import { FiCheck } from "react-icons/fi";
 import { TESTIMONIAL_CONTENT } from "@/app/constants/testimonials";
 import { useLocale } from "@/app/hooks/useLocale";
-
-interface StarsProps {
-  rating: number;
-  inline?: boolean;
-}
-
-function Stars({ rating, inline = false }: StarsProps) {
-  return (
-    <span
-      className={`flex items-center gap-xxs ${inline ? "text-court-gold" : ""}`}
-      role="img"
-      aria-label={`${rating} / 5`}
-    >
-      {Array.from({ length: 5 }, (_, index) => (
-        <FiStar
-          key={index}
-          aria-hidden="true"
-          className={
-            index < rating
-              ? "h-3.5 w-3.5 fill-current text-court-gold"
-              : "h-3.5 w-3.5 text-embassy/20"
-          }
-        />
-      ))}
-    </span>
-  );
-}
+import { revealTransition } from "@/app/helpers/transitions";
+import { Stars } from "./stars";
+import { TestimonialCard } from "./testimonialCard";
 
 export default function TestimonialsSection() {
   const locale = useLocale() ?? "ar";
   const content = TESTIMONIAL_CONTENT[locale];
   const shouldReduceMotion = useReducedMotion();
   const [featured, ...rest] = content.items;
-
-  const revealTransition = (delay = 0) =>
-    shouldReduceMotion
-      ? { duration: 0 }
-      : { duration: 0.55, delay, ease: "easeOut" as const };
 
   return (
     <section
@@ -55,7 +26,7 @@ export default function TestimonialsSection() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={revealTransition()}
+          transition={revealTransition(shouldReduceMotion)}
           className="flex flex-wrap items-end justify-between gap-lg"
         >
           <div className="max-w-184">
@@ -107,7 +78,7 @@ export default function TestimonialsSection() {
             initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={revealTransition(0.1)}
+            transition={revealTransition(shouldReduceMotion, 0.1)}
             className="relative flex flex-col overflow-hidden rounded-md border border-embassy/10 bg-parchment p-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:p-xl"
           >
             <span
@@ -147,44 +118,12 @@ export default function TestimonialsSection() {
 
           <div className="grid gap-sm sm:grid-cols-2">
             {rest.map((item, index) => (
-              <motion.article
+              <TestimonialCard
                 key={item.id}
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={shouldReduceMotion ? undefined : { y: -2 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={revealTransition(0.08 + index * 0.06)}
-                className="group relative flex min-h-0 flex-col overflow-hidden rounded-md border border-embassy/10 bg-marble p-md transition-[border-color,box-shadow] duration-150 ease-out hover:border-court-gold/45 hover:shadow-float"
-              >
-                <span
-                  className="pointer-events-none absolute -top-3 start-2 select-none font-headline text-[5rem] font-bold leading-[0.8] text-embassy/[0.04]"
-                  aria-hidden="true"
-                >
-                  {item.initial}
-                </span>
-
-                <div className="relative flex items-center justify-between gap-xs">
-                  <Stars rating={item.rating} />
-                  <span className="min-w-0 truncate text-label font-label uppercase tracking-[0.08em] text-ink-soft">
-                    {item.service}
-                  </span>
-                </div>
-
-                <blockquote className="relative mt-sm flex-1 text-body leading-7 text-ink-soft">
-                  {item.quote}
-                </blockquote>
-
-                <footer className="relative mt-md border-t border-embassy/10 pt-sm">
-                  <p className="truncate font-title text-title font-semibold leading-tight text-embassy">
-                    {item.name}
-                  </p>
-                  <p className="mt-xxs truncate text-label text-ink-soft">
-                    {item.role}
-                    <span className="mx-xs inline-block h-px w-4 translate-y-[-3px] bg-embassy/20" aria-hidden="true" />
-                    {item.location}
-                  </p>
-                </footer>
-              </motion.article>
+                item={item}
+                shouldReduceMotion={shouldReduceMotion}
+                transition={revealTransition(shouldReduceMotion, 0.08 + index * 0.06)}
+              />
             ))}
           </div>
         </div>

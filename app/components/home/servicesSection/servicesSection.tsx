@@ -1,12 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import type { IconType } from "react-icons";
 import {
-  FiArrowUpRight,
   FiCalendar,
   FiChevronLeft,
   FiChevronRight,
@@ -17,7 +14,10 @@ import {
   FiSun,
 } from "react-icons/fi";
 import { useLocale } from "@/app/hooks/useLocale";
+import { revealTransition } from "@/app/helpers/transitions";
 import { useTranslation } from "@/app/hooks/useTranslations";
+import CategoryCard from "./categoryCard";
+import ServiceCard from "./serviceCard";
 
 type ServiceKey =
   | "hourlyRental"
@@ -26,7 +26,7 @@ type ServiceKey =
   | "monthlyRental"
   | "globalWorkforce";
 
-interface ServiceItem {
+export interface ServiceItem {
   key: ServiceKey;
   icon: IconType;
 }
@@ -41,7 +41,7 @@ const SERVICES: readonly ServiceItem[] = [
 
 type CategoryKey = "recruitment" | "transfer" | "rental";
 
-interface CategoryItem {
+export interface CategoryItem {
   key: CategoryKey;
   image: string;
   href: string;
@@ -82,9 +82,7 @@ export default function ServicesSection() {
     );
   };
 
-  const transition = shouldReduceMotion
-    ? { duration: 0 }
-    : { duration: 0.55, ease: "easeOut" as const };
+  const transition = revealTransition(shouldReduceMotion);
 
   const panelEnter = shouldReduceMotion
     ? false
@@ -134,7 +132,7 @@ export default function ServicesSection() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.08, ease: "easeOut" }}
+          transition={revealTransition(shouldReduceMotion, 0.08, 0.6)}
           className="min-w-0 w-full flex-1/2"
         >
           <div className="relative mt-md overflow-hidden rounded-lg border border-embassy/15 bg-marble outline-none sm:mt-0">
@@ -148,74 +146,16 @@ export default function ServicesSection() {
                   transition={panelTransition}
                   className="grid min-h-0 gap-md p-sm sm:p-xl"
                 >
-                  {CATEGORIES.map((item, index) => {
-                    const copy = t.categories[item.key];
-                    const isRental = item.key === "rental";
-
-                    const cardClass =
-                      "group flex flex-col overflow-hidden rounded-md border border-embassy/15 bg-marble transition-[border-color,box-shadow,transform] duration-150 ease-out hover:-translate-y-0.5 hover:border-court-gold/45 hover:shadow-float focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:flex-row";
-
-                    const inner = (
-                      <>
-                        <span className="relative aspect-[3/2] shrink-0 overflow-hidden border-b border-embassy/15 sm:aspect-auto sm:w-[38%] sm:self-stretch sm:border-b-0 sm:border-e">
-                          <Image
-                            src={item.image}
-                            alt={'service-image'}
-                            fill
-                            preload={index === 0}
-                            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 45vw, 100vw"
-                            className="object-cover"
-                          />
-                        </span>
-
-                        <span className="flex min-w-0 flex-1 flex-col p-md sm:p-lg">
-                          <h3 className="font-headline text-title font-bold leading-tight text-embassy">
-                            {copy.title}
-                          </h3>
-                          <p className="mt-xs text-body leading-6 text-ink-soft">
-                            {copy.description}
-                          </p>
-
-                          <span className="mt-auto flex items-center gap-xs pt-lg">
-                            <span className="text-label font-label uppercase tracking-[0.1em] text-embassy transition-colors duration-200 group-hover:text-court-gold">
-                              {copy.action}
-                            </span>
-                            <span
-                              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-embassy/20 text-embassy transition-colors duration-200 group-hover:border-court-gold group-hover:text-court-gold"
-                              aria-hidden="true"
-                            >
-                              {isRental ? (
-                                <FiChevronRight className="h-5 w-5 rtl:scale-x-[-1]" />
-                              ) : (
-                                <FiArrowUpRight className="h-4 w-4 rtl:scale-x-[-1]" />
-                              )}
-                            </span>
-                          </span>
-                        </span>
-                      </>
-                    );
-
-                    return isRental ? (
-                      <button
-                        key={item.key}
-                        type="button"
-                        aria-expanded={false}
-                        aria-controls="services-rental-slider"
-                        onClick={() => setView("slider")}
-                        className={`${cardClass} cursor-pointer text-start`}
-                      >
-                        {inner}
-                      </button>
-                    ) : (
-                      <Link
-                        key={item.key}
-                        href={`/${locale}/${item.href}`}
-                        className={cardClass}
-                      >
-                        {inner}
-                      </Link>
-                    );
-                  })}
+                  {CATEGORIES.map((item, index) => (
+                    <CategoryCard
+                      key={item.key}
+                      item={item}
+                      index={index}
+                      copy={t.categories[item.key]}
+                      locale={locale}
+                      onOpenSlider={() => setView("slider")}
+                    />
+                  ))}
                 </motion.div>
               ) : (
                 <motion.div
@@ -261,63 +201,20 @@ export default function ServicesSection() {
                         className="relative grid gap-md p-sm sm:grid-cols-2 sm:p-xl"
                       >
                         {visibleItems.map((item, offset) => {
-                          const copy = t.items[item.key];
-                          const Icon = item.icon;
-                          const itemIndex = (activeIndex + offset) % SERVICES.length;
+                          const itemIndex =
+                            (activeIndex + offset) % SERVICES.length;
 
                           return (
-                            <article
+                            <ServiceCard
                               key={item.key}
-                              className={`flex min-h-0 flex-col rounded-md border border-embassy/15 bg-parchment p-md sm:min-h-[28rem] sm:p-lg ${
-                                offset === 1 ? "hidden sm:flex" : ""
-                              }`}
-                            >
-                              <div className="flex items-start justify-between gap-md border-b border-embassy/15 pb-md">
-                                <div>
-                                  <p className="text-label font-label uppercase tracking-[0.12em] text-ink-soft">
-                                    {t.serviceLabel}
-                                  </p>
-                                  <p className="mt-xs text-label text-ink-soft/75">
-                                    {String(itemIndex + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}
-                                  </p>
-                                </div>
-                                <span
-                                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-court-gold/45 bg-embassy text-court-gold"
-                                  aria-hidden="true"
-                                >
-                                  <Icon className="h-5 w-5" />
-                                </span>
-                              </div>
-
-                              <div className="mt-lg">
-                                <h3 className="font-headline text-headline font-bold leading-tight text-embassy">
-                                  {copy.title}
-                                </h3>
-                                <p className="mt-sm text-body leading-7 text-ink-soft">
-                                  {copy.description}
-                                </p>
-                              </div>
-
-                              <div className="mt-lg border-s-2 border-court-gold ps-sm">
-                                <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
-                                  {t.detailLabel}
-                                </p>
-                                <p className="mt-xs text-label leading-6 text-embassy">
-                                  {copy.detail}
-                                </p>
-                              </div>
-
-                              <Link
-                                href={`/${locale}/request?package=household&service=${item.key}`}
-                                className="group mt-auto inline-flex min-h-12 w-fit items-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
-                              >
-                                <span>{t.requestService}</span>
-                                <FiArrowUpRight
-                                  className={`h-4 w-4 rtl:scale-x-[-1] ${shouldReduceMotion ? "" : "transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"}`}
-                                  aria-hidden="true"
-                                />
-                              </Link>
-                            </article>
+                              item={item}
+                              t={t}
+                              itemIndex={itemIndex}
+                              offset={offset}
+                              total={SERVICES.length}
+                              locale={locale}
+                              shouldReduceMotion={shouldReduceMotion}
+                            />
                           );
                         })}
 

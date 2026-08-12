@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard } from "swiper/modules";
 import "swiper/css";
 import { useLocale } from "@/app/hooks/useLocale";
+import { revealTransition } from "@/app/helpers/transitions";
 import { useTranslation } from "@/app/hooks/useTranslations";
+import LogoItem from "./logoItem";
 
 const GOVERNMENT_LOGOS = [
   {
@@ -57,11 +58,7 @@ export default function GovermentsLogos() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.55, ease: "easeOut" }
-          }
+          transition={revealTransition(shouldReduceMotion)}
           className="mx-auto flex flex-col items-center text-center"
         >
           <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
@@ -86,11 +83,7 @@ export default function GovermentsLogos() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.6, delay: 0.1, ease: "easeOut" }
-          }
+          transition={revealTransition(shouldReduceMotion, 0.1, 0.6)}
           className="mt-xl"
         >
           <Swiper
@@ -117,17 +110,12 @@ export default function GovermentsLogos() {
                 key={`${logo.id}-${index}`}
                 aria-hidden={index >= GOVERNMENT_LOGOS.length}
               >
-                <div className="flex h-24 w-36 items-center justify-center sm:h-28 sm:w-44 lg:h-36 lg:w-56">
-                  <Image
-                    src={logo.src}
-                    alt={`${t.logoAlt} ${t.logos[logo.id]}`}
-                    width={logo.width}
-                    height={logo.height}
-                    unoptimized
-                    decoding="async"
-                    className="max-h-full w-auto max-w-full select-none object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
-                  />
-                </div>
+                <LogoItem
+                  src={logo.src}
+                  alt={`${t.logoAlt} ${t.logos[logo.id]}`}
+                  width={logo.width}
+                  height={logo.height}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
