@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { FiArrowUpRight, FiCheck, FiMessageCircle } from "react-icons/fi";
 import { SITE_WHATSAPP } from "@/app/constants/site";
 import {
@@ -35,7 +35,7 @@ export default function RequestForm({
     t.whatsappMessage.replace("{route}", routeLabel),
   )}`;
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
@@ -74,9 +74,10 @@ export default function RequestForm({
       window.location.href = `https://wa.me/${SITE_WHATSAPP}?text=${encodeURIComponent(
         whatsappText,
       )}`;
-    } catch {
+    } catch (error) {
       setSubmitError(true);
       setIsSubmitting(false);
+      console.log(error);
     }
   };
 
@@ -84,9 +85,9 @@ export default function RequestForm({
     <section
       aria-labelledby="request-title"
       aria-label={t.ariaLabel}
-      className="flex pt-20 h-screen flex-col justify-center bg-parchment text-ink-deep"
+      className="flex min-h-svh flex-col justify-center bg-parchment pt-20 text-ink-deep"
     >
-      <div className="mx-auto grid w-full gap-xl px-sm py-xxl sm:px-md lg:grid-cols-[minmax(220px,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-xxl lg:px-xl">
+      <div className="mx-auto grid w-full gap-lg px-sm py-xxl sm:px-md lg:grid-cols-[minmax(260px,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-lg xl:gap-xxl lg:px-xl">
         <div className="lg:sticky lg:top-28">
           <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
             <span className="text-court-gold" aria-hidden="true">
@@ -199,7 +200,7 @@ export default function RequestForm({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex min-h-12 items-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
               >
                 <FiCheck className="h-4 w-4" aria-hidden="true" />
                 <span>{isSubmitting ? t.sending : t.submit}</span>
@@ -209,7 +210,7 @@ export default function RequestForm({
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center gap-xs rounded-md border border-embassy/20 px-md text-label font-semibold text-embassy transition-colors duration-200 hover:border-embassy hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-xs rounded-md border border-embassy/20 px-md text-label font-semibold text-embassy transition-colors duration-200 hover:border-embassy hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
               >
                 <FiMessageCircle className="h-4 w-4" aria-hidden="true" />
                 <span>{t.whatsappFallback}</span>

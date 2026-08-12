@@ -44,7 +44,9 @@ function isRateLimited(request: Request): number | null {
 
   if (rateLimitHits.size > RATE_LIMIT_MAX_KEYS) {
     for (const [key, timestamps] of rateLimitHits) {
-      if (timestamps.every((timestamp) => now - timestamp >= RATE_LIMIT_WINDOW_MS)) {
+      if (
+        timestamps.every((timestamp) => now - timestamp >= RATE_LIMIT_WINDOW_MS)
+      ) {
         rateLimitHits.delete(key);
       }
     }
@@ -100,10 +102,7 @@ export async function POST(request: Request) {
   try {
     payload = (await request.json()) as RequestFormPayload;
   } catch {
-    return NextResponse.json(
-      { error: "Invalid JSON body" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
   const { route, name, phone, message } = payload;
@@ -135,8 +134,13 @@ export async function POST(request: Request) {
   });
 
   if (error) {
+    console.error("Resend error:", error);
+
     return NextResponse.json(
-      { error: "Failed to send the request email" },
+      {
+        error: "Failed to send the request email",
+        details: error.message,
+      },
       { status: 500 },
     );
   }

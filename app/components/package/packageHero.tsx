@@ -63,7 +63,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto grid w-full min-h-screen grid-cols-1 grid-rows-[auto_auto_auto] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:grid-rows-[auto_minmax(0,1fr)]">
+      <div className="relative mx-auto grid w-full min-h-svh grid-cols-1 grid-rows-[auto_auto_auto] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:grid-rows-[auto_minmax(0,1fr)]">
         {/* ===== Navy apron — sits under the transparent navbar ===== */}
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0 }}
@@ -98,7 +98,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
 
         {/* ===== Light field — the letter, entered by a navy diagonal ===== */}
         <div
-          className="relative flex flex-col border-b border-embassy/10 bg-parchment px-sm pb-xl pt-20 text-ink-deep sm:px-md lg:border-b-0 lg:px-xl lg:pb-16 lg:pt-0 lg:[clip-path:polygon(0_0,calc(100%_-_9rem)_0,100%_100%,0_100%)] lg:rtl:[clip-path:polygon(100%_0,9rem_0,0_100%,100%_100%)]"
+          className="relative flex flex-col border-b border-embassy/10 bg-parchment px-sm pb-xl pt-16 text-ink-deep sm:px-md lg:border-b-0 lg:px-xl lg:pb-16 lg:pt-0 lg:[clip-path:polygon(0_0,calc(100%_-_9rem)_0,100%_100%,0_100%)] lg:rtl:[clip-path:polygon(100%_0,9rem_0,0_100%,100%_100%)]"
         >
           {/* Seam seal — the diamond stamped on the diagonal */}
           <motion.div
@@ -176,7 +176,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
             >
               <a
                 href="#request"
-                className="group inline-flex min-h-12 items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                className="group inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
               >
                 <span>{t.cta}</span>
                 <FiArrowUpRight
@@ -189,7 +189,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-xs rounded-md border border-ink-deep/15 px-md text-label font-semibold text-ink-soft transition-colors duration-200 hover:border-court-gold hover:text-ink-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-xs rounded-md border border-ink-deep/15 px-md text-label font-semibold text-ink-soft transition-colors duration-200 hover:border-court-gold hover:text-ink-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
               >
                 <FiMessageCircle className="h-4 w-4" aria-hidden="true" />
                 <span>{p.whatsappFallback}</span>
@@ -201,7 +201,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={reveal(0.3)}
-              className="mt-lg flex max- items-start gap-sm border border-embassy/15 bg-marble px-sm py-sm text-start"
+              className="mt-lg flex items-start gap-sm border border-embassy/15 bg-marble px-sm py-sm text-start"
             >
               <FiLock
                 className="mt-1 h-4 w-4 shrink-0 text-amendment"
@@ -235,7 +235,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
         </div>
 
         {/* ===== Navy field — the inclusions wall sits inside the diagonal ===== */}
-        <div className="flex flex-col bg-transparent px-sm pt-20 sm:px-md lg:col-start-2 lg:row-start-2 lg:px-16 lg:pt-0 lg:pb-16">
+        <div className="flex flex-col bg-transparent px-sm pt-xl pb-xl sm:px-md lg:col-start-2 lg:row-start-2 lg:px-16 lg:pt-0 lg:pb-16">
           <div className="flex flex-1 items-center lg:justify-center">
             <motion.aside
               initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}

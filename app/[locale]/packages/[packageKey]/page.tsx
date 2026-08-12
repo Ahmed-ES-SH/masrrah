@@ -68,7 +68,7 @@ export default async function PackageDetailsPage({
       <section
         id="request"
         aria-label="request"
-        className="scroll-mt-16 lg:scroll-mt-20"
+        className="scroll-mt-20"
       >
         <RequestForm initialPackage={packageKey} />
       </section>
