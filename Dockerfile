@@ -20,7 +20,7 @@ WORKDIR /app
 
 # Copy package-related files first to leverage Docker's caching mechanism
 
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* ./
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* pnpm-workspace.yaml .npmrc* ./
 
 # Install project dependencies with frozen lockfile for reproducible builds
 
@@ -32,7 +32,7 @@ RUN --mount=type=cache,target=/root/.npm \
     elif [ -f yarn.lock ]; then \
         corepack enable yarn && yarn install --frozen-lockfile --production=false; \
     elif [ -f pnpm-lock.yaml ]; then \
-        corepack enable pnpm && pnpm install --frozen-lockfile --allow-build=core-js,unrs-resolver; \
+        corepack enable pnpm && pnpm install --frozen-lockfile; \
     else \
         echo "No lockfile found." && exit 1; \
     fi
@@ -58,6 +58,11 @@ COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 
 ENV NODE_ENV=production
+
+# Build-time public env vars (inlined by Next.js during build)
+
+ARG NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 
 # Next.js collects completely anonymous telemetry data about general usage.
 
