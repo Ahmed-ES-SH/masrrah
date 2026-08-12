@@ -64,4 +64,4 @@ The site is containerized and self-hosted:
 - `docs/CI-CD.md` — CI/CD setup
 
 
-try CI/CD Action Version 1 
+try CI/CD Action Version 2
