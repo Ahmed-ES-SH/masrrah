@@ -113,12 +113,12 @@ export default function ServicesSection() {
         >
           <h2
             id="services-title"
-            className="max-w-[12ch] font-headline text-display font-bold leading-[1.08] text-embassy"
+            className="max-w-[12ch] bg-gradient-to-r from-court-gold via-amendment to-court-gold bg-clip-text font-headline text-display font-bold leading-[1.08] text-balance text-transparent drop-shadow-gold-glow"
           >
             {t.title}
           </h2>
 
-          <p className="mt-md max-w-[38ch] text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[38ch] text-title font-medium leading-8 text-ink-soft">
             {t.body}
           </p>
 

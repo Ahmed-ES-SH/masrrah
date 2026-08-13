@@ -18,13 +18,14 @@
   --color-amendment: #b8862e;
   --color-cerise: #b3403a;
 
-  --font-display: "Amiri", "Noto Naskh Arabic", Georgia, serif;
-  --font-headline: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  --font-display: "Inter", "IBM Plex Sans Arabic", Georgia, serif;
+  --font-headline: "Inter", "IBM Plex Sans Arabic", Georgia, serif;
   --font-title: "Inter", "IBM Plex Sans Arabic", sans-serif;
   --font-body: "Inter", "IBM Plex Sans Arabic", sans-serif;
   --font-label: "Inter", "IBM Plex Sans Arabic", sans-serif;
 
   --text-display: clamp(1.75rem, 5vw, 3rem);
+  --text-hero-display: clamp(2.125rem, 5.6vw, 3.75rem);
   --text-headline: clamp(1.375rem, 2.8vw, 2.125rem);
   --text-title: clamp(1.125rem, 1.4vw, 1.5rem);
   --text-body: clamp(0.9375rem, 1vw, 1rem);
@@ -44,6 +45,12 @@
 
   --shadow-float: 0 8px 24px rgba(11, 27, 58, 0.12);
   --shadow-apparatus: 0 6px 16px rgba(11, 27, 58, 0.25);
+
+  --drop-shadow-hero-title:
+    0 2px 20px rgba(11, 27, 58, 0.6), 0 1px 2px rgba(11, 27, 58, 0.85);
+  --drop-shadow-hero-copy: 0 1px 10px rgba(11, 27, 58, 0.6);
+  --drop-shadow-gold-glow:
+    0 1px 2px rgba(11, 27, 58, 0.5), 0 2px 14px rgba(184, 134, 46, 0.35);
 }
 
 @theme inline {
@@ -71,6 +78,7 @@
   --font-label: var(--font-label);
 
   --text-display: var(--text-display);
+  --text-hero-display: var(--text-hero-display);
   --text-headline: var(--text-headline);
   --text-title: var(--text-title);
   --text-body: var(--text-body);
@@ -90,6 +98,18 @@
 
   --shadow-float: var(--shadow-float);
   --shadow-apparatus: var(--shadow-apparatus);
+
+  --drop-shadow-hero-title: var(--drop-shadow-hero-title);
+  --drop-shadow-hero-copy: var(--drop-shadow-hero-copy);
+  --drop-shadow-gold-glow: var(--drop-shadow-gold-glow);
+}
+
+html[lang="ar"] {
+  --font-display: var(--font-thmanyah-serif-display), "IBM Plex Sans Arabic", Georgia, serif;
+  --font-headline: var(--font-thmanyah-serif-display), "IBM Plex Sans Arabic", Georgia, serif;
+  --font-title: var(--font-thmanyah-serif-text), "IBM Plex Sans Arabic", Georgia, serif;
+  --font-body: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
+  --font-label: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
 }
 
 html {

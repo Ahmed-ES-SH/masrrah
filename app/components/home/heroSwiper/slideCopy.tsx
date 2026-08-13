@@ -12,7 +12,8 @@ const PRIMARY_CTA_CLASSES = `group inline-flex min-h-12 flex-1 items-center just
 
 const SECONDARY_CTA_CLASSES = `inline-flex min-h-12 whitespace-nowrap flex-1 items-center justify-center rounded-md border border-champagne-gilt/35 px-md text-title font-semibold text-parchment hover:border-champagne-gilt hover:bg-chancery/75 ${CTA_FOCUS_CLASSES}`;
 
-export type HeroTranslations = (typeof import("@/app/translations/ar.json"))["hero"];
+export type HeroTranslations =
+  (typeof import("@/app/translations/ar.json"))["hero"];
 type SlideCopyData = HeroTranslations["slides"][HeroSlideId];
 
 export function SlideCopy({
@@ -40,18 +41,23 @@ export function SlideCopy({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: reducedMotion ? 0 : -12 }}
           transition={transition}
-          className="w-full max-w-[640px] border-s-2 border-court-gold ps-md sm:ps-lg"
+          className="relative w-full max-w-[640px] border-s-2 border-court-gold ps-md sm:ps-lg"
         >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-8 -z-10 rounded-lg bg-chancery/60 blur-3xl"
+          />
+
           <div className="mb-md flex items-center gap-sm text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
             <span className="h-px w-8 bg-court-gold" aria-hidden="true" />
             <span>{copy.eyebrow}</span>
           </div>
 
-          <h1 className="max-w-[20rem] font-headline text-display font-bold leading-[1.15] text-balance text-parchment sm:max-w-[26rem]">
+          <h1 className="max-w-3xl bg-gradient-to-r from-court-gold via-champagne-gilt to-gilded-light bg-clip-text font-headline text-hero-display font-bold leading-[1.15] text-balance text-transparent drop-shadow-hero-title sm:max-w-[30rem]">
             {copy.headline}
           </h1>
 
-          <p className="mt-md max-w-[50ch] text-body leading-8 text-parchment/80 sm:max-w-[48ch]">
+          <p className="mt-md max-w-[50ch] text-title font-medium leading-8 text-parchment/95 drop-shadow-hero-copy sm:max-w-[48ch]">
             {copy.body}
           </p>
 
