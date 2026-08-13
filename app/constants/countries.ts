@@ -4,7 +4,7 @@ export const RECRUITMENT_COUNTRIES = [
   { key: "kenya", code: "KE", region: "eastAfrica" },
   { key: "bangladesh", code: "BD", region: "southAsia" },
   { key: "philippines", code: "PH", region: "southeastAsia" },
-  { key: "indonesia", code: "ID", region: "southeastAsia" },
+  { key: "pakistan", code: "PK", region: "southAsia" },
 ] as const;
 
 export type RecruitmentCountryKey = (typeof RECRUITMENT_COUNTRIES)[number]["key"];

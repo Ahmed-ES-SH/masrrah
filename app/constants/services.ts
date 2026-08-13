@@ -50,7 +50,7 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
     icon: "home",
     packageKey: "household",
     featured: true,
-    corridors: ["sriLanka", "philippines", "bangladesh", "indonesia"],
+    corridors: ["sriLanka", "philippines", "bangladesh", "pakistan"],
     copy: {
       ar: {
         eyebrow: "للأسر",
@@ -146,7 +146,7 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
     slug: "nannies-and-home-care",
     icon: "heart",
     packageKey: "care",
-    corridors: ["philippines", "indonesia", "sriLanka"],
+    corridors: ["philippines", "pakistan", "sriLanka"],
     copy: {
       ar: {
         eyebrow: "رعاية منزلية",

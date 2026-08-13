@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiGlobe } from "react-icons/fi";
-import { BD, ET, ID, KE, LK, PH } from "country-flag-icons/react/3x2";
+import { BD, ET, KE, LK, PH, PK } from "country-flag-icons/react/3x2";
 import type { IconType } from "react-icons";
 import type en from "@/app/translations/en.json";
 import {
@@ -17,7 +17,7 @@ const COUNTRY_FLAGS: Record<string, typeof LK> = {
   KE,
   BD,
   PH,
-  ID,
+  PK,
 };
 
 const COUNTRY_MARKS: Record<RecruitmentCountryKey, IconType> = {
@@ -26,7 +26,7 @@ const COUNTRY_MARKS: Record<RecruitmentCountryKey, IconType> = {
   kenya: FiGlobe,
   bangladesh: FiGlobe,
   philippines: FiGlobe,
-  indonesia: FiGlobe,
+  pakistan: FiGlobe,
 };
 
 type CountriesCopy = typeof en["countries"];
