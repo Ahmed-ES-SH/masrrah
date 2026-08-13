@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { SITE_PHONE } from "@/app/constants/site";
+import { SITE_LICENSE_NUMBER, SITE_PHONE } from "@/app/constants/site";
 import { SOCIAL_LINKS } from "@/app/constants/social-links";
 import { useTranslation } from "@/app/hooks/useTranslations";
 import Image from "next/image";
@@ -62,68 +62,71 @@ export default function Navbar() {
             : "border-transparent top-2 bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-18 items-center justify-between gap-3 px-4 sm:gap-4 md:px-6 lg:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
-          {/* Start cluster — desktop links only (hidden on mobile so logo sits at the start) */}
-          <div className="hidden items-center gap-4 lg:flex lg:gap-6">
-            <nav className="flex items-center gap-8">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="group relative py-1.5 text-[0.9375rem] font-medium tracking-[0.01em] text-parchment transition-colors duration-150 ease-out hover:text-court-gold"
-                >
-                  {t.nav[link.key]}
-                  <span className="absolute inset-x-0 bottom-0 h-px origin-center scale-x-0 bg-court-gold transition-transform duration-150 ease-out group-hover:scale-x-100" />
-                </Link>
-              ))}
-            </nav>
+        <div className="mx-auto flex h-18 items-center justify-between gap-3 px-4 sm:gap-4 md:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:px-8">
+          {/* Start cluster — wordmark + license seal (desktop) or compact crest (mobile) */}
+          <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+            <div
+              aria-label={t.brandLabel}
+              className="flex shrink-0 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+            >
+              <motion.div
+                className="relative"
+                animate={{
+                  width: isSolid ? 64 : 84,
+                  height: isSolid ? 64 : 84,
+                }}
+                transition={
+                  shouldReduceMotion
+                    ? { duration: 0 }
+                    : { duration: 0.45, ease: "easeInOut" }
+                }
+              >
+                <AnimatePresence initial={false} mode="wait">
+                  <motion.div
+                    key={isSolid ? "small" : "full"}
+                    className="absolute inset-0"
+                    initial={
+                      shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }
+                    }
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={
+                      shouldReduceMotion
+                        ? { opacity: 0 }
+                        : { opacity: 0, scale: 0.8 }
+                    }
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <Link href={`/${locale}`}>
+                      <Image
+                        width={360}
+                        height={360}
+                        src={isSolid ? "/small-logo.webp" : "/logo.webp"}
+                        alt={t.brandLabel}
+                        className="h-full w-full object-contain"
+                      />
+                    </Link>
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
+            </div>
           </div>
 
-          {/* Center — the crest */}
-          <div
-            aria-label={t.brandLabel}
-            className="flex justify-self-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+          {/* Center — desktop links only (hidden on mobile so the wordmark sits at the start) */}
+          <nav
+            className="hidden items-center justify-center gap-8 lg:flex"
+            aria-label={t.menuLabel}
           >
-            <motion.div
-              className="relative"
-              animate={{
-                width: isSolid ? 64 : 96,
-                height: isSolid ? 64 : 96,
-              }}
-              transition={
-                shouldReduceMotion
-                  ? { duration: 0 }
-                  : { duration: 0.45, ease: "easeInOut" }
-              }
-            >
-              <AnimatePresence initial={false} mode="wait">
-                <motion.div
-                  key={isSolid ? "small" : "full"}
-                  className="absolute inset-0"
-                  initial={
-                    shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }
-                  }
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={
-                    shouldReduceMotion
-                      ? { opacity: 0 }
-                      : { opacity: 0, scale: 0.8 }
-                  }
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <Link href={`/${locale}`}>
-                    <Image
-                      width={360}
-                      height={360}
-                      src={isSolid ? "/small-logo.webp" : "/logo.webp"}
-                      alt={t.brandLabel}
-                      className="h-full lg:w-full w-14 object-contain"
-                    />
-                  </Link>
-                </motion.div>
-              </AnimatePresence>
-            </motion.div>
-          </div>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group relative py-1.5 text-[0.9375rem] font-medium tracking-[0.01em] text-parchment transition-colors duration-150 ease-out hover:text-court-gold"
+              >
+                {t.nav[link.key]}
+                <span className="absolute inset-x-0 bottom-0 h-px origin-center scale-x-0 bg-court-gold transition-transform duration-150 ease-out group-hover:scale-x-100" />
+              </Link>
+            ))}
+          </nav>
 
           {/* End cluster — logical end */}
           <div className="flex items-center justify-self-end gap-3.5 ">
@@ -190,7 +193,32 @@ export default function Navbar() {
         aria-hidden={!menuOpen}
         inert={!menuOpen}
       >
-        <div className="flex justify-start">
+        <div className="flex items-center justify-between gap-3">
+          <Link
+            href={`/${locale}`}
+            onClick={() => setMenuOpen(false)}
+            className="flex min-w-0 items-center gap-3"
+            aria-label={t.brandLabel}
+          >
+            <Image
+              width={160}
+              height={160}
+              src="/small-logo.webp"
+              alt=""
+              className="h-11 w-11 shrink-0 object-contain"
+            />
+            <span className="min-w-0">
+              <span className="block truncate font-title text-base font-semibold leading-none text-parchment">
+                {t.brand}
+              </span>
+              <span
+                dir="ltr"
+                className="mt-1.5 inline-flex items-center gap-1 rounded-full border border-champagne-gilt/30 px-2 py-0.5 text-[0.6875rem] font-bold tabular-nums leading-none text-court-gold"
+              >
+                {SITE_LICENSE_NUMBER}
+              </span>
+            </span>
+          </Link>
           <Suspense>
             <LanguageSwitcher />
           </Suspense>

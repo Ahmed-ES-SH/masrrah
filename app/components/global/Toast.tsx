@@ -82,7 +82,7 @@ export default function Toast({
               onClick={onClose}
               aria-label={closeButtonLabel ?? t.close}
               title={closeButtonLabel ?? t.close}
-              className="ms-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-parchment/60 transition-colors duration-200 hover:bg-parchment/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+              className="ms-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-parchment/80 transition-colors duration-200 hover:bg-parchment/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
             >
               <FiX className="h-4 w-4" aria-hidden="true" />
             </button>

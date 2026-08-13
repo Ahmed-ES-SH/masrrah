@@ -192,56 +192,6 @@ export const SERVICE_DETAILS: readonly ServiceDetailRecord[] = [
       },
     },
   },
-  {
-    slug: "business-recruitment",
-    icon: "briefcase",
-    packageKey: "business",
-    corridors: ["philippines", "ethiopia", "kenya"],
-    copy: {
-      ar: {
-        eyebrow: "للشركات",
-        title: "استقدام يساند احتياج منشأتك",
-        description:
-          "نستمع إلى الدور المطلوب والجدول التشغيلي والمستوى المطلوب، ثم نبني معك مساراً خاصاً ينتهي بموظف جاهز للعمل.",
-        clauses: [
-          "تحديد الدور والمؤهلات والجدول التشغيلي",
-          "إعداد وصف وظيفي وهيكل توظيف خاص بالمنشأة",
-          "مراجعة العقود وفق أنظمة العمل",
-          "التحقق من المؤهلات وسجل الموظف",
-          "ترتيب الوصول والتهيئة لبدء العمل",
-          "متابعة دورية بعد بدء الموظف",
-        ],
-        suitedFor: [
-          "منشآت تعرف الدور المطلوب وتحتاج قوة عاملة جاهزة",
-          "فرق تشغيلية في طور التوسع",
-          "أدوار تحتاج مؤهلات ووثائق محددة",
-        ],
-        outcome:
-          "يستلم فريقك موظفاً جاهزاً: عقده واضح، وتهيئته مكتملة، والمتابعة مستمرة.",
-      },
-      en: {
-        eyebrow: "For businesses",
-        title: "Recruitment for your operating needs",
-        description:
-          "We take the role, the operating timeline, and the level you need, and build a private recruitment path that ends in a work-ready hire.",
-        clauses: [
-          "Role, qualifications, and operating timeline defined",
-          "A job profile and private presentation structure prepared",
-          "Contracts reviewed against labor regulations",
-          "Qualifications and work record verified",
-          "Arrival and onboarding arranged",
-          "Ongoing follow-up after the hire starts",
-        ],
-        suitedFor: [
-          "Companies with a defined role to fill",
-          "Operating teams preparing to expand",
-          "Roles with specific qualifications or documentation",
-        ],
-        outcome:
-          "Your team receives a work-ready hire: contract clear, onboarding complete, follow-up ongoing.",
-      },
-    },
-  },
 ] as const;
 
 export function getServiceDetail(slug: string) {

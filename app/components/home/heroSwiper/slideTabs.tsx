@@ -33,7 +33,7 @@ export function SlideTabs({
             aria-controls="hero-slide-copy"
             aria-label={copy.eyebrow}
             onClick={() => onSelect(index)}
-            className="group relative flex min-h-11 items-center gap-xs px-xs text-start text-label text-parchment/60 transition-colors duration-200 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne-gilt sm:min-w-[122px] sm:px-sm"
+            className="group relative flex min-h-11 items-center gap-xs px-xs text-start text-label text-parchment/80 transition-colors duration-200 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne-gilt sm:min-w-[122px] sm:px-sm"
           >
             {isActive && (
               <motion.span
@@ -48,7 +48,7 @@ export function SlideTabs({
               aria-hidden="true"
             />
             <span
-              className={`font-headline text-base font-bold leading-none sm:hidden ${isActive ? "text-court-gold" : "text-parchment/60"}`}
+              className={`font-headline text-base font-bold leading-none sm:hidden ${isActive ? "text-court-gold" : "text-parchment/80"}`}
               aria-hidden="true"
             >
               {String(index + 1).padStart(2, "0")}

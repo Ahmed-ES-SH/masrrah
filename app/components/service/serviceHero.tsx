@@ -79,8 +79,8 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             <span>{t.back}</span>
           </Link>
 
-          <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-parchment/55">
-            <span className="text-court-gold" aria-hidden="true">
+          <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-parchment/80">
+            <span className="text-champagne-gilt" aria-hidden="true">
               ◆
             </span>
             <span>{t.apronMeta}</span>
@@ -109,14 +109,14 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
               className="absolute -end-3 -top-3 z-10"
               aria-hidden="true"
             >
-              <span className="flex h-10 w-10 rotate-45 items-center justify-center rounded-sm border-2 border-court-gold bg-parchment shadow-float">
-                <span className="-rotate-45 text-lg leading-none text-court-gold">
+              <span className="flex h-10 w-10 rotate-45 items-center justify-center rounded-sm border-2 border-embassy/30 bg-parchment shadow-float">
+                <span className="-rotate-45 text-lg leading-none text-embassy">
                   ◆
                 </span>
               </span>
             </motion.span>
 
-            <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.12em] text-court-gold">
+            <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.12em] text-ink-soft">
               <span aria-hidden="true">◆</span>
               <span>{copy.eyebrow}</span>
             </p>
@@ -175,14 +175,14 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           >
             <div className="flex items-center gap-sm">
               <span
-                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-court-gold/60 bg-embassy text-court-gold"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/30 bg-embassy text-champagne-gilt"
                 aria-hidden="true"
               >
                 <Icon className="h-5 w-5" />
               </span>
               <div className="min-w-0">
                 <p className="text-label font-semibold">{t.ledgerLabel}</p>
-                <p className="mt-xxs text-label text-parchment/60">
+                <p className="mt-xxs text-label text-parchment/75">
                   {t.eyebrow}
                 </p>
               </div>
@@ -200,16 +200,16 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                   className="flex items-start gap-sm border-b border-champagne-gilt/10 py-sm last:border-b-0"
                 >
                   <span
-                    className="w-6 shrink-0 pt-1 text-label font-semibold tabular-nums text-court-gold"
+                    className="w-6 shrink-0 pt-1 text-label font-semibold tabular-nums text-champagne-gilt"
                     aria-hidden="true"
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span
-                    className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-court-gold/50 bg-embassy"
+                    className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/40 bg-embassy"
                     aria-hidden="true"
                   >
-                    <FiCheck className="h-3 w-3 text-court-gold" />
+                    <FiCheck className="h-3 w-3 text-champagne-gilt" />
                   </span>
                   <span className="text-body leading-6 text-parchment/85">
                     {clause}
@@ -219,7 +219,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             </ul>
 
             <div className="mt-md border-t border-champagne-gilt/15 pt-md">
-              <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt/70">
+              <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt/85">
                 {t.suitedForLabel}
               </p>
               <ul className="mt-sm space-y-xs">
@@ -229,7 +229,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                     className="flex items-start gap-sm text-body leading-6 text-parchment/80"
                   >
                     <span
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 bg-court-gold/70"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 bg-champagne-gilt/70"
                       aria-hidden="true"
                     />
                     <span>{line}</span>
@@ -239,7 +239,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             </div>
 
             <div className="mt-md border-t border-champagne-gilt/15 pt-md">
-              <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt/70">
+              <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt/85">
                 {t.corridorLabel}
               </p>
               <ul className="mt-sm flex flex-wrap gap-xs">
@@ -252,7 +252,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-sm text-label leading-5 text-parchment/55">
+              <p className="mt-sm text-label leading-5 text-parchment/80">
                 {t.corridorNote}
               </p>
             </div>
@@ -269,7 +269,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           <a
             href="#request"
             aria-label={t.scrollAria}
-            className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-parchment/60 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+            className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-parchment/80 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
           >
             <span className="text-label uppercase tracking-[0.14em]">
               {t.scrollHint}
@@ -292,7 +292,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
               {t.factsRecordLabel}
             </p>
-            <p className="text-title font-semibold tabular-nums text-court-gold">
+            <p className="text-title font-semibold tabular-nums text-embassy">
               {String(copy.clauses.length).padStart(2, "0")}
             </p>
           </div>

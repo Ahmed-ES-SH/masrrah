@@ -64,18 +64,18 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
         initial: "و",
         title: "الأيام الأولى: كيف تبدأ علاقة عمل سليمة",
         excerpt:
-          "من التعريف بالمنزل إلى جدول العمل اليومي — خطوات صغيرة تجعل الموظف الجديد يبدأ بداية ثابتة بدل الحيرة.",
+          "من التعريف بالمنزل إلى جدول العمل اليومي — خطوات صغيرة تجعل العاملة المنزلية تبدأ بداية ثابتة بدل الحيرة.",
       },
       {
-        id: "company-first-hire",
-        slug: "company-first-hire",
-        category: "للشركات",
+        id: "household-first-hire",
+        slug: "household-first-hire",
+        category: "للأسر",
         date: "22 يوليو 2026",
         readTime: "7 دقائق قراءة",
         initial: "أ",
-        title: "أول موظف لشركتك: من احتياج العقد إلى وصوله",
+        title: "أول استقدام لأسرتك: من تحديد الاحتياج إلى الوصول",
         excerpt:
-          "مهما كانت الشركة صغيرة، الموظف القادم يبقى سنوات. اعرف ماذا تراجع قبل التوقيع، وكيف تخطط لإقامته من اليوم الأول.",
+          "قبل بدء الاستقدام، من المهم تحديد احتياج أسرتك بوضوح. تعرف على ما تراجعه قبل التعاقد، وكيف تستعد لوصول العاملة المنزلية من اليوم الأول.",
       },
       {
         id: "questions-households",
@@ -86,7 +86,7 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
         initial: "س",
         title: "أسئلة تطرحها كل أسرة قبل الاستقدام",
         excerpt:
-          "نطاق العمل، والمدة المتوقعة، وماذا لو تغيّر الاحتياج — أسئلة نناقشها معك قبل أن تبدأ رحلتك.",
+          "نطاق العمل، والمدة المتوقعة، وماذا لو تغيّر الاحتياج — أسئلة نناقشها معك قبل أن تبدأ رحلة الاستقدام.",
       },
       {
         id: "contract-reading",
@@ -101,6 +101,7 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
       },
     ],
   },
+
   en: {
     ariaLabel: "Masarrah HR journal",
     eyebrow: "Masarrah HR Journal",
@@ -140,18 +141,18 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
         initial: "و",
         title: "The First Days: Starting a Sound Working Relationship",
         excerpt:
-          "From introducing your home to the shape of a normal day — small steps that let a new worker begin from a steady place instead of guesswork.",
+          "From introducing your home to the shape of a normal day — small steps that help a domestic worker start with clarity instead of guesswork.",
       },
       {
-        id: "company-first-hire",
-        slug: "company-first-hire",
-        category: "Companies",
+        id: "household-first-hire",
+        slug: "household-first-hire",
+        category: "Households",
         date: "Jul 22, 2026",
         readTime: "7 min read",
         initial: "أ",
-        title: "Your Company's First Hire: From Contract Need to Arrival",
+        title: "Your First Recruitment: From Household Needs to Arrival",
         excerpt:
-          "However small the company, the coming worker stays for years. Know what to review before signing, and how to plan for them from day one.",
+          "Before starting the recruitment process, it helps to define your household's needs clearly. Know what to review before signing and how to prepare for the domestic worker's arrival.",
       },
       {
         id: "questions-households",
@@ -160,9 +161,9 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
         date: "Jul 15, 2026",
         readTime: "5 min read",
         initial: "س",
-        title: "Questions Every Household Asks Before Hiring",
+        title: "Questions Every Household Asks Before Recruitment",
         excerpt:
-          "The scope of work, the expected timing, and what happens if the need changes — the questions we walk through with you before you begin.",
+          "The scope of work, the expected timing, and what happens if the need changes — the questions we walk through with you before you begin your recruitment journey.",
       },
       {
         id: "contract-reading",
@@ -171,9 +172,9 @@ export const BLOG_CONTENT: Record<BlogLocale, BlogContent> = {
         date: "Jul 8, 2026",
         readTime: "6 min read",
         initial: "ع",
-        title: "Reading the Contract Before Signing: The Clauses That Decide",
+        title: "Reading the Contract Before Signing: The Clauses That Matter",
         excerpt:
-          "Small clauses rarely read aloud but decisive for a working relationship. Know what they mean before you put your signature down.",
+          "Small clauses are easy to overlook but can shape the working relationship. Know what they mean before you sign.",
       },
     ],
   },

@@ -16,7 +16,6 @@
     ],
     "ogImageAlt": "Masarah — licensed Saudi HR recruitment company for domestic and commercial staff"
   },
-
   "header": {
     "title": "Masarrah HR",
     "tagline": "HR Recruitment",
@@ -67,13 +66,18 @@
       "success": "You are on the list. We will be in touch with the next brief."
     },
     "socials": {
-      "heading": "Follow Masarrah HR",
+      "heading": "Find us in",
       "whatsapp": "Masarrah HR on WhatsApp",
       "instagram": "Masarrah HR on Instagram",
       "x": "Masarrah HR on X",
+      "facebook": "Masarrah HR on Facebook",
       "snapchat": "Masarrah HR on Snapchat",
       "tiktok": "Masarrah HR on TikTok",
       "linkedin": "Masarrah HR on LinkedIn"
+    },
+    "map": {
+      "heading": "Find Us On The Map",
+      "open": "Open location on Google Maps"
     },
     "legal": {
       "rights": "All rights reserved",
@@ -116,6 +120,48 @@
       }
     }
   },
+  "whoUs": {
+    "ariaLabel": "About Masarrah HR",
+    "eyebrow": "About Masarrah HR",
+    "title": "Elevating HR management through an integrated workforce service.",
+    "introduction": "At Masarrah HR, we work to advance human-resources management in the Kingdom by providing workforce services for individuals and meeting local-market needs through an integrated system built around our clients.",
+    "commitmentLabel": "Our commitment",
+    "commitment": "We meet the aspirations of our clients in the Kingdom through a skilled, experienced workforce, with a focus on sustainable growth.",
+    "charterLabel": "The Masarrah HR charter",
+    "about": "We provide professional workers with advanced skills and innovative human-resources strategies across multiple fields, so we can deliver the best service to our clients.",
+    "vision": {
+      "label": "Our vision",
+      "body": "To be the preferred choice for providing skilled, experienced people across every specialty, supporting Saudi Arabia's social and economic goals."
+    },
+    "mission": {
+      "label": "Our mission",
+      "body": "To meet our clients' aspirations with highly skilled, experienced workforce services, while focusing on sustainable growth."
+    },
+    "valuesTitle": "Our working values",
+    "valuesIntroduction": "The principles that guide how we work with our team, partners, and clients.",
+    "values": {
+      "teamwork": {
+        "title": "Working as one team",
+        "body": "We believe collective collaboration achieves more than any one of us can alone, so we work together toward shared goals."
+      },
+      "foresight": {
+        "title": "Forward-looking",
+        "body": "We attract ambitious people and encourage strategic thinking and future planning to keep moving forward and growing."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "body": "We meet and exceed expectations, honour agreed timelines, and deliver the outcomes we set out to achieve."
+      },
+      "passion": {
+        "title": "Passion",
+        "body": "Our deep belief in the company's vision gives our work its energy and helps us deliver distinctive results."
+      },
+      "alignment": {
+        "title": "Alignment",
+        "body": "We align our operating model and resources with stakeholder interests, using our varied experience to create distinctive value."
+      }
+    }
+  },
   "navbar": {
     "brand": "Masarrah HR",
     "brandSub": "مسرة إتش أر للاستقدام",
@@ -137,7 +183,11 @@
       "x": "X",
       "snapchat": "Snapchat",
       "tiktok": "TikTok",
-      "linkedin": "LinkedIn"
+      "linkedin": "LinkedIn",
+      "facebook": "facebook"
+    },
+    "license": {
+      "label": "Recruitment License"
     }
   },
   "goverments": {
@@ -150,7 +200,7 @@
       "musaned": "Musaned",
       "ministryOfForeignAffairs": "the Ministry of Foreign Affairs",
       "ministryOfInterior": "the Ministry of Interior",
-      "ministryOfLabor": "the Ministry of Labor and Development"
+      "ministryOfHumanResources": "the Ministry of Human Resources and Social Development"
     }
   },
   "platform": {
@@ -167,24 +217,24 @@
     },
     "steps": {
       "request": {
-        "label": "Request",
-        "title": "Start with the need, not a catalogue",
-        "body": "Tell us about your home or business, the role you need, and the timing that works for you."
+        "label": "Send",
+        "title": "Send your request",
+        "body": "Tell us about your home, the role you need, and the timing that suits you — in two minutes."
       },
       "screening": {
-        "label": "Review",
-        "title": "Requirements become a clear brief",
-        "body": "Our team reviews the details with you and explains the next requirements before any commitment."
+        "label": "Pricing",
+        "title": "We review and set the price",
+        "body": "Our team reviews your request and sends you the full cost and expected timeline, with no commitment."
       },
       "arrival": {
-        "label": "Arrival",
-        "title": "A documented route to the Kingdom",
-        "body": "We keep the recruitment path organized from selection and contracts through the worker’s arrival."
+        "label": "Documentation",
+        "title": "Official documentation, handled",
+        "body": "We arrange the visa, contract, and government procedures in full on your behalf."
       },
       "support": {
         "label": "Support",
-        "title": "Follow-up that continues after arrival",
-        "body": "The relationship stays open for the practical questions that help both sides settle with confidence."
+        "title": "The worker arrives — and we stay with you",
+        "body": "Ongoing support for the first month after arrival for any question or adjustment."
       }
     }
   },
@@ -363,46 +413,19 @@
           "Replacement support in the first year"
         ]
       },
-      "business": {
-        "label": "Business",
-        "shortDescription": "Workforce recruitment",
-        "title": "Recruitment aligned with your operation",
-        "description": "Role, contracts, and onboarding on one line — with a dedicated consultant.",
-        "price": "12,900",
-        "features": [
-          "Dedicated consultant and hiring brief",
-          "Contracting and labor-law compliance",
-          "Visa, tickets, and onboarding handled",
-          "Role-specific screening before arrival",
-          "Ongoing follow-up after arrival"
-        ]
-      },
+
       "driver": {
         "label": "Driver",
         "shortDescription": "Private driver",
         "title": "A private driver, vetted and ready",
         "description": "Qualified drivers with clean records and valid licenses, ready to serve your household.",
-        "price": "13,900",
+        "price": "7990",
         "features": [
           "Clean driving record and valid license",
           "Route and schedule orientation before you start",
           "Visa, ticket, and residence handled",
           "Road-safety and city-familiarity checks",
           "Replacement support in the first months"
-        ]
-      },
-      "nurse": {
-        "label": "Nursing",
-        "shortDescription": "Home nursing",
-        "title": "Home nursing with certified care",
-        "description": "Licensed nurses for elder care and medical follow-up inside your home.",
-        "price": "15,900",
-        "features": [
-          "Licensed nurse with verified credentials",
-          "Elder-care and post-illness support plans",
-          "Visa, ticket, and residence handled",
-          "Medication and follow-up guidance",
-          "Replacement support in the first year"
         ]
       }
     }
@@ -444,5 +467,54 @@
     "factsRecordLabel": "Recorded commitments",
     "factsSuitedLabel": "You often request it for",
     "factsOutcomeLabel": "The outcome"
+  },
+  "recruitmentProcess": {
+    "ariaLabel": "The Masarrah HR recruitment process",
+    "eyebrow": "A documented route",
+    "title": "From shortlist to handover, your recruitment file moves with clarity.",
+    "body": "We keep every stage in one clear record, so you know what is complete and what comes next.",
+    "ledgerLabel": "Process record",
+    "ledgerNote": "6 carefully managed stages, from first selection to support after handover.",
+    "steps": {
+      "cvSelection": {
+        "label": "Matching",
+        "title": "We shortlist profiles that fit your needs",
+        "body": "We review each CV and experience record before presenting options suited to the role."
+      },
+      "fees": {
+        "label": "Payment",
+        "title": "Fees are paid through Musaned",
+        "body": "We coordinate your payment through Musaned as part of a clear, documented route."
+      },
+      "procedures": {
+        "label": "Procedures",
+        "title": "We complete the recruitment formalities",
+        "body": "Our team follows the worker’s official requirements through to completion."
+      },
+      "arrival": {
+        "label": "Arrival",
+        "title": "We follow the worker’s arrival at the airport",
+        "body": "We stay informed on the arrival journey and coordinate the next step with you."
+      },
+      "handover": {
+        "label": "Handover",
+        "title": "Collect the worker from our office",
+        "body": "We arrange the office handover and explain what you need for the next stage."
+      },
+      "warranty": {
+        "label": "Assurance",
+        "title": "Peace of mind for 2 months",
+        "body": "We remain available during the assurance period for anything that needs follow-up."
+      }
+    }
+  },
+  "licenseSection": {
+    "eyebrow": "Officially licensed",
+    "title": "A recruitment license approved by the official authority",
+    "body": "Masarah HR is a Saudi recruitment house licensed by the Ministry of Human Resources and Social Development, verifiable through Musaned.",
+    "licenseLabel": "Recruitment License",
+    "verifyLabel": "Verify via Musaned",
+    "verifyHref": "https://musaned.com.sa",
+    "ministryName": "Ministry of Human Resources and Social Development"
   }
 }

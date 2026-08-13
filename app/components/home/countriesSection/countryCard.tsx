@@ -9,7 +9,6 @@ import {
   RECRUITMENT_COUNTRIES,
   type RecruitmentCountryKey,
 } from "@/app/constants/countries";
-import { revealTransition } from "@/app/helpers/transitions";
 
 const COUNTRY_FLAGS: Record<string, typeof LK> = {
   LK,
@@ -29,19 +28,17 @@ const COUNTRY_MARKS: Record<RecruitmentCountryKey, IconType> = {
   pakistan: FiGlobe,
 };
 
-type CountriesCopy = typeof en["countries"];
+type CountriesCopy = (typeof en)["countries"];
 type RecruitmentCountry = (typeof RECRUITMENT_COUNTRIES)[number];
 
 interface CountryCardProps {
   country: RecruitmentCountry;
-  index: number;
   shouldReduceMotion: boolean | null;
   t: CountriesCopy;
 }
 
 export default function CountryCard({
   country,
-  index,
   shouldReduceMotion,
   t,
 }: CountryCardProps) {
@@ -55,8 +52,7 @@ export default function CountryCard({
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={shouldReduceMotion ? undefined : { y: -2 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={revealTransition(shouldReduceMotion, 0.08 + index * 0.05)}
-      className="group relative min-h-60 overflow-hidden rounded-md border border-embassy/10 bg-marble p-md transition-shadow duration-200 hover:shadow-float"
+      className="group relative min-h-60 overflow-hidden rounded-lg border border-embassy/10 bg-marble p-md transition-shadow duration-200 hover:shadow-float sm:p-lg"
     >
       <span
         className="pointer-events-none absolute -end-2 -top-5 font-title text-6xl font-semibold leading-none text-embassy/[0.035] sm:text-[6rem]"
@@ -66,10 +62,10 @@ export default function CountryCard({
       </span>
 
       <div className="relative flex items-start justify-between gap-sm">
-        <span className="flex h-12 w-16 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-embassy/10 bg-parchment p-1">
+        <span className="flex h-12 w-16 shrink-0 items-center justify-center overflow-hidden rounded-md border border-embassy/10 bg-parchment p-1">
           <Flag className="h-full w-full object-cover" aria-hidden="true" />
         </span>
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-embassy/10 text-court-gold transition-colors duration-200 group-hover:border-court-gold/60">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-embassy/20 text-embassy transition-colors duration-200 group-hover:border-embassy/40">
           <Mark className="h-4 w-4" aria-hidden="true" />
         </span>
       </div>
@@ -77,7 +73,7 @@ export default function CountryCard({
       <div className="relative mt-xl">
         <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.1em] text-ink-soft">
           <span>{country.code}</span>
-          <span className="h-px w-5 bg-court-gold/60" aria-hidden="true" />
+          <span className="h-px w-5 bg-embassy/25" aria-hidden="true" />
           <span>{t.regions[country.region]}</span>
         </div>
         <h3 className="mt-xs text-balance font-title text-title font-semibold leading-tight text-embassy">

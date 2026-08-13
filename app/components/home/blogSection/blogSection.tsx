@@ -5,14 +5,15 @@ import { useRef, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
-import "swiper/css";
 import { BLOG_CONTENT } from "@/app/constants/blog";
 import { revealTransition } from "@/app/helpers/transitions";
 import { useLocale } from "@/app/hooks/useLocale";
 import { useTranslation } from "@/app/hooks/useTranslations";
 import Toast from "@/app/components/global/Toast";
+import Section from "@/app/components/common/Section";
 import ArticleCard from "./articleCard";
+import type { Swiper as SwiperType } from "swiper";
+import "swiper/css";
 
 export default function BlogSection() {
   const locale = useLocale() ?? "ar";
@@ -31,13 +32,13 @@ export default function BlogSection() {
   };
 
   return (
-    <section
+    <Section
       id="journal"
       aria-labelledby="journal-title"
       aria-label={content.ariaLabel}
-      className="bg-embassy text-parchment"
+      className="bg-parchment text-ink-deep"
+      containerClassName="overflow-hidden"
     >
-      <div className="mx-auto w-full overflow-hidden px-sm py-xxl sm:px-md lg:px-xl">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,8 +47,8 @@ export default function BlogSection() {
           className="flex flex-wrap items-end justify-between gap-lg"
         >
           <div className="max-w-184">
-            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
-              <span className="text-court-gold" aria-hidden="true">
+            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
+              <span className="text-embassy" aria-hidden="true">
                 ◆
               </span>
               <span>{content.eyebrow}</span>
@@ -55,22 +56,22 @@ export default function BlogSection() {
 
             <h2
               id="journal-title"
-              className="mt-md max-w-[16ch] font-headline text-display font-bold leading-[1.12] text-parchment"
+              className="mt-md max-w-[16ch] font-headline text-display font-bold leading-[1.12] text-embassy"
             >
               {content.title}
             </h2>
 
-            <p className="mt-md max-w-[52ch] text-body leading-8 text-parchment/75">
+            <p className="mt-md max-w-[52ch] text-body leading-8 text-ink-soft">
               {content.body}
             </p>
           </div>
 
           <div className="flex items-center gap-sm">
             <p
-              className="me-sm text-label font-label tabular-nums tracking-[0.12em] text-parchment/55"
+              className="me-sm text-label font-label tabular-nums tracking-[0.12em] text-ink-soft"
               aria-live="polite"
             >
-              <span className="text-court-gold">
+              <span className="text-embassy">
                 {String(activeIndex + 1).padStart(2, "0")}
               </span>
               <span aria-hidden="true"> / </span>
@@ -81,7 +82,7 @@ export default function BlogSection() {
               type="button"
               aria-label={content.previous}
               onClick={() => moveTo(Math.max(activeIndex - 1, 0))}
-              className="flex h-11 w-11 items-center justify-center rounded-md border border-champagne-gilt/30 text-parchment transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+              className="flex h-11 w-11 items-center justify-center rounded-md border border-embassy/25 text-embassy transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
             >
               <FiChevronLeft
                 className="h-5 w-5 rtl:scale-x-[-1]"
@@ -92,7 +93,7 @@ export default function BlogSection() {
               type="button"
               aria-label={content.next}
               onClick={() => moveTo(Math.min(activeIndex + 1, total - 1))}
-              className="flex h-11 w-11 items-center justify-center rounded-md border border-champagne-gilt/30 text-parchment transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+              className="flex h-11 w-11 items-center justify-center rounded-md border border-embassy/25 text-embassy transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
             >
               <FiChevronRight
                 className="h-5 w-5 rtl:scale-x-[-1]"
@@ -107,7 +108,7 @@ export default function BlogSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={revealTransition(shouldReduceMotion, 0.1, 0.6)}
-          className="mt-xl"
+          className="mt-lg"
         >
           <Swiper
             key={locale}
@@ -139,7 +140,6 @@ export default function BlogSection() {
             ))}
           </Swiper>
         </motion.div>
-      </div>
 
       <Toast
         open={toastOpen}
@@ -147,6 +147,6 @@ export default function BlogSection() {
         title={toastContent.journalComingSoon.title}
         message={toastContent.journalComingSoon.message}
       />
-    </section>
+    </Section>
   );
 }

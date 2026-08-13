@@ -56,7 +56,7 @@ export default function FaqItem({
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={transition}
-          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border ${isOpen ? "border-court-gold/60 text-court-gold" : "border-embassy/15 text-embassy"}`}
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md border ${isOpen ? "border-embassy/30 text-embassy" : "border-embassy/15 text-embassy"}`}
           aria-hidden="true"
         >
           <FiChevronDown className="h-5 w-5" />

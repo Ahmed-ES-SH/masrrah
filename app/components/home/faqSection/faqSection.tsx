@@ -4,6 +4,7 @@ import { useRef, useState, type KeyboardEvent } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { FAQ_CONTENT } from "@/app/constants/faq";
 import { useLocale } from "@/app/hooks/useLocale";
+import Section from "@/app/components/common/Section";
 import FaqItem from "./faqItem";
 
 export default function FaqSection() {
@@ -53,13 +54,14 @@ export default function FaqSection() {
   };
 
   return (
-    <section
+    <Section
       id="faq"
       aria-labelledby="faq-title"
       aria-label={content.ariaLabel}
       className="scroll-mt-24 bg-parchment"
+      containerClassName="max-w-7xl"
     >
-      <div className="mx-auto grid w-full max-w-7xl gap-xl px-sm py-xxl sm:px-md lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-xxl lg:px-xl">
+      <div className="grid w-full gap-xl lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-xxl">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +70,7 @@ export default function FaqSection() {
           className="lg:sticky lg:top-28"
         >
           <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
-            <span className="text-court-gold" aria-hidden="true">
+            <span className="text-embassy" aria-hidden="true">
               ◆
             </span>
             <span>{content.eyebrow}</span>
@@ -114,6 +116,6 @@ export default function FaqSection() {
           ))}
         </motion.div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -24,7 +24,7 @@ export default function CategoryCard({
   const isRental = item.key === "rental";
 
   const cardClass =
-    "group flex flex-col overflow-hidden rounded-md border border-embassy/15 bg-marble transition-[border-color,box-shadow,transform] duration-150 ease-out hover:-translate-y-0.5 hover:border-court-gold/45 hover:shadow-float focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:flex-row";
+    "group flex flex-col overflow-hidden rounded-lg border border-embassy/15 bg-marble transition-[border-color,box-shadow,transform] duration-150 ease-out hover:-translate-y-0.5 hover:border-court-gold/45 hover:shadow-float focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:flex-row";
 
   const inner = (
     <>

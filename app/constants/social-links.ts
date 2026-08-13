@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import {
+  FaFacebook,
   FaInstagram,
   FaLinkedinIn,
   FaSnapchat,
@@ -13,9 +14,9 @@ export type SocialLinkKey =
   | "whatsapp"
   | "instagram"
   | "x"
+  | "facebook"
   | "snapchat"
-  | "tiktok"
-  | "linkedin";
+  | "tiktok";
 
 export interface SocialLink {
   key: SocialLinkKey;
@@ -36,19 +37,20 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
   },
   {
     key: "instagram",
-    href: "https://instagram.com/MasarrahHR",
+    href: "https://instagram.com/masarah_hr",
     icon: FaInstagram,
   },
-  { key: "x", href: "https://x.com/MasarrahHR", icon: FaXTwitter },
+  { key: "x", href: "https://x.com/masarah_hr", icon: FaXTwitter },
   {
     key: "snapchat",
-    href: "https://snapchat.com/add/MasarrahHR",
+    href: "https://snapchat.com/add/masarah_hr",
     icon: FaSnapchat,
   },
-  { key: "tiktok", href: "https://tiktok.com/@MasarrahHR", icon: FaTiktok },
   {
-    key: "linkedin",
-    href: "https://linkedin.com/company/MasarrahHR",
-    icon: FaLinkedinIn,
+    key: "facebook",
+    href: "https://www.facebook.com/profile.php?id=61592799287002",
+    icon: FaFacebook,
   },
+
+  { key: "tiktok", href: "https://tiktok.com/@masarah_hr", icon: FaTiktok },
 ];

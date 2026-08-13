@@ -16,6 +16,7 @@ import {
 import { useLocale } from "@/app/hooks/useLocale";
 import { revealTransition } from "@/app/helpers/transitions";
 import { useTranslation } from "@/app/hooks/useTranslations";
+import Section from "@/app/components/common/Section";
 import CategoryCard from "./categoryCard";
 import ServiceCard from "./serviceCard";
 
@@ -97,13 +98,13 @@ export default function ServicesSection() {
     : { duration: 0.32, ease: "easeOut" as const };
 
   return (
-    <section
+    <Section
       id="services"
       aria-labelledby="services-title"
-      className="relative scroll-mt-24 overflow-hidden bg-parchment text-ink-deep"
+      className="scroll-mt-24 bg-parchment text-ink-deep"
       aria-label={t.ariaLabel}
     >
-      <div className="mx-auto flex items-start max-xl:flex-col  w-full gap-xl px-sm py-xxl sm:px-md  lg:items-start lg:gap-xxl lg:px-xl">
+      <div className="flex w-full items-start gap-xl max-xl:flex-col lg:items-start lg:gap-xxl">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, x: 18 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -113,7 +114,7 @@ export default function ServicesSection() {
         >
           <h2
             id="services-title"
-            className="max-w-[12ch] bg-gradient-to-r from-court-gold via-amendment to-court-gold bg-clip-text font-headline text-display font-bold leading-[1.08] text-balance text-transparent drop-shadow-gold-glow"
+            className="max-w-[12ch] font-headline text-display font-bold leading-[1.08] text-balance text-embassy"
           >
             {t.title}
           </h2>
@@ -122,7 +123,7 @@ export default function ServicesSection() {
             {t.body}
           </p>
 
-          <div className="mt-xl flex items-center gap-xs text-label font-label text-court-gold">
+          <div className="mt-xl flex items-center gap-xs text-label font-label text-ink-soft">
             <FiCircle className="h-2.5 w-2.5 fill-current" aria-hidden="true" />
             <span>{t.catalogueNote}</span>
           </div>
@@ -258,6 +259,6 @@ export default function ServicesSection() {
           </div>
         </motion.div>
       </div>
-    </section>
+    </Section>
   );
 }

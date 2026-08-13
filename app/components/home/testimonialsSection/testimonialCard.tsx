@@ -20,7 +20,7 @@ export function TestimonialCard({
       whileHover={shouldReduceMotion ? undefined : { y: -2 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={transition}
-      className="group relative flex min-h-0 flex-col overflow-hidden rounded-md border border-embassy/10 bg-marble p-md transition-[border-color,box-shadow] duration-150 ease-out hover:border-court-gold/45 hover:shadow-float"
+      className="group relative flex min-h-0 flex-col overflow-hidden rounded-lg border border-embassy/10 bg-marble p-md transition-[border-color,box-shadow] duration-150 ease-out hover:border-court-gold/45 hover:shadow-float sm:p-lg"
     >
       <span
         className="pointer-events-none absolute -top-3 start-2 select-none font-headline text-[5rem] font-bold leading-[0.8] text-embassy/[0.04]"

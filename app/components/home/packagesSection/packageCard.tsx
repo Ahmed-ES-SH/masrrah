@@ -14,14 +14,12 @@ interface PackageCardProps {
   packageItem: RecruitmentPackage;
   isFeatured: boolean;
   shouldReduceMotion: boolean | null;
-  transition: Transition;
 }
 
 export function PackageCard({
   packageItem,
   isFeatured,
   shouldReduceMotion,
-  transition,
 }: PackageCardProps) {
   const locale = useLocale();
   const t = useTranslation("packages");
@@ -35,7 +33,6 @@ export function PackageCard({
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={shouldReduceMotion ? undefined : { y: -4 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={transition}
       aria-labelledby={`package-${packageItem.key}-title`}
       className={`group relative flex h-full flex-col overflow-hidden rounded-lg border transition-shadow duration-200 hover:shadow-float focus-within:border-court-gold ${
         isFeatured
@@ -47,7 +44,7 @@ export function PackageCard({
         <div className="flex items-start justify-between gap-sm">
           <div className="flex min-w-0 items-center gap-sm">
             <span
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-court-gold/60 bg-embassy text-court-gold shadow-apparatus"
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-champagne-gilt/30 bg-chancery text-champagne-gilt shadow-apparatus"
               aria-hidden="true"
             >
               <Icon className="h-5 w-5" />
@@ -56,21 +53,21 @@ export function PackageCard({
               <p className="text-label font-semibold text-parchment">
                 {copy.label}
               </p>
-              <p className="mt-xxs text-label text-parchment/60">
+              <p className="mt-xxs text-label text-parchment/75">
                 {copy.shortDescription}
               </p>
             </div>
           </div>
 
           {isFeatured && (
-            <span className="shrink-0 rounded-full border border-court-gold/60 bg-embassy/80 px-sm py-xxs text-label font-semibold text-champagne-gilt">
+            <span className="shrink-0 rounded-md border border-court-gold/60 bg-embassy/80 px-sm py-xxs text-label font-semibold text-champagne-gilt">
               {t.popularLabel}
             </span>
           )}
         </div>
 
         <p className="mt-md flex flex-wrap items-baseline gap-xs border-t border-champagne-gilt/15 pt-md">
-          <span className="text-label uppercase tracking-[0.1em] text-champagne-gilt/70">
+          <span className="text-label uppercase tracking-[0.1em] text-champagne-gilt/85">
             {t.priceFrom}
           </span>
           <span className="font-headline text-[2.4rem] font-bold leading-none tracking-tight text-court-gold">
@@ -93,10 +90,7 @@ export function PackageCard({
           {copy.description}
         </p>
 
-        <div
-          className="mt-md h-px w-full bg-embassy/10"
-          aria-hidden="true"
-        />
+        <div className="mt-md h-px w-full bg-embassy/10" aria-hidden="true" />
         <p className="mt-md text-label font-label uppercase tracking-[0.1em] text-amendment">
           {t.includedLabel}
         </p>
@@ -108,10 +102,10 @@ export function PackageCard({
               className="flex items-start gap-sm text-body leading-6 text-ink-soft"
             >
               <span
-                className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-court-gold/50 bg-marble"
+                className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-embassy/20 bg-marble"
                 aria-hidden="true"
               >
-                <FiCheck className="h-3 w-3 text-court-gold" />
+                <FiCheck className="h-3 w-3 text-embassy" />
               </span>
               <span>{feature}</span>
             </li>

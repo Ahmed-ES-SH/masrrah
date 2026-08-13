@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { AnimatePresence, motion, type Transition } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiShield } from "react-icons/fi";
 import type { HeroSlideId } from "@/app/types/hero-slide";
+import { SITE_LICENSE_NUMBER } from "@/app/constants/site";
+import { useTranslation } from "@/app/hooks/useTranslations";
 
 const CTA_FOCUS_CLASSES =
   "transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt";
@@ -27,6 +29,7 @@ export function SlideCopy({
   transition: Transition;
   reducedMotion: boolean | null;
 }) {
+  const t = useTranslation("navbar");
   return (
     <div
       id="hero-slide-copy"
@@ -41,7 +44,7 @@ export function SlideCopy({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: reducedMotion ? 0 : -12 }}
           transition={transition}
-          className="relative w-full max-w-[640px] border-s-2 border-court-gold ps-md sm:ps-lg"
+          className="relative w-full max-w-[640px] border-s-2 border-champagne-gilt/60 ps-md sm:ps-lg"
         >
           <div
             aria-hidden="true"
@@ -49,7 +52,10 @@ export function SlideCopy({
           />
 
           <div className="mb-md flex items-center gap-sm text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
-            <span className="h-px w-8 bg-court-gold" aria-hidden="true" />
+            <span
+              className="h-px w-8 bg-champagne-gilt/60"
+              aria-hidden="true"
+            />
             <span>{copy.eyebrow}</span>
           </div>
 
@@ -74,12 +80,41 @@ export function SlideCopy({
             </Link>
           </div>
 
-          <div className="mt-xl flex items-center gap-sm border-t border-champagne-gilt/20 pt-md text-label text-parchment/65">
-            <span
-              className="h-2 w-2 rounded-full bg-parchment/30"
-              aria-hidden="true"
-            />
-            <span>{copy.metric}</span>
+          <div className="mt-xl border-t border-champagne-gilt/20 pt-md">
+            <div className="flex flex-wrap items-center justify-between gap-sm">
+              <div className="flex items-center gap-sm text-label text-parchment/80">
+                <span
+                  className="h-2 w-2 rounded-full bg-parchment/30"
+                  aria-hidden="true"
+                />
+                <span>{copy.metric}</span>
+              </div>
+
+              <div
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-champagne-gilt/30 bg-gradient-to-br from-chancery/70 to-embassy/80 py-1 ps-1 pe-2.5 shadow-float backdrop-blur-sm sm:gap-2 sm:pe-3"
+                title={`${t.license.label} ${SITE_LICENSE_NUMBER}`}
+                aria-label={`${t.license.label} ${SITE_LICENSE_NUMBER}`}
+              >
+                <span
+                  className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-court-gold/15 ring-1 ring-inset ring-champagne-gilt/45 sm:h-6 sm:w-6"
+                  aria-hidden="true"
+                >
+                  <FiShield
+                    className="h-3 w-3 text-champagne-gilt sm:h-3.5 sm:w-3.5"
+                    aria-hidden="true"
+                  />
+                </span>
+                <span className="hidden text-label font-label uppercase tracking-[0.13em] text-parchment/75 sm:inline">
+                  {t.license.label}
+                </span>
+                <span
+                  dir="ltr"
+                  className="font-headline text-[0.9375rem] font-bold tabular-nums leading-none text-court-gold"
+                >
+                  {SITE_LICENSE_NUMBER}
+                </span>
+              </div>
+            </div>
           </div>
         </motion.div>
       </AnimatePresence>

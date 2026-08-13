@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, type CSSProperties } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   FiArrowUp,
@@ -10,18 +10,34 @@ import {
   FiMail,
   FiMapPin,
   FiPhone,
+  FiShield,
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import { COMPANY_PHONES, SITE_ADDRESS, SITE_EMAIL } from "@/app/constants/site";
+import {
+  COMPANY_PHONES,
+  SITE_ADDRESS,
+  SITE_EMAIL,
+  SITE_LICENSE_NUMBER,
+} from "@/app/constants/site";
 import { SOCIAL_LINKS } from "@/app/constants/social-links";
 import { useTranslation } from "@/app/hooks/useTranslations";
 import { useLocale } from "@/app/hooks/useLocale";
+import FooterSocialSection from "./FooterSocialSection";
 
 const MAILTO_URL = `mailto:${SITE_EMAIL}`;
+
+const TICK_RING_STYLE: CSSProperties = {
+  background:
+    "repeating-conic-gradient(from 0deg, rgba(201,162,39,0.5) 0deg 2deg, transparent 2deg 8deg)",
+  WebkitMask:
+    "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px))",
+  mask: "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px))",
+};
 
 export default function Footer() {
   const locale = useLocale() ?? "ar";
   const t = useTranslation("footer");
+  const lt = useTranslation("licenseSection");
   const shouldReduceMotion = useReducedMotion();
   const [subscribed, setSubscribed] = useState(false);
   const year = new Date().getFullYear();
@@ -35,22 +51,127 @@ export default function Footer() {
     setSubscribed(true);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: shouldReduceMotion ? "auto" : "smooth",
-    });
-  };
-
   return (
     <footer
       id="footer"
-      aria-labelledby="footer-title"
       className="relative isolate overflow-hidden bg-parchment text-ink-deep"
     >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-court-gold/20" />
+      <section
+        id="license"
+        aria-labelledby="footer-license-title"
+        className="relative isolate overflow-hidden border-b border-champagne-gilt/20 bg-embassy text-parchment"
+      >
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-court-gold/25"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-72 max-w-3xl bg-court-gold/10 blur-3xl"
+          aria-hidden="true"
+        />
 
-      <div className="mx-auto w-full  px-sm py-xxl pb-[max(4rem,env(safe-area-inset-bottom))] sm:px-md lg:px-xl">
+        <div className="mx-auto w-full px-sm py-xl sm:px-md lg:px-xl">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={transition}
+            className="mx-auto flex max-w-[880px] flex-col items-center text-center"
+          >
+            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
+              <span aria-hidden="true">◆</span>
+              <span>{lt.eyebrow}</span>
+              <span aria-hidden="true">◆</span>
+            </div>
+
+            <h2
+              id="footer-license-title"
+              className="mt-md max-w-[26ch] font-headline text-headline font-bold leading-[1.2] text-parchment"
+            >
+              {lt.title}
+            </h2>
+
+            <p className="mt-sm max-w-[56ch] text-body leading-8 text-parchment/75">
+              {lt.body}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.08 }}
+            className="mx-auto mt-xl flex max-w-[880px] flex-col items-center gap-xl lg:flex-row lg:justify-between"
+          >
+            <div className="flex flex-col items-center gap-xs lg:flex-1">
+              <Image
+                src="/goverments/(MHRSD)-logo.svg"
+                alt={lt.ministryName}
+                width={218}
+                height={67}
+                className="h-auto w-44 select-none object-contain sm:w-52"
+              />
+              <p className="max-w-[24ch] text-center text-label font-label leading-6 text-parchment/70">
+                {lt.ministryName}
+              </p>
+            </div>
+
+            <div className="relative h-44 w-44 shrink-0 sm:h-48 sm:w-48">
+              <div
+                className="absolute -inset-8 rounded-full bg-court-gold/10 blur-3xl"
+                aria-hidden="true"
+              />
+              <div
+                className="absolute inset-0 rounded-full border border-court-gold/40"
+                aria-hidden="true"
+              />
+              <motion.div
+                aria-hidden="true"
+                className="absolute inset-1.5 rounded-full"
+                style={TICK_RING_STYLE}
+                animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+                transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
+              />
+              <div
+                className="absolute inset-5 rounded-full border border-court-gold/25"
+                aria-hidden="true"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
+                <FiShield
+                  className="h-5 w-5 text-court-gold"
+                  aria-hidden="true"
+                />
+                <p className="text-label font-label uppercase tracking-[0.14em] text-champagne-gilt/90">
+                  {lt.licenseLabel}
+                </p>
+                <p
+                  dir="ltr"
+                  className="select-none font-headline text-[clamp(2.5rem,6vw,3.25rem)] font-bold leading-none tracking-tight text-court-gold tabular-nums drop-shadow-gold-glow"
+                >
+                  {SITE_LICENSE_NUMBER}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-md lg:flex-1">
+              <Link
+                href={lt.verifyHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center gap-xs rounded-md border border-champagne-gilt/30 px-md text-label font-semibold text-parchment transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+              >
+                <span>{lt.verifyLabel}</span>
+                <FiArrowUpRight
+                  className="h-4 w-4 rtl:scale-x-[-1]"
+                  aria-hidden="true"
+                />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="mx-auto w-full px-sm py-xxl pb-[max(4rem,env(safe-area-inset-bottom))] sm:px-md lg:px-xl">
         <div className="grid gap-xl lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:items-stretch lg:gap-xxl">
           <motion.div
             initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
@@ -84,9 +205,9 @@ export default function Footer() {
               {t.about}
             </p>
 
-            <div className="mt-lg flex items-center gap-xs border-t border-court-gold/15 pt-md">
+            <div className="mt-lg flex items-center gap-xs border-t border-embassy/15 pt-md">
               <span
-                className="me-xs hidden text-court-gold sm:inline"
+                className="me-xs hidden text-ink-soft sm:inline"
                 aria-hidden="true"
               >
                 ◆
@@ -102,7 +223,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t.socials[key]}
-                    className="flex h-11 w-11 items-center justify-center rounded-sm border border-court-gold/25 text-ink-soft transition-colors duration-200 hover:border-amendment hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
+                    className="flex h-11 w-11 items-center justify-center rounded-sm border border-embassy/20 text-ink-soft transition-colors duration-200 hover:border-amendment hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
                   >
                     <Icon className="h-[17px] w-[17px]" aria-hidden="true" />
                   </Link>
@@ -116,9 +237,9 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.08 }}
-            className="rounded-lg border border-court-gold/20 bg-marble p-md shadow-float sm:p-lg"
+            className="rounded-lg border border-embassy/15 bg-marble p-md shadow-float sm:p-lg"
           >
-            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-court-gold">
+            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
               <span aria-hidden="true">◆</span>
               <span>{t.newsletter.eyebrow}</span>
             </div>
@@ -148,7 +269,7 @@ export default function Footer() {
                     autoComplete="email"
                     required
                     placeholder={t.newsletter.placeholder}
-                    className="min-h-12 min-w-0 flex-1 rounded-sm border border-court-gold/25 bg-parchment px-sm text-body text-ink-deep placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
+                    className="min-h-12 min-w-0 flex-1 rounded-sm border border-embassy/25 bg-parchment px-sm text-body text-ink-deep placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
                   />
                   <button
                     type="submit"
@@ -186,120 +307,16 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="mt-xl grid gap-xl border-t border-court-gold/15 pt-xl sm:grid-cols-2 lg:grid-cols-[0.8fr_0.9fr_1.3fr] lg:gap-xxl">
-          <div>
-            <p className="text-label font-label uppercase tracking-[0.12em] text-amendment">
-              {t.nav.heading}
-            </p>
-            <nav
-              aria-label={t.nav.heading}
-              className="mt-sm flex flex-col items-start gap-xs"
-            >
-              <Link
-                href="#home"
-                className="min-h-11 py-xs text-body text-ink-soft transition-colors duration-200 hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
-              >
-                {t.nav.home}
-              </Link>
-              <Link
-                href="#services"
-                className="min-h-11 py-xs text-body text-ink-soft transition-colors duration-200 hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
-              >
-                {t.nav.services}
-              </Link>
-              <Link
-                href={`/${locale}/request`}
-                className="min-h-11 py-xs text-body text-ink-soft transition-colors duration-200 hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
-              >
-                {t.nav.contact}
-              </Link>
-            </nav>
-          </div>
+        {/*  FooterSocialSection */}
+        <FooterSocialSection MAILTO_URL={MAILTO_URL} locale={locale} />
 
-          <div>
-            <p className="text-label font-label uppercase tracking-[0.12em] text-amendment">
-              {t.contact.heading}
-            </p>
-            <ul className="mt-sm divide-y divide-court-gold/15">
-              {COMPANY_PHONES.map(({ labelKey, national, tel, whatsapp }) => (
-                <li key={tel} className="flex min-h-12 items-center gap-2 py-1">
-                  <a
-                    href={`tel:${tel}`}
-                    aria-label={`${t.phones[labelKey]} ${national}`}
-                    className="flex min-h-11 flex-1 items-center gap-2 text-body text-ink-soft transition-colors duration-200 hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
-                  >
-                    <FiPhone
-                      className="h-4 w-4 shrink-0 text-amendment"
-                      aria-hidden="true"
-                    />
-                    <span className="text-label text-ink-soft/70">
-                      {t.phones[labelKey]}
-                    </span>
-                    <span
-                      dir="ltr"
-                      className="font-semibold tabular-nums tracking-[0.02em] text-ink-deep"
-                    >
-                      {national}
-                    </span>
-                  </a>
-                  <a
-                    href={`https://wa.me/${whatsapp}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${t.phones[labelKey]} ${national} — ${t.contact.whatsapp}`}
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-court-gold/25 text-ink-soft transition-colors duration-200 hover:border-amendment hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
-                  >
-                    <FaWhatsapp
-                      className="h-4 w-4 shrink-0 text-amendment"
-                      aria-hidden="true"
-                    />
-                  </a>
-                </li>
-              ))}
-              <li className="flex min-h-12 items-center py-1">
-                <a
-                  href={MAILTO_URL}
-                  className="flex min-h-11 w-full items-center gap-2 text-body text-ink-soft transition-colors duration-200 hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
-                >
-                  <FiMail
-                    className="h-4 w-4 shrink-0 text-amendment"
-                    aria-hidden="true"
-                  />
-                  <span dir="ltr">{SITE_EMAIL}</span>
-                </a>
-              </li>
-              <li className="flex min-h-12 items-center py-1">
-                <span className="flex min-h-11 w-full items-center gap-2 text-body text-ink-soft">
-                  <FiMapPin
-                    className="h-4 w-4 shrink-0 text-amendment"
-                    aria-hidden="true"
-                  />
-                  <span>{SITE_ADDRESS[locale]}</span>
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col justify-between gap-lg sm:col-span-2 lg:col-span-1 lg:items-end">
-            <button
-              type="button"
-              onClick={scrollToTop}
-              aria-label={t.backToTop}
-              className="inline-flex min-h-11 items-center gap-xs self-start border-b border-court-gold/30 pb-xs text-label font-label text-ink-soft transition-colors duration-200 hover:border-amendment hover:text-amendment focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amendment lg:self-end"
-            >
-              <FiArrowUp className="h-4 w-4" aria-hidden="true" />
-              <span>{t.backToTop}</span>
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-xl flex flex-col gap-sm border-t border-court-gold/15 pt-md text-label text-ink-soft/80 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-xl flex flex-col gap-sm border-t border-embassy/15 pt-md text-label text-ink-soft/80 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {t.title}. {t.legal.rights}.
           </p>
           <p>
             {t.legal.madeWith}{" "}
-            <span className="text-court-gold" aria-hidden="true">
+            <span className="text-ink-soft" aria-hidden="true">
               ◆
             </span>{" "}
             {t.title}

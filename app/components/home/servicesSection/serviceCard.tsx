@@ -29,7 +29,7 @@ export default function ServiceCard({
 
   return (
     <article
-      className={`flex min-h-0 flex-col rounded-md border border-embassy/15 bg-parchment p-md sm:min-h-[28rem] sm:p-lg ${
+      className={`flex min-h-0 flex-col rounded-lg border border-embassy/15 bg-parchment p-md sm:min-h-[28rem] sm:p-lg ${
         offset === 1 ? "hidden sm:flex" : ""
       }`}
     >
@@ -44,7 +44,7 @@ export default function ServiceCard({
           </p>
         </div>
         <span
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-court-gold/45 bg-embassy text-court-gold"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-embassy/20 bg-embassy/5 text-embassy"
           aria-hidden="true"
         >
           <Icon className="h-5 w-5" />
@@ -60,7 +60,7 @@ export default function ServiceCard({
         </p>
       </div>
 
-      <div className="mt-lg border-s-2 border-court-gold ps-sm">
+      <div className="mt-lg border-s-2 border-embassy/25 ps-sm">
         <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
           {t.detailLabel}
         </p>

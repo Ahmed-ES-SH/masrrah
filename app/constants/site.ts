@@ -1,3 +1,8 @@
+// Official recruitment license number issued by the Ministry of Human
+// Resources and Social Development — shown in the header, footer, and the
+// licensing seal at the top of the footer.
+export const SITE_LICENSE_NUMBER = "304";
+
 // Contact details — replace with the client's confirmed numbers before launch.
 // SITE_PHONE is the raw international digits used for `tel:`. Must start with the
 // country code (966 for Saudi Arabia) and contain only digits.
@@ -32,7 +37,7 @@ export const COMPANY_PHONES = [
 ] as const;
 
 // Brand-level email shown in the footer contact block.
-export const SITE_EMAIL = "contact@Masarrah HR.sa";
+export const SITE_EMAIL = "info@masarah-hr.com";
 
 // Address line shown in the footer contact block — bilingual (Arabic first).
 export const SITE_ADDRESS = {
@@ -43,3 +48,6 @@ export const SITE_ADDRESS = {
 // Pre-filled WhatsApp inquiry message (plain text; wa.me encodes it).
 export const WHATSAPP_DEFAULT_MESSAGE =
   "مرحباً، أرغب بالاستفسار عن خدمة لدى مسرة إتش أر للاستقدام.";
+
+export const LOCATION_ON_MAP =
+  "https://www.google.com/maps/place/24%C2%B048'34.2%22N+46%C2%B046'43.3%22E/@24.8095055,46.7761193,17z/data=!4m4!3m3!8m2!3d24.8095!4d46.7786944?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D";

@@ -18,8 +18,8 @@
   --color-amendment: #b8862e;
   --color-cerise: #b3403a;
 
-  --font-display: "Inter", "IBM Plex Sans Arabic", Georgia, serif;
-  --font-headline: "Inter", "IBM Plex Sans Arabic", Georgia, serif;
+  --font-display: "Inter", "IBM Plex Sans Arabic", sans-serif;
+  --font-headline: "Inter", "IBM Plex Sans Arabic", sans-serif;
   --font-title: "Inter", "IBM Plex Sans Arabic", sans-serif;
   --font-body: "Inter", "IBM Plex Sans Arabic", sans-serif;
   --font-label: "Inter", "IBM Plex Sans Arabic", sans-serif;
@@ -105,9 +105,9 @@
 }
 
 html[lang="ar"] {
-  --font-display: var(--font-thmanyah-serif-display), "IBM Plex Sans Arabic", Georgia, serif;
-  --font-headline: var(--font-thmanyah-serif-display), "IBM Plex Sans Arabic", Georgia, serif;
-  --font-title: var(--font-thmanyah-serif-text), "IBM Plex Sans Arabic", Georgia, serif;
+  --font-display: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
+  --font-headline: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
+  --font-title: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
   --font-body: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
   --font-label: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
 }
@@ -120,4 +120,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+  font-weight: 500;
 }

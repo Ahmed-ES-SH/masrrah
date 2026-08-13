@@ -7,6 +7,7 @@ import { useLocale } from "@/app/hooks/useLocale";
 import { revealTransition } from "@/app/helpers/transitions";
 import { Stars } from "./stars";
 import { TestimonialCard } from "./testimonialCard";
+import Section from "@/app/components/common/Section";
 
 export default function TestimonialsSection() {
   const locale = useLocale() ?? "ar";
@@ -15,13 +16,13 @@ export default function TestimonialsSection() {
   const [featured, ...rest] = content.items;
 
   return (
-    <section
+    <Section
       id="testimonials"
       aria-labelledby="testimonials-title"
       aria-label={content.ariaLabel}
-      className="relative overflow-hidden bg-marble text-ink-deep"
+      className="bg-parchment text-ink-deep"
+      clip
     >
-      <div className="mx-auto w-full px-sm py-xxl sm:px-md lg:px-xl">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +32,7 @@ export default function TestimonialsSection() {
         >
           <div className="max-w-184">
             <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
-              <span className="text-court-gold" aria-hidden="true">
+              <span className="text-embassy" aria-hidden="true">
                 ◆
               </span>
               <span>{content.eyebrow}</span>
@@ -49,9 +50,9 @@ export default function TestimonialsSection() {
             </p>
           </div>
 
-          <div className="flex items-end gap-sm border-s border-court-gold ps-md lg:justify-self-end">
+          <div className="flex items-end gap-sm border-s border-embassy/25 ps-md lg:justify-self-end">
             <div className="pb-xxs">
-              <p className="text-court-gold">
+              <p className="text-embassy">
                 <span className="font-headline text-[2.75rem] font-bold leading-none tracking-tight tabular-nums">
                   {content.rating}
                 </span>
@@ -73,13 +74,13 @@ export default function TestimonialsSection() {
           </div>
         </motion.div>
 
-        <div className="mt-xl grid gap-sm lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-md">
+        <div className="mt-lg grid gap-sm lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-md">
           <motion.article
             initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={revealTransition(shouldReduceMotion, 0.1)}
-            className="relative flex flex-col overflow-hidden rounded-md border border-embassy/10 bg-parchment p-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:p-xl"
+            className="relative flex flex-col overflow-hidden rounded-lg border border-embassy/10 bg-parchment p-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:p-lg"
           >
             <span
               className="pointer-events-none absolute -top-5 start-2 select-none font-headline text-[9rem] font-bold leading-[0.8] text-embassy/[0.05]"
@@ -100,7 +101,7 @@ export default function TestimonialsSection() {
             </blockquote>
 
             <footer className="relative mt-auto flex items-center gap-sm border-t border-embassy/15 pt-md">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-court-gold/50 bg-marble font-headline text-title font-bold text-embassy">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-embassy/15 bg-marble font-headline text-title font-bold text-embassy">
                 {featured.initial}
               </span>
               <div className="min-w-0">
@@ -127,7 +128,6 @@ export default function TestimonialsSection() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+    </Section>
   );
 }

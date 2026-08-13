@@ -7,6 +7,7 @@ import "swiper/css";
 import { useLocale } from "@/app/hooks/useLocale";
 import { revealTransition } from "@/app/helpers/transitions";
 import { useTranslation } from "@/app/hooks/useTranslations";
+import Section from "@/app/components/common/Section";
 import LogoItem from "./logoItem";
 
 const GOVERNMENT_LOGOS = [
@@ -29,10 +30,10 @@ const GOVERNMENT_LOGOS = [
     height: 1000,
   },
   {
-    id: "ministryOfLabor",
-    src: "/goverments/وزارة-العمل والتنمية.svg",
-    width: 1000,
-    height: 1000,
+    id: "ministryOfHumanResources",
+    src: "/goverments/(MHRSD)-logo.svg",
+    width: 218,
+    height: 67,
   },
 ] as const;
 
@@ -48,12 +49,12 @@ export default function GovermentsLogos() {
   ).flat();
 
   return (
-    <section
+    <Section
       id="goverments"
       aria-labelledby="goverments-title"
-      className="relative isolate overflow-hidden bg-embassy/90 backdrop-blur-xl text-parchment"
+      className="isolate bg-embassy/90 backdrop-blur-xl text-parchment"
+      clip
     >
-      <div className="mx-auto w-full px-sm py-xxl sm:px-md lg:px-xl">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,9 +63,9 @@ export default function GovermentsLogos() {
           className="mx-auto flex flex-col items-center text-center"
         >
           <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
-            <span className="h-px w-8 bg-court-gold" aria-hidden="true" />
+            <span className="h-px w-8 bg-champagne-gilt/60" aria-hidden="true" />
             <span>{t.eyebrow}</span>
-            <span className="h-px w-8 bg-court-gold" aria-hidden="true" />
+            <span className="h-px w-8 bg-champagne-gilt/60" aria-hidden="true" />
           </div>
 
           <h2
@@ -84,7 +85,7 @@ export default function GovermentsLogos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={revealTransition(shouldReduceMotion, 0.1, 0.6)}
-          className="mt-xl"
+          className="mt-lg"
         >
           <Swiper
             key={locale}
@@ -120,7 +121,6 @@ export default function GovermentsLogos() {
             ))}
           </Swiper>
         </motion.div>
-      </div>
-    </section>
+    </Section>
   );
 }

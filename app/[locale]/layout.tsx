@@ -31,50 +31,6 @@ const thmanyahSans = localFont({
   variable: "--font-thmanyah-sans",
 });
 
-const thmanyahSerifText = localFont({
-  src: [
-    {
-      path: "../fonts/thmanyah/thmanyahseriftext-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/thmanyah/thmanyahseriftext-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../fonts/thmanyah/thmanyahseriftext-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-  variable: "--font-thmanyah-serif-text",
-});
-
-const thmanyahSerifDisplay = localFont({
-  src: [
-    {
-      path: "../fonts/thmanyah/thmanyahserifdisplay-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/thmanyah/thmanyahserifdisplay-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../fonts/thmanyah/thmanyahserifdisplay-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-  variable: "--font-thmanyah-serif-display",
-});
-
 interface MainLayoutProps {
   children: ReactNode;
   params: Promise<{ locale: string }>;
@@ -102,7 +58,7 @@ export default async function MainLayout({
     <html
       lang={locale ?? "ar"}
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className={`${inter.variable} ${thmanyahSans.variable} ${thmanyahSerifText.variable} ${thmanyahSerifDisplay.variable} h-full antialiased`}
+      className={`${inter.variable} ${thmanyahSans.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-body text-foreground">
         <Navbar />

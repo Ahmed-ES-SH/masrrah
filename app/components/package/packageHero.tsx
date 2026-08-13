@@ -85,10 +85,10 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
           </Link>
 
           <p
-            className="text-label font-label tabular-nums tracking-[0.14em] text-parchment/55"
+            className="text-label font-label tabular-nums tracking-[0.14em] text-parchment/80"
             aria-hidden="true"
           >
-            <span className="text-court-gold">
+            <span className="text-champagne-gilt">
               {String(packageIndex + 1).padStart(2, "0")}
             </span>
             <span> / </span>
@@ -114,7 +114,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
             className="absolute z-10 hidden h-4 w-4 lg:block"
             aria-hidden="true"
           >
-            <div className="h-4 w-4 rotate-45 border border-court-gold bg-parchment" />
+            <div className="h-4 w-4 rotate-45 border border-embassy/30 bg-parchment" />
           </motion.div>
 
           <div className="flex flex-1 flex-col justify-center lg:pe-24">
@@ -124,7 +124,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               viewport={{ once: true, amount: 0.3 }}
               transition={reveal(0.08)}
             >
-              <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.12em] text-court-gold">
+              <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.12em] text-ink-soft">
                 <span aria-hidden="true">◆</span>
                 <span>{t.eyebrow}</span>
               </p>
@@ -154,11 +154,11 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                 </span>
               )}
 
-              <div className="mt-md flex flex-wrap items-baseline gap-xs border-s border-court-gold/50 ps-md">
+              <div className="mt-md flex flex-wrap items-baseline gap-xs border-s border-embassy/25 ps-md">
                 <p className="w-full text-label font-label uppercase tracking-[0.1em] text-ink-soft">
                   {p.priceFrom}
                 </p>
-                <span className="font-headline text-[3rem] font-bold leading-none tracking-tight text-court-gold tabular-nums">
+                <span className="font-headline text-[3rem] font-bold leading-none tracking-tight text-embassy tabular-nums">
                   {copy.price}
                 </span>
                 <span className="text-label font-semibold text-ink-soft">
@@ -221,7 +221,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
             <a
               href="#request"
               aria-label={t.scrollAria}
-              className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-ink-soft/60 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+              className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-ink-soft/80 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
             >
               <span className="text-label tracking-[0.14em] uppercase">
                 {t.scrollHint}
@@ -248,7 +248,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               <div className="flex items-start justify-between gap-sm">
                 <div className="flex min-w-0 items-center gap-sm">
                   <span
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-court-gold/60 bg-embassy text-court-gold"
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/30 bg-embassy text-champagne-gilt"
                     aria-hidden="true"
                   >
                     <Icon className="h-5 w-5" />
@@ -257,7 +257,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                     <p className="text-label font-semibold text-parchment">
                       {copy.label}
                     </p>
-                    <p className="mt-xxs text-label text-parchment/60">
+                    <p className="mt-xxs text-label text-parchment/75">
                       {copy.shortDescription}
                     </p>
                   </div>
@@ -289,10 +289,10 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                     className="flex items-start gap-sm text-body leading-6 text-parchment/80"
                   >
                     <span
-                      className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-court-gold/50 bg-embassy"
+                      className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/40 bg-embassy"
                       aria-hidden="true"
                     >
-                      <FiCheck className="h-3 w-3 text-court-gold" />
+                      <FiCheck className="h-3 w-3 text-champagne-gilt" />
                     </span>
                     <span>{feature}</span>
                   </li>

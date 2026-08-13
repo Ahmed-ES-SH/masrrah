@@ -90,7 +90,7 @@ export default function RequestForm({
       <div className="mx-auto grid w-full gap-lg px-sm py-xxl sm:px-md lg:grid-cols-[minmax(260px,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-lg xl:gap-xxl lg:px-xl">
         <div className="lg:sticky lg:top-28">
           <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
-            <span className="text-court-gold" aria-hidden="true">
+            <span className="text-embassy" aria-hidden="true">
               ◆
             </span>
             <span>{t.eyebrow}</span>
@@ -107,8 +107,8 @@ export default function RequestForm({
             {t.body}
           </p>
 
-          <div className="mt-xl border-s border-court-gold ps-md">
-            <p className="text-label font-label uppercase tracking-[0.1em] text-court-gold">
+          <div className="mt-xl border-s border-embassy/25 ps-md">
+            <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
               {t.privateNote}
             </p>
           </div>
@@ -224,7 +224,7 @@ export default function RequestForm({
             {submitError && (
               <p
                 role="alert"
-                className="mt-md rounded-sm border border-court-gold/30 bg-parchment px-sm py-sm text-body text-embassy"
+                className="mt-md rounded-sm border border-embassy/20 bg-parchment px-sm py-sm text-body text-embassy"
               >
                 {t.error}
               </p>
