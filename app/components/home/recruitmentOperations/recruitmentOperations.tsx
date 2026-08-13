@@ -1,9 +1,12 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { RECRUITMENT_OPERATIONS } from "@/app/constants/recruitment-operations";
+import { RECRUITMENT_OPERATIONS_ICONS } from "@/app/constants/recruitment-operations";
 import Section from "@/app/components/common/Section";
 import { revealTransition } from "@/app/helpers/transitions";
+import { useTranslation } from "@/app/hooks/useTranslations";
+import type { RecruitmentOperationsColumnKey } from "@/app/constants/recruitment-operations";
+import type { IconType } from "react-icons";
 
 function ArchitecturalWatermark() {
   return (
@@ -42,6 +45,22 @@ function ArchitecturalWatermark() {
 
 export default function RecruitmentOperations() {
   const shouldReduceMotion = useReducedMotion();
+  const t = useTranslation("recruitmentOperations");
+
+  const columns: {
+    key: RecruitmentOperationsColumnKey;
+    heading: string;
+    steps: readonly { text: string; icon: IconType }[];
+  }[] = (
+    ["documents", "procedures"] as const
+  ).map((key) => ({
+    key,
+    heading: t.columns[key].heading,
+    steps: t.columns[key].steps.map((text, index) => ({
+      text,
+      icon: RECRUITMENT_OPERATIONS_ICONS[key][index],
+    })),
+  }));
 
   return (
     <Section
@@ -51,7 +70,7 @@ export default function RecruitmentOperations() {
       clip
       decor={<ArchitecturalWatermark />}
     >
-      <div dir="rtl" lang="ar" className="relative w-full">
+      <div className="relative w-full">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,13 +81,13 @@ export default function RecruitmentOperations() {
           <div>
             <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-embassy">
               <span aria-hidden="true">◆</span>
-              <span>{RECRUITMENT_OPERATIONS.title}</span>
+              <span>{t.title}</span>
             </p>
             <h2
               id="recruitment-operations-title"
               className="mt-xs font-headline text-display font-bold leading-tight text-embassy"
             >
-              {RECRUITMENT_OPERATIONS.title}
+              {t.title}
             </h2>
           </div>
           <span
@@ -78,7 +97,7 @@ export default function RecruitmentOperations() {
         </motion.div>
 
         <div className="grid gap-md lg:grid-cols-2">
-          {RECRUITMENT_OPERATIONS.columns.map((column, columnIndex) => (
+          {columns.map((column, columnIndex) => (
             <motion.article
               key={column.key}
               initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}

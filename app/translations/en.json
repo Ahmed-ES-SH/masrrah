@@ -508,6 +508,29 @@
       }
     }
   },
+  "recruitmentOperations": {
+    "title": "Recruitment Operations",
+    "columns": {
+      "documents": {
+        "heading": "Documents required for employing domestic workers",
+        "steps": [
+          "A summary of the recruitment procedures",
+          "Selecting the candidate's profile",
+          "A copy of the national ID, or the residence permit (Iqama) for residents, and the unified number in Absher",
+          "Conclusion of the recruitment contract via Musaned and payment of the fees"
+        ]
+      },
+      "procedures": {
+        "heading": "Recruitment Procedures",
+        "steps": [
+          "Logging into the Musaned platform",
+          "Verifying your eligibility",
+          "Entering the required data and proving financial capability",
+          "Declaring accurate information and paying the fees"
+        ]
+      }
+    }
+  },
   "licenseSection": {
     "eyebrow": "Officially licensed",
     "title": "A recruitment license approved by the official authority",
