@@ -135,15 +135,14 @@ export default function PlatformSection() {
                   step={step}
                   copy={t.steps[step.key]}
                   shouldReduceMotion={shouldReduceMotion}
-                  transition={revealTransition(shouldReduceMotion, 0.22 + index * 0.08)}
+                  transition={revealTransition(
+                    shouldReduceMotion,
+                    0.22 + index * 0.08,
+                  )}
                 />
               ))}
             </div>
           </div>
-
-          <p className="mt-lg border-t border-embassy/15 pt-md text-label leading-6 text-ink-soft">
-            {t.panel.note}
-          </p>
         </motion.div>
       </div>
     </Section>

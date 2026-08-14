@@ -116,6 +116,32 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scrollbars — one quiet navy rail down the estate wall: chancellery thumb
+   on an embassy track, lifting to diplomacy on hover. Rests in either band
+   of the light/dark walk without shouting on parchment. */
+html {
+  scrollbar-color: var(--color-chancery) var(--color-embassy);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-embassy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-chancery);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-diplomacy);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
