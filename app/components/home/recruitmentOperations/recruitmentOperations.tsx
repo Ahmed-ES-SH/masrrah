@@ -85,7 +85,7 @@ export default function RecruitmentOperations() {
             </p>
             <h2
               id="recruitment-operations-title"
-              className="mt-xs font-headline text-display font-bold leading-tight text-embassy"
+              className="mt-xs font-headline text-display font-medium leading-tight text-embassy"
             >
               {t.title}
             </h2>

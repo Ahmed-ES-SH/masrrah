@@ -40,7 +40,7 @@ export default function StepsRecruitmentProcess() {
           </p>
           <h2
             id="recruitment-process-title"
-            className="mt-sm max-w-[17ch] text-balance font-headline text-display font-bold leading-[1.08] text-embassy"
+            className="mt-sm max-w-[17ch] text-balance font-headline text-display font-medium leading-[1.08] text-embassy"
           >
             {t.title}
           </h2>

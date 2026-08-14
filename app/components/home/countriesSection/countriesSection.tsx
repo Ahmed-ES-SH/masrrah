@@ -35,7 +35,7 @@ export default function CountriesSection() {
         <div>
           <h2
             id="countries-title"
-            className="max-w-[15ch] text-balance font-headline text-display font-bold leading-[1.08] text-embassy"
+            className="max-w-[15ch] text-balance font-headline text-display font-medium leading-[1.08] text-embassy"
           >
             {t.title}
           </h2>

@@ -114,7 +114,7 @@ export default function ServicesSection() {
         >
           <h2
             id="services-title"
-            className="max-w-[12ch] font-headline text-display font-bold leading-[1.08] text-balance text-embassy"
+            className="max-w-[12ch] font-headline text-display font-medium leading-[1.08] text-balance text-embassy"
           >
             {t.title}
           </h2>

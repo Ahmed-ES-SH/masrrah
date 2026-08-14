@@ -70,7 +70,7 @@ export default function GovermentsLogos() {
 
           <h2
             id="goverments-title"
-            className="mt-md max-w-[16ch] font-headline text-display font-bold leading-[1.12] text-parchment"
+            className="mt-md max-w-[16ch] font-headline text-display font-medium leading-[1.12] text-parchment"
           >
             {t.title}
           </h2>

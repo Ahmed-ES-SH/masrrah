@@ -78,7 +78,7 @@ export default function FaqSection() {
 
           <h2
             id="faq-title"
-            className="mt-md max-w-[16ch] font-headline text-display font-bold leading-[1.12] text-embassy"
+            className="mt-md max-w-[16ch] font-headline text-display font-medium leading-[1.12] text-embassy"
           >
             {content.title}
           </h2>

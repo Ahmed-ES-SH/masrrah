@@ -84,7 +84,7 @@ export default function PackagesSection() {
             </p>
             <h2
               id="packages-title"
-              className="mt-sm max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.08] text-parchment"
+              className="mt-sm max-w-[16ch] text-balance font-headline text-display font-medium leading-[1.08] text-parchment"
             >
               {t.title}
             </h2>

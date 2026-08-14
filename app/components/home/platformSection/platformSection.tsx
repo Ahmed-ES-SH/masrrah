@@ -66,7 +66,7 @@ export default function PlatformSection() {
 
           <h2
             id="platform-title"
-            className="max-w-[18ch] font-headline text-display font-bold leading-[1.12] text-embassy"
+            className="max-w-[18ch] font-headline text-display font-medium leading-[1.12] text-embassy"
           >
             {t.title}
           </h2>

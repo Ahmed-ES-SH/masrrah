@@ -55,7 +55,7 @@ export function SlideCopy({
             <span>{copy.eyebrow}</span>
           </div>
 
-          <h1 className="max-w-3xl bg-gradient-to-r from-court-gold via-champagne-gilt to-gilded-light bg-clip-text font-headline text-hero-display font-bold leading-[1.15] text-balance text-transparent drop-shadow-hero-title sm:max-w-[30rem]">
+          <h1 className="max-w-3xl bg-gradient-to-r from-court-gold via-champagne-gilt to-gilded-light bg-clip-text font-headline text-hero-display font-medium leading-[1.15] text-balance text-transparent drop-shadow-hero-title sm:max-w-[30rem]">
             {copy.headline}
           </h1>
 
