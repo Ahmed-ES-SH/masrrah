@@ -93,8 +93,8 @@
     "slides": {
       "trust": {
         "eyebrow": "Trusted recruitment",
-        "headline": "A trusted worker starts with a clear first step",
-        "body": "We review documents and licenses before the process begins, so you have a formal path from your first request to arrival.",
+        "headline": "Bringing in your domestic worker, no surprises and no long waits",
+        "body": "We handle every step — from official documentation to the worker's arrival at your door — and keep regularly",
         "primaryCta": "Explore our services",
         "secondaryCta": "View our packages",
         "metric": "From request to arrival",
@@ -120,48 +120,6 @@
       }
     }
   },
-  "whoUs": {
-    "ariaLabel": "About Masarrah HR",
-    "eyebrow": "About Masarrah HR",
-    "title": "Elevating HR management through an integrated workforce service.",
-    "introduction": "At Masarrah HR, we work to advance human-resources management in the Kingdom by providing workforce services for individuals and meeting local-market needs through an integrated system built around our clients.",
-    "commitmentLabel": "Our commitment",
-    "commitment": "We meet the aspirations of our clients in the Kingdom through a skilled, experienced workforce, with a focus on sustainable growth.",
-    "charterLabel": "The Masarrah HR charter",
-    "about": "We provide professional workers with advanced skills and innovative human-resources strategies across multiple fields, so we can deliver the best service to our clients.",
-    "vision": {
-      "label": "Our vision",
-      "body": "To be the preferred choice for providing skilled, experienced people across every specialty, supporting Saudi Arabia's social and economic goals."
-    },
-    "mission": {
-      "label": "Our mission",
-      "body": "To meet our clients' aspirations with highly skilled, experienced workforce services, while focusing on sustainable growth."
-    },
-    "valuesTitle": "Our working values",
-    "valuesIntroduction": "The principles that guide how we work with our team, partners, and clients.",
-    "values": {
-      "teamwork": {
-        "title": "Working as one team",
-        "body": "We believe collective collaboration achieves more than any one of us can alone, so we work together toward shared goals."
-      },
-      "foresight": {
-        "title": "Forward-looking",
-        "body": "We attract ambitious people and encourage strategic thinking and future planning to keep moving forward and growing."
-      },
-      "commitment": {
-        "title": "Commitment",
-        "body": "We meet and exceed expectations, honour agreed timelines, and deliver the outcomes we set out to achieve."
-      },
-      "passion": {
-        "title": "Passion",
-        "body": "Our deep belief in the company's vision gives our work its energy and helps us deliver distinctive results."
-      },
-      "alignment": {
-        "title": "Alignment",
-        "body": "We align our operating model and resources with stakeholder interests, using our varied experience to create distinctive value."
-      }
-    }
-  },
   "navbar": {
     "brand": "Masarrah HR",
     "brandSub": "مسرة إتش أر للاستقدام",
@@ -175,7 +133,8 @@
       "home": "Home",
       "services": "Services",
       "whyUs": "Why Masarrah HR",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "about": "About Us"
     },
     "socials": {
       "whatsapp": "WhatsApp",
@@ -371,8 +330,8 @@
     "ariaLabel": "Masarrah HR recruitment packages",
     "eyebrow": "Recruitment packages",
     "title": "See the price — and everything the package brings.",
-    "body": "Every path is laid out with its starting price and its full contents. No hidden items: the details are set in a private request, and the final price is confirmed with you before anything moves.",
-    "catalogTitle": "Five paths",
+    "body": "Each service plan includes its price, and details are determined by submitting your requests and specifying the type of service required ",
+    "catalogTitle": "Three paths",
     "catalogNote": "Pick the closest package and we will refine the details with you.",
     "popularLabel": "Most requested",
     "previous": "Previous package",
@@ -413,7 +372,6 @@
           "Replacement support in the first year"
         ]
       },
-
       "driver": {
         "label": "Driver",
         "shortDescription": "Private driver",
@@ -539,5 +497,73 @@
     "verifyLabel": "Verify via Musaned",
     "verifyHref": "https://musaned.com.sa",
     "ministryName": "Ministry of Human Resources and Social Development"
+  },
+  "about": {
+    "ariaLabel": "About Masarrah HR",
+    "meta": {
+      "title": "About Us — Masarrah HR مسرة إتش أر للاستقدام",
+      "description": "Masarrah HR is a licensed Saudi recruitment house developing the Kingdom's human-resources sector with an integrated workforce system, a clear vision, and five working values: teamwork, vision, commitment, passion, and alignment."
+    },
+    "hero": {
+      "eyebrow": "About Masarrah HR",
+      "title": "Developing the Kingdom's human-resources sector.",
+      "body": "At Masarrah HR, we aim to develop the human-resources management sector in the Kingdom by providing workforce services for individuals and meeting the needs of the local market through an integrated system built around our clients.",
+      "action": "Start your recruitment request"
+    },
+    "story": {
+      "eyebrow": "Our story",
+      "title": "About Masarrah HR",
+      "panelLabel": "The Masarrah HR charter",
+      "paragraphs": [
+        "At Masarrah HR, we strive to provide the market with professional workers who possess advanced skills, alongside innovative human-resources management strategies across multiple fields — so we can deliver the best services to our clients.",
+        "Every placement moves through one integrated system — from request to screening, arrival, and the support that follows — so the promise in our charter is kept at every step."
+      ],
+      "vision": {
+        "label": "Our vision",
+        "body": "To be the preferred choice for providing qualified and experienced workers across all specialties, supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia."
+      },
+      "mission": {
+        "label": "Our mission",
+        "body": "We fulfil the aspirations of our clients in the Kingdom of Saudi Arabia by providing workforce services with high levels of experience and skills, while focusing on achieving sustainable growth."
+      }
+    },
+    "vision": {
+      "ariaLabel": "Our vision and mission",
+      "eyebrow": "Our vision",
+      "title": "The preferred choice for qualified workers, in every specialty.",
+      "intro": "Every placement we make is measured against one horizon — supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia.",
+      "visionLabel": "Vision",
+      "visionBody": "To be the preferred choice for providing qualified and experienced workers across all specialties, supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia.",
+      "missionLabel": "Mission",
+      "missionBody": "We fulfil the aspirations of our clients in the Kingdom of Saudi Arabia by providing workforce services with high levels of experience and skills, while focusing on achieving sustainable growth."
+    },
+    "values": {
+      "ariaLabel": "Our values",
+      "eyebrow": "Our values",
+      "title": "The principles behind the work",
+      "introduction": "The principles that guide how we work with our team, partners, and clients.",
+      "items": {
+        "teamwork": {
+          "title": "Teamwork",
+          "body": "We believe teamwork gives us the ability to achieve accomplishments that exceed what each of us could achieve individually, so we follow a collaborative approach to reach our shared goals."
+        },
+        "visionary": {
+          "title": "Visionary",
+          "body": "We encourage a forward-looking vision and attract ambitious individuals who think beyond the present moment, promoting strategic thinking and future planning as we work toward progress and growth."
+        },
+        "commitment": {
+          "title": "Commitment",
+          "body": "Commitment is the primary driver of our efforts and the character of our culture. We work to meet and exceed expectations, respect established deadlines, and achieve the desired goals."
+        },
+        "passion": {
+          "title": "Passion",
+          "body": "Our deep passion for seeing the company excel and progress drives our shared energy and motivates us to achieve our goals with outstanding results."
+        },
+        "alignment": {
+          "title": "Alignment",
+          "body": "We work as one team, verifying the effectiveness of our business model and aligning the value our companies add with the use of resources in the interests of stakeholders, investing our diverse expertise to expand our presence in the market and deliver distinctive value to our clients."
+        }
+      }
+    }
   }
 }

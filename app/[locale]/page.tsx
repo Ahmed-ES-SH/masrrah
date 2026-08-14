@@ -8,14 +8,12 @@ import GovermentsLogos from "../components/home/govermentsLogos/govermentsLogos"
 import HeroSwiper from "../components/home/heroSwiper/heroSwiper";
 import TestimonialsSection from "../components/home/testimonialsSection/testimonialsSection";
 import StepsRecruitmentProcess from "../components/home/stepsRecruitmentProcess/stepsRecruitmentProcess";
-import WhoUs from "../components/home/whoUs/whoUs";
 import RecruitmentOperations from "../components/home/recruitmentOperations/recruitmentOperations";
 
 export default async function Home() {
   return (
     <>
       <HeroSwiper />
-      <WhoUs />
       <ServicesSection />
       <StepsRecruitmentProcess />
       <RecruitmentOperations />

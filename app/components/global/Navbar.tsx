@@ -24,9 +24,10 @@ export default function Navbar() {
 
   const NAV_LINKS: {
     href: string;
-    key: "home" | "services" | "whyUs" | "faq";
+    key: "home" | "about" | "services" | "whyUs" | "faq";
   }[] = [
     { href: `/${locale}`, key: "home" },
+    { href: `/${locale}/about`, key: "about" },
     { href: `/${locale}#services`, key: "services" },
     { href: `/${locale}#why-us`, key: "whyUs" },
     { href: `/${locale}#faq`, key: "faq" },
@@ -108,6 +109,35 @@ export default function Navbar() {
                   </motion.div>
                 </AnimatePresence>
               </motion.div>
+            </div>
+
+            {/* License credential — mini official-document lockup beside the logo */}
+            <div
+              role="img"
+              aria-label={`${t.license.label} ${SITE_LICENSE_NUMBER}`}
+              className="relative flex shrink-0 flex-col items-center"
+            >
+              <span
+                aria-hidden
+                className="mb-1.5 hidden h-[2px] w-9 rounded-full bg-court-gold/80 sm:block"
+              />
+              <span
+                className={`max-w-[8.5rem] truncate text-[0.625rem] font-semibold leading-none text-champagne-gilt/90 ${
+                  locale === "en" ? "uppercase tracking-[0.18em]" : ""
+                }`}
+              >
+                {t.license.label}
+              </span>
+              <span
+                dir="ltr"
+                className="mt-1 font-headline text-[1.125rem] font-bold leading-none tracking-[0.1em] text-court-gold tabular-nums"
+              >
+                {SITE_LICENSE_NUMBER}
+              </span>
+              <span
+                aria-hidden
+                className="mt-1.5 hidden h-px w-8 bg-court-gold/40 sm:block"
+              />
             </div>
           </div>
 
@@ -211,11 +241,8 @@ export default function Navbar() {
               <span className="block truncate font-title text-base font-semibold leading-none text-parchment">
                 {t.brand}
               </span>
-              <span
-                dir="ltr"
-                className="mt-1.5 inline-flex items-center gap-1 rounded-full border border-champagne-gilt/30 px-2 py-0.5 text-[0.6875rem] font-bold tabular-nums leading-none text-court-gold"
-              >
-                {SITE_LICENSE_NUMBER}
+              <span className="mt-1.5 inline-flex items-center gap-1 rounded-full border border-champagne-gilt/30 px-2 py-0.5 text-[0.6875rem] font-bold tabular-nums leading-none text-court-gold">
+                {t.license.label} {SITE_LICENSE_NUMBER}
               </span>
             </span>
           </Link>
