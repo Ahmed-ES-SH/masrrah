@@ -37,16 +37,10 @@ const GOVERNMENT_LOGOS = [
   },
 ] as const;
 
-const REPEAT_COUNT = 4;
-
 export default function GovermentsLogos() {
   const locale = useLocale();
   const t = useTranslation("goverments");
   const shouldReduceMotion = useReducedMotion();
-
-  const slides = Array.from({ length: REPEAT_COUNT }, () =>
-    GOVERNMENT_LOGOS,
-  ).flat();
 
   return (
     <Section
@@ -94,23 +88,19 @@ export default function GovermentsLogos() {
             a11y={{ enabled: true, slideRole: "listitem" }}
             dir={locale === "ar" ? "rtl" : "ltr"}
             speed={shouldReduceMotion ? 0 : 700}
-            loop
             grabCursor
-            spaceBetween={40}
-            slidesPerView={2}
+            spaceBetween={24}
+            slidesPerView={1.5}
+            centeredSlides={false}
             keyboard={{ enabled: true }}
             breakpoints={{
-              480: { slidesPerView: 3, spaceBetween: 48 },
-              768: { slidesPerView: 4, spaceBetween: 56 },
-              1024: { slidesPerView: 5, spaceBetween: 64 },
-              1280: { slidesPerView: 6, spaceBetween: 64 },
+              480: { slidesPerView: 2, spaceBetween: 32 },
+              768: { slidesPerView: 3, spaceBetween: 40 },
+              1024: { slidesPerView: 4, spaceBetween: 48 },
             }}
           >
-            {slides.map((logo, index) => (
-              <SwiperSlide
-                key={`${logo.id}-${index}`}
-                aria-hidden={index >= GOVERNMENT_LOGOS.length}
-              >
+            {GOVERNMENT_LOGOS.map((logo) => (
+              <SwiperSlide key={logo.id}>
                 <LogoItem
                   src={logo.src}
                   alt={`${t.logoAlt} ${t.logos[logo.id]}`}
