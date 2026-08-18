@@ -52,7 +52,7 @@ export default function GovermentsLogos() {
     <Section
       id="goverments"
       aria-labelledby="goverments-title"
-      className="isolate bg-embassy/90 backdrop-blur-xl text-parchment"
+      className="isolate border-y border-embassy/10 bg-parchment text-ink-deep"
       clip
     >
         <motion.div
@@ -62,20 +62,20 @@ export default function GovermentsLogos() {
           transition={revealTransition(shouldReduceMotion)}
           className="mx-auto flex flex-col items-center text-center"
         >
-          <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
-            <span className="h-px w-8 bg-champagne-gilt/60" aria-hidden="true" />
+          <div className="flex items-center gap-xs type-label uppercase text-embassy">
+            <span className="h-px w-8 bg-embassy/40" aria-hidden="true" />
             <span>{t.eyebrow}</span>
-            <span className="h-px w-8 bg-champagne-gilt/60" aria-hidden="true" />
+            <span className="h-px w-8 bg-embassy/40" aria-hidden="true" />
           </div>
 
           <h2
             id="goverments-title"
-            className="mt-md max-w-[16ch] font-headline text-display font-medium leading-[1.12] text-parchment"
+            className="mt-md max-w-[16ch] type-display text-embassy"
           >
             {t.title}
           </h2>
 
-          <p className="mt-sm max-w-[52ch] text-body leading-7 text-parchment/80">
+          <p className="mt-sm max-w-[52ch] type-body-lg text-ink-soft">
             {t.body}
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export default function GovermentsLogos() {
         >
           <Swiper
             key={locale}
-            className="!overflow-visible focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt"
+            className="!overflow-visible focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
             modules={[A11y, Keyboard]}
             a11y={{ enabled: true, slideRole: "listitem" }}
             dir={locale === "ar" ? "rtl" : "ltr"}

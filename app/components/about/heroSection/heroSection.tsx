@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <Section
       ariaLabel={t.ariaLabel}
-      className="isolate overflow-hidden bg-embassy text-parchment"
+      className="isolate overflow-hidden bg-marble text-ink-deep"
       clip
       containerClassName="flex min-h-[72svh] flex-col justify-center pt-32 pb-24 sm:pt-36 lg:min-h-[78svh]"
       decor={
@@ -46,8 +46,8 @@ export default function HeroSection() {
             className="object-cover object-center opacity-90"
             aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-embassy via-embassy/70 to-embassy/20 rtl:lg:bg-gradient-to-l ltr:lg:bg-gradient-to-r" />
-          <div className="absolute inset-0 bg-embassy/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-parchment via-parchment/80 to-parchment/25 rtl:lg:bg-gradient-to-l ltr:lg:bg-gradient-to-r" />
+          <div className="absolute inset-0 bg-parchment/10" />
           <div
             className="pointer-events-none absolute inset-x-0 top-0 h-px bg-court-gold/40"
             aria-hidden="true"
@@ -61,24 +61,24 @@ export default function HeroSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={revealTransition(shouldReduceMotion)}
-        className="relative max-w-3xl rounded-lg border border-champagne-gilt/25 bg-embassy/75 p-md sm:p-xl"
+        className="relative max-w-3xl rounded-lg border border-ink-deep/10 bg-marble/85 p-md backdrop-blur-md sm:p-xl"
       >
-        <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
+        <p className="flex items-center gap-xs type-label uppercase text-embassy">
           <span aria-hidden="true">◆</span>
           <span>{t.hero.eyebrow}</span>
         </p>
 
-        <h1 className="mt-md max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.08] text-parchment [text-shadow:var(--drop-shadow-hero-title)]">
+        <h1 className="mt-md max-w-[16ch] text-balance type-display text-embassy">
           {t.hero.title}
         </h1>
 
-        <p className="mt-md max-w-[52ch] text-pretty text-body leading-8 text-parchment/90 [text-shadow:var(--drop-shadow-hero-copy)]">
+        <p className="mt-md max-w-[52ch] text-pretty type-body-lg text-ink-soft">
           {t.hero.body}
         </p>
 
         <Link
           href={`/${locale}/request`}
-          className="group mt-lg inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt sm:w-auto"
+          className="group mt-lg inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
         >
           <span>{t.hero.action}</span>
           <FiArrowUpRight

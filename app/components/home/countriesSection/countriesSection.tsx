@@ -35,21 +35,21 @@ export default function CountriesSection() {
         <div>
           <h2
             id="countries-title"
-            className="max-w-[15ch] text-balance font-headline text-display font-medium leading-[1.08] text-embassy"
+            className="max-w-[15ch] text-balance type-display text-embassy"
           >
             {t.title}
           </h2>
-          <p className="mt-md max-w-[60ch] text-pretty text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[60ch] text-pretty type-body-lg text-ink-soft">
             {t.body}
           </p>
         </div>
 
         <div className="flex items-end gap-sm border-s border-embassy/20 ps-md lg:justify-self-end">
           <div className="pb-xxs">
-            <p className="text-label font-label uppercase tracking-[0.1em] text-embassy">
+            <p className="type-label uppercase text-embassy">
               {t.registryLabel}
             </p>
-            <p className="mt-xxs max-w-[22ch] text-label leading-5 text-ink-soft">
+            <p className="mt-xxs max-w-[22ch] type-label text-ink-soft">
               {t.registryNote}
             </p>
           </div>

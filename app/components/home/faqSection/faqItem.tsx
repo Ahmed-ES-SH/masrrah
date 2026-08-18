@@ -47,7 +47,7 @@ export default function FaqItem({
         onKeyDown={onKeyDown}
         className={`flex min-h-16 w-full items-center gap-md px-md py-sm text-start transition-colors duration-200 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-court-gold sm:min-h-[72px] sm:px-lg ${isOpen ? "bg-parchment/60" : "hover:bg-parchment/45 active:bg-parchment/60"}`}
       >
-        <span className="min-w-0 flex-1 font-title text-title font-semibold leading-7 text-ink-deep">
+        <span className="min-w-0 flex-1 type-title text-ink-deep">
           {item.question}
         </span>
         <span className="sr-only">
@@ -79,7 +79,7 @@ export default function FaqItem({
               id={answerId}
               className="border-t border-embassy/10 px-md pb-lg pt-sm sm:px-lg"
             >
-              <p className="max-w-[65ch] text-body leading-7 text-ink-soft">
+              <p className="max-w-[65ch] type-body text-ink-soft">
                 {item.answer}
               </p>
             </div>

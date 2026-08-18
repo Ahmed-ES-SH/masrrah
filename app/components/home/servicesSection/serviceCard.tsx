@@ -35,10 +35,10 @@ export default function ServiceCard({
     >
       <div className="flex items-start justify-between gap-md border-b border-embassy/15 pb-md">
         <div>
-          <p className="text-label font-label uppercase tracking-[0.12em] text-ink-soft">
+          <p className="type-label uppercase text-ink-soft">
             {t.serviceLabel}
           </p>
-          <p className="mt-xs text-label text-ink-soft/75">
+          <p className="mt-xs type-label text-ink-soft/75">
             {String(itemIndex + 1).padStart(2, "0")} /{" "}
             {String(total).padStart(2, "0")}
           </p>
@@ -52,26 +52,26 @@ export default function ServiceCard({
       </div>
 
       <div className="mt-lg">
-        <h3 className="font-headline text-headline font-bold leading-tight text-embassy">
+        <h3 className="type-headline text-embassy">
           {copy.title}
         </h3>
-        <p className="mt-sm text-body leading-7 text-ink-soft">
+        <p className="mt-sm type-body text-ink-soft">
           {copy.description}
         </p>
       </div>
 
       <div className="mt-lg border-s-2 border-embassy/25 ps-sm">
-        <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+        <p className="type-label uppercase text-ink-soft">
           {t.detailLabel}
         </p>
-        <p className="mt-xs text-label leading-6 text-embassy">
+        <p className="mt-xs type-label text-embassy">
           {copy.detail}
         </p>
       </div>
 
       <Link
         href={`/${locale}/request?package=household&service=${item.key}`}
-        className="group mt-auto inline-flex min-h-12 w-fit items-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+        className="group mt-auto inline-flex min-h-12 w-fit items-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
       >
         <span>{t.requestService}</span>
         <FiArrowUpRight

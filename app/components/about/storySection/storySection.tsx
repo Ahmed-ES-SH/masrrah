@@ -33,13 +33,13 @@ export default function StorySection() {
           viewport={{ once: true, amount: 0.25 }}
           transition={revealTransition(shouldReduceMotion)}
         >
-          <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-embassy">
+          <p className="flex items-center gap-xs type-label uppercase text-embassy">
             <span aria-hidden="true">◆</span>
             <span>{t.story.eyebrow}</span>
           </p>
           <h2
             id="about-story-title"
-            className="mt-sm max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.08] text-embassy"
+            className="mt-sm max-w-[16ch] text-balance type-display text-embassy"
           >
             {t.story.title}
           </h2>
@@ -48,7 +48,7 @@ export default function StorySection() {
             {t.story.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="max-w-[52ch] text-pretty text-body leading-8 text-ink-soft"
+                className="max-w-[52ch] text-pretty type-body-lg text-ink-soft"
               >
                 {paragraph}
               </p>
@@ -70,37 +70,37 @@ export default function StorySection() {
             ◆
           </div>
 
-          <p className="relative text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
+          <p className="relative type-label uppercase text-champagne-gilt">
             {t.story.panelLabel}
           </p>
 
           <dl className="relative mt-lg space-y-lg border-s border-champagne-gilt/30 ps-md">
             <div>
-              <dt className="text-label font-label uppercase tracking-[0.12em] text-champagne-gilt">
+              <dt className="type-label uppercase text-champagne-gilt">
                 {t.story.vision.label}
               </dt>
-              <dd className="mt-xs max-w-[46ch] text-body leading-7 text-parchment">
+              <dd className="mt-xs max-w-[46ch] type-body text-parchment">
                 {t.story.vision.body}
               </dd>
             </div>
 
             <div>
-              <dt className="text-label font-label uppercase tracking-[0.12em] text-champagne-gilt">
+              <dt className="type-label uppercase text-champagne-gilt">
                 {t.story.mission.label}
               </dt>
-              <dd className="mt-xs max-w-[46ch] text-body leading-7 text-parchment">
+              <dd className="mt-xs max-w-[46ch] type-body text-parchment">
                 {t.story.mission.body}
               </dd>
             </div>
 
             <div>
-              <dt className="text-label font-label uppercase tracking-[0.12em] text-champagne-gilt">
+              <dt className="type-label uppercase text-champagne-gilt">
                 {lt.licenseLabel}
               </dt>
-              <dd className="mt-xs max-w-[46ch] text-body leading-7 text-parchment">
+              <dd className="mt-xs max-w-[46ch] type-body text-parchment">
                 <span
                   dir="ltr"
-                  className="block font-headline text-title font-bold tracking-tight text-court-gold tabular-nums"
+                  className="block font-headline text-title font-semibold tracking-tight text-court-gold tabular-nums"
                 >
                   {SITE_LICENSE_NUMBER}
                 </span>
@@ -108,7 +108,7 @@ export default function StorySection() {
                   href={lt.verifyHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-sm inline-flex min-h-11 items-center gap-xs text-label font-semibold text-court-gold transition-colors duration-200 hover:text-champagne-gilt focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                  className="mt-sm inline-flex min-h-11 items-center gap-xs type-btn text-court-gold transition-colors duration-200 hover:text-champagne-gilt focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
                 >
                   <span>{lt.verifyLabel}</span>
                   <FiArrowUpRight

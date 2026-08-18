@@ -54,13 +54,6 @@ export default function CountryCard({
       viewport={{ once: true, amount: 0.2 }}
       className="group relative min-h-60 overflow-hidden rounded-lg border border-embassy/10 bg-marble p-md transition-shadow duration-200 hover:shadow-float sm:p-lg"
     >
-      <span
-        className="pointer-events-none absolute -end-2 -top-5 font-title text-6xl font-semibold leading-none text-embassy/[0.035] sm:text-[6rem]"
-        aria-hidden="true"
-      >
-        {country.code}
-      </span>
-
       <div className="relative flex items-start justify-between gap-sm">
         <span className="flex h-12 w-16 shrink-0 items-center justify-center overflow-hidden rounded-md border border-embassy/10 bg-parchment p-1">
           <Flag className="h-full w-full object-cover" aria-hidden="true" />
@@ -71,25 +64,25 @@ export default function CountryCard({
       </div>
 
       <div className="relative mt-xl">
-        <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+        <div className="flex items-center gap-xs type-label uppercase text-ink-soft">
           <span>{country.code}</span>
           <span className="h-px w-5 bg-embassy/25" aria-hidden="true" />
           <span>{t.regions[country.region]}</span>
         </div>
-        <h3 className="mt-xs text-balance font-title text-title font-semibold leading-tight text-embassy">
+        <h3 className="mt-xs text-balance type-title text-embassy">
           {copy.name}
         </h3>
-        <p className="mt-sm text-pretty text-body leading-7 text-ink-soft">
+        <p className="mt-sm text-pretty type-body text-ink-soft">
           {copy.description}
         </p>
         <p className="mt-md flex flex-wrap items-baseline gap-xs border-t border-embassy/10 pt-md">
-          <span className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+          <span className="type-label uppercase text-ink-soft">
             {t.priceFrom}
           </span>
-          <span className="font-headline text-[2rem] font-bold leading-none tracking-tight text-court-gold">
+          <span className="font-headline text-[2rem] font-semibold leading-none tracking-tight text-court-gold">
             {copy.price}
           </span>
-          <span className="text-label font-semibold text-ink-soft">
+          <span className="type-label text-ink-soft">
             {t.currency}
           </span>
         </p>

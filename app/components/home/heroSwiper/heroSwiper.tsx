@@ -101,7 +101,7 @@ export default function HeroSwiper() {
       onMouseLeave={() => setPausedByPointer(false)}
       onFocusCapture={() => setPausedByPointer(true)}
       onBlurCapture={() => setPausedByPointer(false)}
-      className="relative isolate min-h-svh overflow-hidden bg-embassy text-parchment"
+      className="relative isolate min-h-svh overflow-hidden bg-marble text-ink-deep"
     >
       <AnimatePresence initial={false} custom={direction} mode="sync">
         <motion.div
@@ -128,8 +128,7 @@ export default function HeroSwiper() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-embassy via-embassy/80 to-embassy/25 rtl:lg:bg-gradient-to-l ltr:lg:bg-gradient-to-r" />
-          <div className="absolute inset-0 bg-embassy/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-parchment/85 via-parchment/45 to-parchment/5 rtl:lg:bg-gradient-to-l ltr:lg:bg-gradient-to-r" />
         </motion.div>
       </AnimatePresence>
 
@@ -142,7 +141,7 @@ export default function HeroSwiper() {
         />
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-20 border-t border-champagne-gilt/20 bg-embassy/90">
+      <div className="absolute inset-x-0 bottom-0 z-20 border-t border-ink-deep/10 bg-marble/90">
         <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-md px-sm py-sm sm:px-md lg:px-xl">
           <SlideTabs
             activeIndex={activeIndex}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+
 import { SITE_LICENSE_NUMBER, SITE_PHONE } from "@/app/constants/site";
 import { SOCIAL_LINKS } from "@/app/constants/social-links";
 import { useTranslation } from "@/app/hooks/useTranslations";
@@ -18,7 +18,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const locale = useLocale() ?? "ar";
   const t = useTranslation("navbar");
-  const shouldReduceMotion = useReducedMotion();
   const pathname = usePathname();
   const isSolid = scrolled || pathname.includes("/request");
 
@@ -59,86 +58,32 @@ export default function Navbar() {
       <header
         className={`fixed inset-x-0  z-50 border-b pb-2 shadow-none transition-[background-color,border-color,backdrop-filter,box-shadow] duration-300 ease-out motion-reduce:transition-none ${
           isSolid
-            ? "border-champagne-gilt/20 top-0 bg-embassy/90 shadow-float backdrop-blur-md"
+            ? "border-ink-deep/10 top-0 bg-marble/90 shadow-float backdrop-blur-md"
             : "border-transparent top-2 bg-transparent"
         }`}
       >
         <div className="mx-auto flex h-18 items-center justify-between gap-3 px-4 sm:gap-4 md:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:px-8">
           {/* Start cluster — wordmark + license seal (desktop) or compact crest (mobile) */}
           <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
-            <div
+            <Link
+              href={`/${locale}`}
               aria-label={t.brandLabel}
-              className="flex shrink-0 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+              className="flex min-w-0 items-center gap-2.5 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:gap-3"
             >
-              <motion.div
-                className="relative"
-                animate={{
-                  width: isSolid ? 64 : 84,
-                  height: isSolid ? 64 : 84,
-                }}
-                transition={
-                  shouldReduceMotion
-                    ? { duration: 0 }
-                    : { duration: 0.45, ease: "easeInOut" }
-                }
-              >
-                <AnimatePresence initial={false} mode="wait">
-                  <motion.div
-                    key={isSolid ? "small" : "full"}
-                    className="absolute inset-0"
-                    initial={
-                      shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }
-                    }
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={
-                      shouldReduceMotion
-                        ? { opacity: 0 }
-                        : { opacity: 0, scale: 0.8 }
-                    }
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                  >
-                    <Link href={`/${locale}`}>
-                      <Image
-                        width={360}
-                        height={360}
-                        src={isSolid ? "/small-logo.webp" : "/logo.webp"}
-                        alt={t.brandLabel}
-                        className="h-full w-full object-contain"
-                      />
-                    </Link>
-                  </motion.div>
-                </AnimatePresence>
-              </motion.div>
-            </div>
-
-            {/* License credential — mini official-document lockup beside the logo */}
-            <div
-              role="img"
-              aria-label={`${t.license.label} ${SITE_LICENSE_NUMBER}`}
-              className="relative flex shrink-0 flex-col items-center"
-            >
-              <span
-                aria-hidden
-                className="mb-1.5 hidden h-[2px] w-9 rounded-full bg-court-gold/80 sm:block"
+              <Image
+                width={160}
+                height={160}
+                src="/small-logo.webp"
+                alt=""
+                className="h-10 w-10 shrink-0 rounded object-contain sm:h-12 sm:w-12"
               />
-              <span
-                className={`max-w-[8.5rem] truncate text-[0.625rem] font-semibold leading-none text-champagne-gilt/90 ${
-                  locale === "en" ? "uppercase tracking-[0.18em]" : ""
-                }`}
-              >
-                {t.license.label}
+              <span className="flex min-w-0 flex-col">
+                <span className="type-title whitespace-nowrap text-embassy">
+                  {t.brand}
+                </span>
+                <span className="type-label text-ink-soft">{t.brandSub}</span>
               </span>
-              <span
-                dir="ltr"
-                className="mt-1 font-headline text-[1.125rem] font-bold leading-none tracking-[0.1em] text-court-gold tabular-nums"
-              >
-                {SITE_LICENSE_NUMBER}
-              </span>
-              <span
-                aria-hidden
-                className="mt-1.5 hidden h-px w-8 bg-court-gold/40 sm:block"
-              />
-            </div>
+            </Link>
           </div>
 
           {/* Center — desktop links only (hidden on mobile so the wordmark sits at the start) */}
@@ -150,7 +95,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="group relative py-1.5 text-[0.9375rem] font-medium tracking-[0.01em] text-parchment transition-colors duration-150 ease-out hover:text-court-gold"
+                className="group relative py-1.5 text-[0.9375rem] font-medium tracking-[0.01em] text-embassy transition-colors duration-150 ease-out hover:text-court-gold"
               >
                 {t.nav[link.key]}
                 <span className="absolute inset-x-0 bottom-0 h-px origin-center scale-x-0 bg-court-gold transition-transform duration-150 ease-out group-hover:scale-x-100" />
@@ -161,7 +106,7 @@ export default function Navbar() {
           {/* End cluster — logical end */}
           <div className="flex items-center justify-self-end gap-3.5 ">
             {/* Social icons — wide desktop only, WhatsApp always gold */}
-            <div className="hidden items-center gap-3.5 border-e border-champagne-gilt/20 pe-3.5 xl:flex">
+            <div className="hidden items-center gap-3.5 border-e border-ink-deep/10 pe-3.5 xl:flex">
               {SOCIAL_LINKS.map((s) => (
                 <Link
                   key={s.key}
@@ -172,7 +117,7 @@ export default function Navbar() {
                   className={`flex h-8 w-8 items-center justify-center transition-colors duration-150 ease-out ${
                     s.gold
                       ? "text-court-gold"
-                      : "text-parchment/85 hover:text-court-gold"
+                      : "text-ink-deep/85 hover:text-court-gold"
                   }`}
                 >
                   <s.icon className="h-4.5 w-4.5" />
@@ -194,9 +139,9 @@ export default function Navbar() {
               aria-label={t.menuLabel}
               className="flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.25 lg:hidden"
             >
-              <span className="h-[1.5px] w-5.5 bg-parchment" />
-              <span className="h-[1.5px] w-5.5 bg-parchment" />
-              <span className="h-[1.5px] w-5.5 bg-parchment" />
+              <span className="h-[1.5px] w-5.5 bg-embassy" />
+              <span className="h-[1.5px] w-5.5 bg-embassy" />
+              <span className="h-[1.5px] w-5.5 bg-embassy" />
             </button>
           </div>
         </div>
@@ -204,14 +149,14 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-embassy/50 backdrop-blur-sm transition-opacity duration-200 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-ink-deep/50 backdrop-blur-sm transition-opacity duration-200 lg:hidden ${
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setMenuOpen(false)}
         aria-hidden
       />
       <div
-        className={`fixed inset-y-0 inset-e-0 z-50 flex w-[min(320px,84vw)] flex-col gap-7 border-s border-champagne-gilt/20 bg-chancery p-6 transition-transform duration-250 ease-out lg:hidden ${
+        className={`fixed inset-y-0 inset-e-0 z-50 flex w-[min(320px,84vw)] flex-col gap-7 border-s border-ink-deep/10 bg-marble p-6 transition-transform duration-250 ease-out lg:hidden ${
           menuOpen
             ? "translate-x-0"
             : locale === "ar"
@@ -235,15 +180,13 @@ export default function Navbar() {
               height={160}
               src="/small-logo.webp"
               alt=""
-              className="h-11 w-11 shrink-0 object-contain"
+              className="h-11 w-11 shrink-0 rounded object-contain"
             />
-            <span className="min-w-0">
-              <span className="block truncate font-title text-base font-semibold leading-none text-parchment">
+            <span className="flex min-w-0 flex-col">
+              <span className="type-title whitespace-nowrap text-embassy">
                 {t.brand}
               </span>
-              <span className="mt-1.5 inline-flex items-center gap-1 rounded-full border border-champagne-gilt/30 px-2 py-0.5 text-[0.6875rem] font-bold tabular-nums leading-none text-court-gold">
-                {t.license.label} {SITE_LICENSE_NUMBER}
-              </span>
+              <span className="type-label text-ink-soft">{t.brandSub}</span>
             </span>
           </Link>
           <Suspense>
@@ -257,7 +200,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="border-b border-champagne-gilt/15 py-3.5 text-[1.0625rem] font-medium text-parchment"
+              className="border-b border-ink-deep/10 py-3.5 text-[1.0625rem] font-medium text-embassy"
             >
               {t.nav[link.key]}
             </a>
@@ -266,7 +209,7 @@ export default function Navbar() {
 
         <a
           href={PHONE_URL}
-          className="flex h-12 items-center justify-center gap-2 rounded-[10px] bg-court-gold text-sm font-semibold text-embassy"
+          className="flex h-12 items-center justify-center gap-2 rounded-[10px] bg-court-gold type-btn text-embassy"
         >
           {t.ctaMobile}
         </a>
@@ -279,7 +222,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t.socials[s.key]}
-              className={`flex h-9 w-9 items-center justify-center ${s.gold ? "text-court-gold" : "text-parchment"}`}
+              className={`flex h-9 w-9 items-center justify-center ${s.gold ? "text-court-gold" : "text-ink-deep"}`}
             >
               <s.icon className="h-5 w-5" />
             </a>

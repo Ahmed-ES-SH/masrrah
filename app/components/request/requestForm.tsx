@@ -89,7 +89,7 @@ export default function RequestForm({
     >
       <div className="mx-auto grid w-full gap-lg px-sm py-xxl sm:px-md lg:grid-cols-[minmax(260px,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-lg xl:gap-xxl lg:px-xl">
         <div className="lg:sticky lg:top-28">
-          <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
+          <div className="flex items-center gap-xs type-label uppercase text-ink-soft">
             <span className="text-embassy" aria-hidden="true">
               ◆
             </span>
@@ -98,17 +98,17 @@ export default function RequestForm({
 
           <h1
             id="request-title"
-            className="mt-md max-w-[16ch] font-headline text-display font-bold leading-[1.12] text-embassy"
+            className="mt-md max-w-[16ch] type-display text-embassy"
           >
             {t.title}
           </h1>
 
-          <p className="mt-md max-w-[43ch] text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[43ch] type-body-lg text-ink-soft">
             {t.body}
           </p>
 
           <div className="mt-xl border-s border-embassy/25 ps-md">
-            <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+            <p className="type-label uppercase text-ink-soft">
               {t.privateNote}
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function RequestForm({
             <div className="border-b border-embassy/15 pb-md">
               <label
                 htmlFor="request-package"
-                className="text-label font-label uppercase tracking-[0.1em] text-ink-soft"
+                className="type-label uppercase text-ink-soft"
               >
                 {t.routeLabel}
               </label>
@@ -130,7 +130,7 @@ export default function RequestForm({
                 onChange={(event) =>
                   setActivePackage(event.target.value as RecruitmentPackageKey)
                 }
-                className="mt-xs min-h-12 w-full rounded-sm border border-embassy/15 bg-marble px-sm text-body text-embassy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+                className="mt-xs min-h-12 w-full rounded-sm border border-embassy/15 bg-marble px-sm type-body text-embassy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
               >
                 {RECRUITMENT_PACKAGES.map((packageItem) => (
                   <option key={packageItem.key} value={packageItem.key}>
@@ -144,7 +144,7 @@ export default function RequestForm({
               <div>
                 <label
                   htmlFor="request-name"
-                  className="text-label font-label uppercase tracking-[0.1em] text-ink-soft"
+                  className="type-label uppercase text-ink-soft"
                 >
                   {t.nameLabel}
                 </label>
@@ -155,14 +155,14 @@ export default function RequestForm({
                   autoComplete="name"
                   placeholder={t.namePlaceholder}
                   required
-                  className="mt-xs min-h-12 w-full rounded-sm border border-embassy/15 bg-marble px-sm text-body text-embassy placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+                  className="mt-xs min-h-12 w-full rounded-sm border border-embassy/15 bg-marble px-sm type-body text-embassy placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="request-phone"
-                  className="text-label font-label uppercase tracking-[0.1em] text-ink-soft"
+                  className="type-label uppercase text-ink-soft"
                 >
                   {t.phoneLabel}
                 </label>
@@ -174,7 +174,7 @@ export default function RequestForm({
                   inputMode="tel"
                   placeholder={t.phonePlaceholder}
                   required
-                  className="mt-xs min-h-12 w-full rounded-sm border border-embassy/15 bg-marble px-sm text-body text-embassy placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+                  className="mt-xs min-h-12 w-full rounded-sm border border-embassy/15 bg-marble px-sm type-body text-embassy placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
                 />
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function RequestForm({
             <div className="mt-md">
               <label
                 htmlFor="request-message"
-                className="text-label font-label uppercase tracking-[0.1em] text-ink-soft"
+                className="type-label uppercase text-ink-soft"
               >
                 {t.messageLabel}
               </label>
@@ -192,7 +192,7 @@ export default function RequestForm({
                 rows={6}
                 placeholder={t.messagePlaceholder}
                 required
-                className="mt-xs w-full rounded-sm border border-embassy/15 bg-marble px-sm py-sm text-body leading-7 text-embassy placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+                className="mt-xs w-full rounded-sm border border-embassy/15 bg-marble px-sm py-sm type-body text-embassy placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
               />
             </div>
 
@@ -200,7 +200,7 @@ export default function RequestForm({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
               >
                 <FiCheck className="h-4 w-4" aria-hidden="true" />
                 <span>{isSubmitting ? t.sending : t.submit}</span>
@@ -210,7 +210,7 @@ export default function RequestForm({
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 w-full items-center justify-center gap-xs rounded-md border border-embassy/20 px-md text-label font-semibold text-embassy transition-colors duration-200 hover:border-embassy hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-xs rounded-md border border-embassy/20 px-md type-btn text-embassy transition-colors duration-200 hover:border-embassy hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
               >
                 <FiMessageCircle className="h-4 w-4" aria-hidden="true" />
                 <span>{t.whatsappFallback}</span>
@@ -224,7 +224,7 @@ export default function RequestForm({
             {submitError && (
               <p
                 role="alert"
-                className="mt-md rounded-sm border border-embassy/20 bg-parchment px-sm py-sm text-body text-embassy"
+                className="mt-md rounded-sm border border-embassy/20 bg-parchment px-sm py-sm type-body text-embassy"
               >
                 {t.error}
               </p>

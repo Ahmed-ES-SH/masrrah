@@ -38,12 +38,12 @@ export default function LanguageSwitcher() {
         className="relative flex h-9 w-18 shrink-0 cursor-pointer items-center rounded-full border-[1.5px] border-court-gold px-0.75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
       >
         <span
-          className={`relative z-1 w-1/2 text-center text-xs font-semibold tracking-[0.03em] transition-colors duration-200 ${locale === "ar" ? "text-embassy" : "text-parchment"}`}
+          className={`relative z-1 w-1/2 text-center text-xs font-semibold tracking-[0.03em] transition-colors duration-200 ${locale === "ar" ? "text-embassy" : "text-ink-soft"}`}
         >
           AR
         </span>
         <span
-          className={`relative z-1 w-1/2 text-center text-xs font-semibold tracking-[0.03em] transition-colors duration-200 ${locale === "ar" ? "text-parchment" : "text-embassy"}`}
+          className={`relative z-1 w-1/2 text-center text-xs font-semibold tracking-[0.03em] transition-colors duration-200 ${locale === "ar" ? "text-ink-soft" : "text-embassy"}`}
         >
           EN
         </span>

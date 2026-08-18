@@ -47,7 +47,7 @@ export default function BlogSection() {
           className="flex flex-wrap items-end justify-between gap-lg"
         >
           <div className="max-w-184">
-            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
+            <div className="flex items-center gap-xs type-label uppercase text-ink-soft">
               <span className="text-embassy" aria-hidden="true">
                 ◆
               </span>
@@ -56,19 +56,19 @@ export default function BlogSection() {
 
             <h2
               id="journal-title"
-              className="mt-md max-w-[16ch] font-headline text-display font-medium leading-[1.12] text-embassy"
+              className="mt-md max-w-[16ch] type-display text-embassy"
             >
               {content.title}
             </h2>
 
-            <p className="mt-md max-w-[52ch] text-body leading-8 text-ink-soft">
+            <p className="mt-md max-w-[52ch] type-body-lg text-ink-soft">
               {content.body}
             </p>
           </div>
 
           <div className="flex items-center gap-sm">
             <p
-              className="me-sm text-label font-label tabular-nums tracking-[0.12em] text-ink-soft"
+              className="me-sm type-label tabular-nums text-ink-soft"
               aria-live="polite"
             >
               <span className="text-embassy">

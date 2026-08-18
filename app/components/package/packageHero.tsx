@@ -51,31 +51,31 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
     <section
       aria-labelledby="package-detail-title"
       aria-label={`${t.ariaLabel} — ${copy.label}`}
-      className="relative overflow-hidden bg-embassy text-parchment"
+      className="relative overflow-hidden bg-marble text-ink-deep"
     >
-      {/* Navy field decoration */}
+      {/* Field decoration */}
       <div
-        className="pointer-events-none absolute end-[-10rem] top-[-12rem] h-[26rem] w-[26rem] rounded-full border border-champagne-gilt/10"
+        className="pointer-events-none absolute end-[-10rem] top-[-12rem] h-[26rem] w-[26rem] rounded-full border border-ink-deep/10"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute bottom-[-14rem] end-[28%] h-[24rem] w-[24rem] rounded-full border border-champagne-gilt/10"
+        className="pointer-events-none absolute bottom-[-14rem] end-[28%] h-[24rem] w-[24rem] rounded-full border border-ink-deep/10"
         aria-hidden="true"
       />
 
       <div className="relative mx-auto grid w-full min-h-svh grid-cols-1 grid-rows-[auto_auto_auto] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:grid-rows-[auto_minmax(0,1fr)]">
-        {/* ===== Navy apron — sits under the transparent navbar ===== */}
+        {/* Apron — sits under the transparent navbar */}
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={reveal()}
-          className="flex items-center justify-between gap-md border-b border-champagne-gilt/15 px-sm pb-lg pt-20 sm:px-md lg:col-span-2 lg:px-xl"
+          className="flex items-center justify-between gap-md border-b border-ink-deep/10 px-sm pb-lg pt-20 sm:px-md lg:col-span-2 lg:px-xl"
         >
           <Link
             href={`/${locale}/#packages`}
             aria-label={t.backAria}
-            className="inline-flex items-center gap-xs rounded-md p-1 text-label font-semibold text-champagne-gilt/80 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+            className="inline-flex items-center gap-xs rounded-md p-1 type-btn text-ink-soft transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
           >
             <FiChevronDown
               className="h-4 w-4 rotate-[-90deg] rtl:rotate-90"
@@ -85,10 +85,10 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
           </Link>
 
           <p
-            className="text-label font-label tabular-nums tracking-[0.14em] text-parchment/80"
+            className="type-label tabular-nums text-ink-soft"
             aria-hidden="true"
           >
-            <span className="text-champagne-gilt">
+            <span className="text-embassy">
               {String(packageIndex + 1).padStart(2, "0")}
             </span>
             <span> / </span>
@@ -124,19 +124,19 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               viewport={{ once: true, amount: 0.3 }}
               transition={reveal(0.08)}
             >
-              <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.12em] text-ink-soft">
+              <p className="flex items-center gap-xs type-label uppercase text-ink-soft">
                 <span aria-hidden="true">◆</span>
                 <span>{t.eyebrow}</span>
               </p>
 
               <h1
                 id="package-detail-title"
-                className="mt-md max-w-[15ch] text-balance font-headline text-display font-bold leading-[1.1] text-embassy"
+                className="mt-md max-w-[15ch] text-balance type-display text-embassy"
               >
                 {copy.title}
               </h1>
 
-              <p className="mt-md max-w-[52ch] text-pretty text-body leading-8 text-ink-soft">
+              <p className="mt-md max-w-[52ch] text-pretty type-body-lg text-ink-soft">
                 {copy.description}
               </p>
             </motion.div>
@@ -149,19 +149,19 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               className="mt-lg"
             >
               {isFeatured && (
-                <span className="inline-block rounded-full border border-embassy/15 bg-marble px-sm py-xxs text-label font-semibold text-amendment">
+                <span className="inline-block rounded-full border border-ink-deep/15 bg-marble px-sm py-xxs type-label text-ink-soft">
                   {p.popularLabel}
                 </span>
               )}
 
               <div className="mt-md flex flex-wrap items-baseline gap-xs border-s border-embassy/25 ps-md">
-                <p className="w-full text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+                <p className="w-full type-label uppercase text-ink-soft">
                   {p.priceFrom}
                 </p>
-                <span className="font-headline text-[3rem] font-bold leading-none tracking-tight text-embassy tabular-nums">
+                <span className="font-headline text-[3rem] font-semibold leading-none tracking-tight text-embassy tabular-nums">
                   {copy.price}
                 </span>
-                <span className="text-label font-semibold text-ink-soft">
+                <span className="type-label text-ink-soft">
                   {p.currency}
                 </span>
               </div>
@@ -176,7 +176,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
             >
               <a
                 href="#request"
-                className="group inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
+                className="group inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
               >
                 <span>{t.cta}</span>
                 <FiArrowUpRight
@@ -189,7 +189,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 w-full items-center justify-center gap-xs rounded-md border border-ink-deep/15 px-md text-label font-semibold text-ink-soft transition-colors duration-200 hover:border-court-gold hover:text-ink-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-xs rounded-md border border-ink-deep/15 px-md type-btn text-ink-soft transition-colors duration-200 hover:border-court-gold hover:text-ink-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold sm:w-auto"
               >
                 <FiMessageCircle className="h-4 w-4" aria-hidden="true" />
                 <span>{p.whatsappFallback}</span>
@@ -207,7 +207,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                 className="mt-1 h-4 w-4 shrink-0 text-amendment"
                 aria-hidden="true"
               />
-              <p className="text-label leading-6 text-ink-soft">{p.note}</p>
+              <p className="type-label text-ink-soft">{p.note}</p>
             </motion.div>
           </div>
 
@@ -223,7 +223,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               aria-label={t.scrollAria}
               className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-ink-soft/80 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
             >
-              <span className="text-label tracking-[0.14em] uppercase">
+              <span className="type-label uppercase">
                 {t.scrollHint}
               </span>
               <FiChevronDown
@@ -234,7 +234,7 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
           </motion.div>
         </div>
 
-        {/* ===== Navy field — the inclusions wall sits inside the diagonal ===== */}
+        {/* ===== Inclusions wall — sits inside the diagonal ===== */}
         <div className="flex flex-col bg-transparent px-sm pt-xl pb-xl sm:px-md lg:col-start-2 lg:row-start-2 lg:px-16 lg:pt-0 lg:pb-16">
           <div className="flex flex-1 items-center lg:justify-center">
             <motion.aside
@@ -243,41 +243,41 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
               viewport={{ once: true, amount: 0.2 }}
               transition={reveal(0.2)}
               aria-labelledby="package-included-title"
-              className="w-full rounded-lg border border-champagne-gilt/20 bg-chancery p-md shadow-apparatus sm:p-lg"
+              className="w-full rounded-lg border border-ink-deep/10 bg-parchment p-md shadow-apparatus sm:p-lg"
             >
               <div className="flex items-start justify-between gap-sm">
                 <div className="flex min-w-0 items-center gap-sm">
                   <span
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/30 bg-embassy text-champagne-gilt"
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-court-gold/30 bg-court-gold/15 text-court-gold"
                     aria-hidden="true"
                   >
                     <Icon className="h-5 w-5" />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-label font-semibold text-parchment">
+                    <p className="type-label text-embassy">
                       {copy.label}
                     </p>
-                    <p className="mt-xxs text-label text-parchment/75">
+                    <p className="mt-xxs type-label text-ink-soft">
                       {copy.shortDescription}
                     </p>
                   </div>
                 </div>
 
                 {isFeatured && (
-                  <span className="shrink-0 rounded-full border border-court-gold/60 bg-embassy/80 px-sm py-xxs text-label font-semibold text-champagne-gilt">
+                  <span className="shrink-0 rounded-full border border-court-gold/50 bg-marble px-sm py-xxs type-label text-embassy">
                     {p.popularLabel}
                   </span>
                 )}
               </div>
 
               <div
-                className="mt-md h-px w-full bg-champagne-gilt/15"
+                className="mt-md h-px w-full bg-ink-deep/10"
                 aria-hidden="true"
               />
 
               <p
                 id="package-included-title"
-                className="mt-md text-label font-label uppercase tracking-[0.1em] text-amendment"
+                className="mt-md type-label uppercase text-ink-soft"
               >
                 {p.includedLabel}
               </p>
@@ -286,13 +286,13 @@ export default function PackageHero({ packageKey }: PackageHeroProps) {
                 {copy.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-sm text-body leading-6 text-parchment/80"
+                    className="flex items-start gap-sm type-body text-ink-soft"
                   >
                     <span
-                      className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/40 bg-embassy"
+                      className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-court-gold/40 bg-marble"
                       aria-hidden="true"
                     >
-                      <FiCheck className="h-3 w-3 text-champagne-gilt" />
+                      <FiCheck className="h-3 w-3 text-court-gold" />
                     </span>
                     <span>{feature}</span>
                   </li>

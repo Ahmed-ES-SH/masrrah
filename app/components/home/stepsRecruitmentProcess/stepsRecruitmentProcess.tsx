@@ -34,17 +34,17 @@ export default function StepsRecruitmentProcess() {
         className="grid gap-lg border-b border-embassy/15 pb-lg lg:grid-cols-[minmax(0,1fr)_minmax(15rem,0.55fr)] lg:items-end lg:gap-xxl"
       >
         <div>
-          <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-embassy">
+          <p className="flex items-center gap-xs type-label uppercase text-embassy">
             <span aria-hidden="true">◆</span>
             <span>{t.eyebrow}</span>
           </p>
           <h2
             id="recruitment-process-title"
-            className="mt-sm max-w-[17ch] text-balance font-headline text-display font-medium leading-[1.08] text-embassy"
+            className="mt-sm max-w-[17ch] text-balance type-display text-embassy"
           >
             {t.title}
           </h2>
-          <p className="mt-md max-w-[58ch] text-pretty text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[58ch] text-pretty type-body-lg text-ink-soft">
             {t.body}
           </p>
         </div>
@@ -57,10 +57,10 @@ export default function StepsRecruitmentProcess() {
             <FiCheck className="h-5 w-5" />
           </span>
           <div className="pt-xxs">
-            <p className="text-label font-label uppercase tracking-[0.12em] text-embassy">
+            <p className="type-label uppercase text-embassy">
               {t.ledgerLabel}
             </p>
-            <p className="mt-xxs max-w-[24ch] text-label leading-5 text-ink-soft">
+            <p className="mt-xxs max-w-[24ch] type-label text-ink-soft">
               {t.ledgerNote}
             </p>
           </div>
@@ -85,16 +85,16 @@ export default function StepsRecruitmentProcess() {
               )}
               className="relative min-h-64 overflow-hidden rounded-lg border border-embassy/15 bg-marble p-md sm:p-lg"
             >
-              <span className="text-label font-label tabular-nums tracking-[0.12em] text-court-gold">
+              <span className="type-label tabular-nums text-court-gold">
                 {stepNumber}
               </span>
 
               <div className="mt-sm flex items-start justify-between gap-md">
                 <div>
-                  <p className="text-label font-label uppercase tracking-[0.12em] text-ink-soft">
+                  <p className="type-label uppercase text-ink-soft">
                     {copy.label}
                   </p>
-                  <h3 className="mt-xs max-w-[18ch] font-title text-title font-semibold leading-7 text-embassy">
+                  <h3 className="mt-xs max-w-[18ch] type-title text-embassy">
                     {copy.title}
                   </h3>
                 </div>
@@ -110,7 +110,7 @@ export default function StepsRecruitmentProcess() {
                 </div>
               </div>
 
-              <p className="mt-md max-w-[34ch] text-body leading-7 text-ink-soft">
+              <p className="mt-md max-w-[34ch] type-body text-ink-soft">
                 {copy.body}
               </p>
             </motion.li>

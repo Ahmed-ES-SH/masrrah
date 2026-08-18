@@ -63,7 +63,7 @@ export default function Toast({
             transition={
               shouldReduceMotion ? { duration: 0 } : { duration: 0.4, delay: 0.08 }
             }
-            className="pointer-events-auto flex w-full max-w-2xl items-start gap-sm rounded-lg border border-champagne-gilt/25 bg-chancery p-sm shadow-apparatus"
+            className="pointer-events-auto flex w-full max-w-2xl items-start gap-sm rounded-lg border border-ink-deep/10 bg-marble p-sm shadow-apparatus"
           >
             <span
               className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-court-gold"
@@ -73,8 +73,8 @@ export default function Toast({
             </span>
 
             <div className="min-w-0 flex-1">
-              <p className="font-title text-title font-bold text-parchment">{title}</p>
-              <p className="mt-xxs text-body leading-6 text-parchment/75">{message}</p>
+              <p className="type-title text-embassy">{title}</p>
+              <p className="mt-xxs type-body text-ink-soft">{message}</p>
             </div>
 
             <button
@@ -82,7 +82,7 @@ export default function Toast({
               onClick={onClose}
               aria-label={closeButtonLabel ?? t.close}
               title={closeButtonLabel ?? t.close}
-              className="ms-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-parchment/80 transition-colors duration-200 hover:bg-parchment/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+              className="ms-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-ink-soft transition-colors duration-200 hover:bg-embassy/5 hover:text-embassy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
             >
               <FiX className="h-4 w-4" aria-hidden="true" />
             </button>

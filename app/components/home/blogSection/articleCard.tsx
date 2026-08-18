@@ -13,36 +13,29 @@ export default function ArticleCard({ post, onOpen }: ArticleCardProps) {
       onClick={onOpen}
       className="group relative flex h-full w-full min-h-[24rem] flex-col overflow-hidden rounded-lg border border-embassy/15 bg-marble text-start hover:border-embassy/40 motion-safe:transition-all motion-safe:duration-150 motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-float focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
     >
-      <span
-        className="pointer-events-none absolute -top-5 start-2 select-none font-headline text-[9rem] font-bold leading-[0.8] text-embassy/[0.05]"
-        aria-hidden="true"
-      >
-        {post.initial}
-      </span>
-
       <div className="relative z-10 flex min-h-10 items-center gap-xs border-b border-embassy/15 px-md">
         <span className="text-embassy" aria-hidden="true">
           ◆
         </span>
-        <span className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+        <span className="type-label uppercase text-ink-soft">
           {post.category}
         </span>
-        <span className="ms-auto text-label leading-5 text-ink-soft/75">
+        <span className="ms-auto type-label text-ink-soft/75">
           {post.date}
         </span>
       </div>
 
       <div className="relative z-10 flex flex-1 flex-col p-md sm:p-lg">
-        <h3 className="font-headline text-headline font-bold leading-snug text-ink-deep">
+        <h3 className="type-headline text-ink-deep">
           {post.title}
         </h3>
 
-        <p className="mb-md mt-sm text-body leading-7 text-ink-soft">
+        <p className="mb-md mt-sm type-body text-ink-soft">
           {post.excerpt}
         </p>
 
         <div className="mt-auto flex items-center gap-xs border-t border-embassy/15 pt-md">
-          <span className="text-label leading-5 text-ink-soft/80">
+          <span className="type-label text-ink-soft/80">
             {post.readTime}
           </span>
           <span

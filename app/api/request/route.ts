@@ -67,7 +67,7 @@ function buildEmailHtml(payload: RequestFormPayload) {
     .map(
       ([label, value]) => `
         <tr>
-          <td style="padding:10px 16px;width:160px;font-weight:600;color:#0f2e3d;background:#f4efe5;border-bottom:1px solid #e4dbc8;">${label}</td>
+          <td style="padding:10px 16px;width:160px;font-weight:600;color:#241c12;background:#f4efe5;border-bottom:1px solid #e4dbc8;">${label}</td>
           <td style="padding:10px 16px;color:#2a2a2a;border-bottom:1px solid #e4dbc8;white-space:pre-wrap;">${value}</td>
         </tr>`,
     )
@@ -76,8 +76,8 @@ function buildEmailHtml(payload: RequestFormPayload) {
   return `
     <div dir="auto" style="font-family:Arial,Helvetica,sans-serif;background:#faf7f0;padding:32px 16px;">
       <div style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #e4dbc8;border-radius:12px;overflow:hidden;">
-        <div style="padding:20px 24px;background:#0f2e3d;">
-          <h1 style="margin:0;font-size:18px;color:#c9a227;">New request — Masarrah HR</h1>
+        <div style="padding:20px 24px;background:#241c12;">
+          <h1 style="margin:0;font-size:18px;color:#b98a45;">New request — Masarrah HR</h1>
         </div>
         <table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6;">${cells}</table>
         <div style="padding:16px 24px;font-size:12px;color:#8a8578;">

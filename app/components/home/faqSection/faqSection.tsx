@@ -69,7 +69,7 @@ export default function FaqSection() {
           transition={transition}
           className="lg:sticky lg:top-28"
         >
-          <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
+          <div className="flex items-center gap-xs type-label uppercase text-ink-soft">
             <span className="text-embassy" aria-hidden="true">
               ◆
             </span>
@@ -78,12 +78,12 @@ export default function FaqSection() {
 
           <h2
             id="faq-title"
-            className="mt-md max-w-[16ch] font-headline text-display font-medium leading-[1.12] text-embassy"
+            className="mt-md max-w-[16ch] type-display text-embassy"
           >
             {content.title}
           </h2>
 
-          <p className="mt-md max-w-[44ch] text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[44ch] type-body-lg text-ink-soft">
             {content.body}
           </p>
         </motion.div>

@@ -17,7 +17,7 @@ export default async function Home() {
       <ServicesSection />
       <StepsRecruitmentProcess />
       <RecruitmentOperations />
-      <PackagesSection />
+      {/* <PackagesSection /> */}
       <CountriesSection />
       <PlatformSection />
       <FaqSection />

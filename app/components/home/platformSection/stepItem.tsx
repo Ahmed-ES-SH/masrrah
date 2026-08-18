@@ -29,17 +29,17 @@ export function StepItem({
       </div>
       <div className="min-w-0 pt-xxs">
         <div className="flex flex-wrap items-baseline gap-xs">
-          <span className="text-label font-label tracking-[0.12em] text-embassy">
+          <span className="type-label text-embassy">
             {step.number}
           </span>
-          <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+          <p className="type-label uppercase text-ink-soft">
             {copy.label}
           </p>
         </div>
-        <h4 className="mt-xs font-title text-title font-semibold text-ink-deep">
+        <h4 className="mt-xs type-title text-ink-deep">
           {copy.title}
         </h4>
-        <p className="mt-xs max-w-[48ch] text-body leading-7 text-ink-soft">
+        <p className="mt-xs max-w-[48ch] type-body text-ink-soft">
           {copy.body}
         </p>
       </div>

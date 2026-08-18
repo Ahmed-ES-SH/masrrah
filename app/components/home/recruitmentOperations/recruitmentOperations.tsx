@@ -79,13 +79,13 @@ export default function RecruitmentOperations() {
           className="mb-lg flex items-end justify-between gap-md border-b border-embassy/10 pb-md"
         >
           <div>
-            <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-embassy">
+            <p className="flex items-center gap-xs type-label uppercase text-embassy">
               <span aria-hidden="true">◆</span>
               <span>{t.title}</span>
             </p>
             <h2
               id="recruitment-operations-title"
-              className="mt-xs font-headline text-display font-medium leading-tight text-embassy"
+              className="mt-xs type-display text-embassy"
             >
               {t.title}
             </h2>
@@ -115,7 +115,7 @@ export default function RecruitmentOperations() {
                   className="h-8 w-1 rounded-sm bg-court-gold"
                   aria-hidden="true"
                 />
-                <h3 className="font-title text-title font-bold leading-7 text-embassy">
+                <h3 className="type-title text-embassy">
                   {column.heading}
                 </h3>
               </div>
@@ -142,7 +142,7 @@ export default function RecruitmentOperations() {
                       <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-embassy/10 bg-marble text-diplomacy/75 transition-colors duration-200 ease-out group-hover:text-embassy">
                         <Icon className="h-5 w-5" aria-hidden="true" />
                       </span>
-                      <span className="pt-xxs font-body text-body font-bold leading-7 text-embassy">
+                      <span className="pt-xxs type-body text-embassy">
                         {step.text}
                       </span>
                     </motion.li>

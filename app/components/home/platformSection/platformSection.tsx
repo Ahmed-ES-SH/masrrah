@@ -57,7 +57,7 @@ export default function PlatformSection() {
           viewport={{ once: true, amount: 0.3 }}
           transition={revealTransition(shouldReduceMotion)}
         >
-          <div className="mb-md flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
+          <div className="mb-md flex items-center gap-xs type-label uppercase text-ink-soft">
             <span className="text-embassy" aria-hidden="true">
               ◆
             </span>
@@ -66,24 +66,24 @@ export default function PlatformSection() {
 
           <h2
             id="platform-title"
-            className="max-w-[18ch] font-headline text-display font-medium leading-[1.12] text-embassy"
+            className="max-w-[18ch] type-display text-embassy"
           >
             {t.title}
           </h2>
 
-          <p className="mt-md max-w-[54ch] text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[54ch] type-body-lg text-ink-soft">
             {t.body}
           </p>
 
           <div className="mt-xl border-s-2 border-embassy/25 ps-md">
-            <p className="text-title font-semibold leading-8 text-ink-deep">
+            <p className="type-title text-ink-deep">
               {t.promise}
             </p>
             <Link
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-md inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt sm:w-auto"
+              className="group mt-md inline-flex min-h-12 w-full items-center justify-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne-gilt sm:w-auto"
             >
               <span>{t.action}</span>
               <FiArrowUpRight
@@ -103,10 +103,10 @@ export default function PlatformSection() {
         >
           <div className="flex items-start justify-between gap-md border-b border-embassy/15 pb-md">
             <div>
-              <p className="text-label font-label uppercase tracking-[0.12em] text-ink-soft">
+              <p className="type-label uppercase text-ink-soft">
                 {t.panel.label}
               </p>
-              <h3 className="mt-xs font-title text-title font-semibold text-ink-deep">
+              <h3 className="mt-xs type-title text-ink-deep">
                 {t.panel.title}
               </h3>
             </div>

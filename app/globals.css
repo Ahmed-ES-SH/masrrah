@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fcf9f2;
+  --foreground: #2b2318;
 
-  --color-embassy: #0b1b3a;
-  --color-chancery: #122451;
-  --color-diplomacy: #1b335e;
-  --color-court-gold: #c9a227;
-  --color-gilded-light: #e1be5e;
-  --color-champagne-gilt: #f0d889;
-  --color-parchment: #f5efdd;
-  --color-marble: #ffffff;
-  --color-ink-deep: #111318;
-  --color-ink-soft: #4a4e5a;
+  --color-embassy: #241c12;
+  --color-chancery: #372c1e;
+  --color-diplomacy: #47392a;
+  --color-court-gold: #b98a45;
+  --color-gilded-light: #c9a05f;
+  --color-champagne-gilt: #e4d7bd;
+  --color-parchment: #f4efe3;
+  --color-marble: #fcf9f2;
+  --color-ink-deep: #2b2318;
+  --color-ink-soft: #6d6153;
+  --color-sand: #ece3cf;
   --color-success: #2e7d5b;
   --color-amendment: #b8862e;
   --color-cerise: #b3403a;
 
-  --font-display: "Inter", "IBM Plex Sans Arabic", sans-serif;
-  --font-headline: "Inter", "IBM Plex Sans Arabic", sans-serif;
-  --font-title: "Inter", "IBM Plex Sans Arabic", sans-serif;
-  --font-body: "Inter", "IBM Plex Sans Arabic", sans-serif;
-  --font-label: "Inter", "IBM Plex Sans Arabic", sans-serif;
+  --font-display: var(--font-thmanyah-sans), var(--font-inter), sans-serif;
+  --font-headline: var(--font-thmanyah-sans), var(--font-inter), sans-serif;
+  --font-title: var(--font-thmanyah-sans), var(--font-inter), sans-serif;
+  --font-body: var(--font-thmanyah-sans), var(--font-inter), sans-serif;
+  --font-label: var(--font-thmanyah-sans), var(--font-inter), sans-serif;
 
   --text-display: clamp(1.75rem, 5vw, 3rem);
   --text-hero-display: clamp(2.125rem, 5.6vw, 3.75rem);
@@ -43,14 +44,14 @@
   --spacing-xl: 48px;
   --spacing-xxl: 64px;
 
-  --shadow-float: 0 8px 24px rgba(11, 27, 58, 0.12);
-  --shadow-apparatus: 0 6px 16px rgba(11, 27, 58, 0.25);
+  --shadow-float: 0 8px 24px rgba(36, 28, 18, 0.12);
+  --shadow-apparatus: 0 6px 16px rgba(36, 28, 18, 0.25);
 
   --drop-shadow-hero-title:
-    0 2px 20px rgba(11, 27, 58, 0.6), 0 1px 2px rgba(11, 27, 58, 0.85);
-  --drop-shadow-hero-copy: 0 1px 10px rgba(11, 27, 58, 0.6);
+    0 2px 20px rgba(36, 28, 18, 0.6), 0 1px 2px rgba(36, 28, 18, 0.85);
+  --drop-shadow-hero-copy: 0 1px 10px rgba(36, 28, 18, 0.6);
   --drop-shadow-gold-glow:
-    0 1px 2px rgba(11, 27, 58, 0.5), 0 2px 14px rgba(184, 134, 46, 0.35);
+    0 1px 2px rgba(36, 28, 18, 0.5), 0 2px 14px rgba(185, 138, 69, 0.35);
 }
 
 @theme inline {
@@ -67,6 +68,7 @@
   --color-marble: var(--color-marble);
   --color-ink-deep: var(--color-ink-deep);
   --color-ink-soft: var(--color-ink-soft);
+  --color-sand: var(--color-sand);
   --color-success: var(--color-success);
   --color-amendment: var(--color-amendment);
   --color-cerise: var(--color-cerise);
@@ -104,20 +106,12 @@
   --drop-shadow-gold-glow: var(--drop-shadow-gold-glow);
 }
 
-html[lang="ar"] {
-  --font-display: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
-  --font-headline: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
-  --font-title: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
-  --font-body: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
-  --font-label: var(--font-thmanyah-sans), "IBM Plex Sans Arabic", sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-/* Scrollbars — one quiet navy rail down the estate wall: chancellery thumb
-   on an embassy track, lifting to diplomacy on hover. Rests in either band
+/* Scrollbars — one quiet espresso rail down the estate wall: espresso thumb
+   on a cocoa track, lifting to walnut on hover. Rests in either band
    of the light/dark walk without shouting on parchment. */
 html {
   scrollbar-color: var(--color-chancery) var(--color-embassy);
@@ -146,5 +140,70 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 400;
+}
+
+@layer components {
+  .type-hero-display {
+    font-family: var(--font-display);
+    font-size: var(--text-hero-display);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .type-display {
+    font-family: var(--font-display);
+    font-size: var(--text-display);
+    font-weight: 500;
+    line-height: 1.12;
+  }
+
+  .type-headline {
+    font-family: var(--font-headline);
+    font-size: var(--text-headline);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .type-title {
+    font-family: var(--font-title);
+    font-size: var(--text-title);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .type-body {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  .type-body-lg {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  .type-label {
+    font-family: var(--font-label);
+    font-size: var(--text-label);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+  }
+
+  .type-btn {
+    font-family: var(--font-label);
+    font-size: var(--text-label);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+  }
+
+  [dir="rtl"] .type-label,
+  [dir="rtl"] .type-btn {
+    letter-spacing: 0;
+  }
 }

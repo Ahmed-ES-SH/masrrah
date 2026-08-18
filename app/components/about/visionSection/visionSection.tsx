@@ -84,17 +84,17 @@ export default function VisionSection() {
           viewport={{ once: true, amount: 0.25 }}
           transition={revealTransition(shouldReduceMotion)}
         >
-          <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-amendment">
+          <p className="flex items-center gap-xs type-label uppercase text-ink-soft">
             <span aria-hidden="true">◈</span>
             <span>{t.vision.eyebrow}</span>
           </p>
           <h2
             id="about-vision-title"
-            className="mt-sm max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.08] text-embassy"
+            className="mt-sm max-w-[16ch] text-balance type-display text-embassy"
           >
             {t.vision.title}
           </h2>
-          <p className="mt-md max-w-[46ch] text-pretty text-body leading-8 text-ink-soft">
+          <p className="mt-md max-w-[46ch] text-pretty type-body-lg text-ink-soft">
             {t.vision.intro}
           </p>
         </motion.div>
@@ -107,11 +107,11 @@ export default function VisionSection() {
           className="relative"
         >
           <GatewayArch shouldReduceMotion={shouldReduceMotion} />
-          <div className="relative rounded-md bg-embassy px-md py-lg text-parchment sm:px-lg">
-            <p className="text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
+          <div className="relative rounded-md border border-embassy/10 bg-marble px-md py-lg text-ink-deep sm:px-lg">
+            <p className="type-label uppercase text-embassy">
               {t.vision.visionLabel}
             </p>
-            <p className="mt-md max-w-[52ch] text-pretty text-body leading-8 text-parchment/90">
+            <p className="mt-md max-w-[52ch] text-pretty type-body-lg text-ink-soft">
               {t.vision.visionBody}
             </p>
           </div>
@@ -126,12 +126,12 @@ export default function VisionSection() {
         className="mt-xl border-t-2 border-court-gold lg:mt-xxl"
       >
         <div className="mt-md flex items-baseline gap-md">
-          <p className="shrink-0 text-label font-semibold uppercase tracking-[0.14em] text-embassy">
+          <p className="shrink-0 type-label uppercase text-embassy">
             {t.vision.missionLabel}
           </p>
           <span className="h-px w-full bg-court-gold/25" aria-hidden="true" />
         </div>
-        <p className="mt-md max-w-[64ch] text-pretty text-body leading-8 text-ink-soft">
+        <p className="mt-md max-w-[64ch] text-pretty type-body-lg text-ink-soft">
           {t.vision.missionBody}
         </p>
       </motion.div>

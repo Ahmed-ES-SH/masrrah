@@ -1,7 +1,7 @@
 {
   "mainLayout": {
-    "title": "Masarah HR Recruitment | مسرة إتش أر للاستقدام",
-    "description": "A licensed Saudi HR recruitment company bringing vetted domestic staff — housekeepers, drivers, home nurses, and cooks — and qualified commercial workers from abroad to households and companies across the Kingdom, with a formal, transparent process and follow-up that continues after arrival.",
+    "title": "Masarah HR Recruitment مسرة إتش أر للاستقدام",
+    "description": "A licensed Saudi HR recruitment company bringing vetted domestic staff housekeepers drivers home nurses and cooks and qualified commercial workers from abroad to households and companies across the Kingdom with a formal transparent process and follow-up that continues after arrival",
     "keywords": [
       "Saudi recruitment",
       "recruitment company Saudi Arabia",
@@ -14,7 +14,7 @@
       "labor recruitment Saudi Arabia",
       "HR recruitment company"
     ],
-    "ogImageAlt": "Masarah — licensed Saudi HR recruitment company for domestic and commercial staff"
+    "ogImageAlt": "Masarah licensed Saudi HR recruitment company for domestic and commercial staff"
   },
   "header": {
     "title": "Masarrah HR",
@@ -36,9 +36,9 @@
     }
   },
   "footer": {
-    "title": "Masarrah HR HR Recruitment",
+    "title": "Masarrah HR Recruitment",
     "tagline": "Licensed Saudi recruitment company",
-    "about": "Masarrah HR is a Saudi recruitment house bringing vetted domestic and commercial staff from abroad to households and companies across the Kingdom, with a clear, formal and trusted process.",
+    "about": "Masarrah HR is a Saudi recruitment house bringing vetted domestic and commercial staff from abroad to households and companies across the Kingdom with a clear formal and trusted process",
     "nav": {
       "heading": "Quick Links",
       "home": "Home",
@@ -58,12 +58,12 @@
     },
     "newsletter": {
       "eyebrow": "The Masarrah HR brief",
-      "title": "A clear note when the next step matters.",
-      "body": "Receive occasional guidance on recruitment routes, preparation and the details worth knowing before you request a service.",
+      "title": "A clear note when the next step matters",
+      "body": "Receive occasional guidance on recruitment routes preparation and the details worth knowing before you request a service",
       "emailLabel": "Your email address",
       "placeholder": "name@example.com",
       "submit": "Subscribe",
-      "success": "You are on the list. We will be in touch with the next brief."
+      "success": "You are on the list We will be in touch with the next brief"
     },
     "socials": {
       "heading": "Find us in",
@@ -93,28 +93,28 @@
     "slides": {
       "trust": {
         "eyebrow": "Trusted recruitment",
-        "headline": "Bringing in your domestic worker, no surprises and no long waits",
-        "body": "We handle every step — from official documentation to the worker's arrival at your door — and keep regularly",
+        "headline": "Bringing in your domestic worker no surprises and no long waits",
+        "body": "We handle every step from official documentation to the worker's arrival at your door and keep regularly",
         "primaryCta": "Explore our services",
-        "secondaryCta": "View our packages",
+        "secondaryCta": "View our services",
         "metric": "From request to arrival",
         "imageAlt": "A team of workers arriving in the Kingdom through a formal recruitment journey"
       },
       "contracts": {
         "eyebrow": "Clear contracts",
-        "headline": "Every clause understood. Every right protected.",
-        "body": "We review the contract with you in plain language, so you know what you commit to and receive before signing.",
+        "headline": "Every clause understood Every right protected",
+        "body": "We review the contract with you in plain language so you know what you commit to and receive before signing",
         "primaryCta": "Explore our services",
-        "secondaryCta": "View our packages",
+        "secondaryCta": "View our services",
         "metric": "Clarity before signing",
         "imageAlt": "Organized contract documents on a formal desk with a stamp and pen"
       },
       "support": {
         "eyebrow": "Support that stays",
         "headline": "Our work does not end at the signature",
-        "body": "The Masarrah HR team follows the trial period and helps with administrative issues, so both sides can settle with confidence.",
+        "body": "The Masarrah HR team follows the trial period and helps with administrative issues so both sides can settle with confidence",
         "primaryCta": "Explore our services",
-        "secondaryCta": "View our packages",
+        "secondaryCta": "View our services",
         "metric": "Support after arrival",
         "imageAlt": "A family and work team sharing a scene of arrival and settling in the Kingdom"
       }
@@ -122,8 +122,8 @@
   },
   "navbar": {
     "brand": "Masarrah HR",
-    "brandSub": "مسرة إتش أر للاستقدام",
-    "brandLabel": "Masarrah HR — home",
+    "brandSub": "Recruitment",
+    "brandLabel": "Masarrah HR home",
     "cta": "Contact us",
     "ctaMobile": "Call us now",
     "menuLabel": "Menu",
@@ -153,7 +153,7 @@
     "ariaLabel": "Government-approved partners",
     "eyebrow": "Trusted by the Kingdom",
     "title": "Government-approved partners",
-    "body": "Licensed and registered with the official authorities regulating recruitment in the Kingdom.",
+    "body": "Licensed and registered with the official authorities regulating recruitment in the Kingdom",
     "logoAlt": "Logo of",
     "logos": {
       "musaned": "Musaned",
@@ -165,61 +165,61 @@
   "platform": {
     "ariaLabel": "How the Masarrah HR recruitment platform works",
     "eyebrow": "The Masarrah HR platform",
-    "title": "A formal path from first request to settled support.",
-    "body": "Masarrah HR brings each recruitment step into one clear journey, so households and companies always know what happens next and who is responsible.",
-    "promise": "One request. One accountable team. A process you can follow.",
+    "title": "A formal path from first request to settled support",
+    "body": "Masarrah HR brings each recruitment step into one clear journey so households and companies always know what happens next and who is responsible",
+    "promise": "One request One accountable team A process you can follow",
     "action": "Speak with a Masarrah HR advisor",
     "panel": {
       "label": "The Masarrah HR route",
-      "title": "Your recruitment file, kept in view",
-      "note": "No public pricing or marketplace browsing. We start with your needs, then prepare a private recommendation."
+      "title": "Your recruitment file kept in view",
+      "note": "No public pricing or marketplace browsing We start with your needs then prepare a private recommendation"
     },
     "steps": {
       "request": {
         "label": "Send",
         "title": "Send your request",
-        "body": "Tell us about your home, the role you need, and the timing that suits you — in two minutes."
+        "body": "Tell us about your home the role you need and the timing that suits you in two minutes"
       },
       "screening": {
         "label": "Pricing",
         "title": "We review and set the price",
-        "body": "Our team reviews your request and sends you the full cost and expected timeline, with no commitment."
+        "body": "Our team reviews your request and sends you the full cost and expected timeline with no commitment"
       },
       "arrival": {
         "label": "Documentation",
-        "title": "Official documentation, handled",
-        "body": "We arrange the visa, contract, and government procedures in full on your behalf."
+        "title": "Official documentation handled",
+        "body": "We arrange the visa contract and government procedures in full on your behalf"
       },
       "support": {
         "label": "Support",
-        "title": "The worker arrives — and we stay with you",
-        "body": "Ongoing support for the first month after arrival for any question or adjustment."
+        "title": "The worker arrives and we stay with you",
+        "body": "Ongoing support for the first month after arrival for any question or adjustment"
       }
     }
   },
   "services": {
-    "ariaLabel": "Masarrah HR domestic worker rental services",
-    "title": "Domestic workers on the terms that suit your home.",
-    "body": "Choose the rental term that matches your routine — by the hour, day, week, or month — and tell us what you need. Every request is prepared privately around your household.",
-    "catalogueNote": "Private requests, prepared around your home.",
+    "ariaLabel": "Masarrah HR services",
+    "eyebrow": "Our services",
+    "title": "Three services shaped around your home",
+    "body": "Pick what suits you best and we will work to provide it",
     "categories": {
       "recruitment": {
-        "title": "Recruitment Request",
-        "description": "Full-time domestic workers placed in your home through our formal recruitment corridors, with a contract prepared around your household.",
-        "action": "Open recruitment request",
+        "title": "Recruitment",
+        "description": "Full-time domestic workers placed in your home through our formal recruitment corridors with a contract prepared around your household",
+        "action": "Request recruitment service",
         "imageAlt": "Domestic worker hired into a household"
       },
-      "transfer": {
-        "title": "Request to Transfer Services",
-        "description": "Move an existing worker's services to your household through a documented transfer handled by our office.",
-        "action": "Open transfer request",
-        "imageAlt": "Transferring a worker's services to a new household"
-      },
       "rental": {
-        "title": "Rental Request",
-        "description": "Workers rented by the hour, day, week, or month — domestic support arranged around your home's own routine.",
+        "title": "Rental",
+        "description": "Workers rented by the hour day week or month domestic support arranged around your home's own routine",
         "action": "Show rental services",
-        "imageAlt": "Domestic worker rented by the hour, day, week or month"
+        "imageAlt": "Domestic worker rented by the hour day week or month"
+      },
+      "transfer": {
+        "title": "Transfer Services",
+        "description": "Move an existing worker's services to your household through a documented transfer handled by our office",
+        "action": "Request transfer service",
+        "imageAlt": "Transferring a worker's services to a new household"
       }
     },
     "serviceLabel": "Available rental",
@@ -234,38 +234,38 @@
     "items": {
       "hourlyRental": {
         "title": "Hourly Domestic Worker Rental",
-        "description": "Domestic support rented by the hour, arranged around the days, hours, and duties you need in your home.",
-        "detail": "A few hours a day, occasional visits, or a recurring hourly slot."
+        "description": "Domestic support rented by the hour arranged around the days hours and duties you need in your home",
+        "detail": "A few hours a day occasional visits or a recurring hourly slot"
       },
       "dailyRental": {
         "title": "Daily Domestic Worker Rental",
-        "description": "A domestic worker rented for a full day on the days you choose, matched to your household routine and working hours.",
-        "detail": "Fixed days per week, full-day shifts, and the daily tasks that keep your home running."
+        "description": "A domestic worker rented for a full day on the days you choose matched to your household routine and working hours",
+        "detail": "Fixed days per week full-day shifts and the daily tasks that keep your home running"
       },
       "weeklyRental": {
         "title": "Weekly Domestic Worker Rental",
-        "description": "Domestic support rented on a weekly basis for households that need consistent help through the week.",
-        "detail": "A continuing weekly schedule with duties agreed in advance."
+        "description": "Domestic support rented on a weekly basis for households that need consistent help through the week",
+        "detail": "A continuing weekly schedule with duties agreed in advance"
       },
       "monthlyRental": {
         "title": "Monthly Domestic Worker Rental",
-        "description": "A domestic worker rented by the month for steady, long-term support that fits the rhythm of your home.",
-        "detail": "A monthly arrangement with a clear schedule, duties, and ongoing follow-up."
+        "description": "A domestic worker rented by the month for steady long-term support that fits the rhythm of your home",
+        "detail": "A monthly arrangement with a clear schedule duties and ongoing follow-up"
       },
       "globalWorkforce": {
         "title": "Domestic Workers from Around the World",
-        "description": "Domestic workforce available from a wide range of countries, matched to the role and preferences of your home.",
-        "detail": "Nationalities and profiles drawn from our recruitment corridors."
+        "description": "Domestic workforce available from a wide range of countries matched to the role and preferences of your home",
+        "detail": "Nationalities and profiles drawn from our recruitment corridors"
       }
     }
   },
   "countries": {
     "ariaLabel": "Countries Masarrah HR recruits from",
     "eyebrow": "Recruitment corridor",
-    "title": "Trusted routes into the Kingdom.",
-    "body": "We work across established recruitment corridors, bringing each request into a clear, private process built around the role and the household or business behind it.",
+    "title": "Trusted routes into the Kingdom",
+    "body": "We work across established recruitment corridors bringing each request into a clear private process built around the role and the household or business behind it",
     "registryLabel": "Active corridors",
-    "registryNote": "A focused starting register for the launch phase.",
+    "registryNote": "A focused starting register for the launch phase",
     "priceFrom": "Starting",
     "currency": "SAR",
     "regions": {
@@ -276,32 +276,32 @@
     "items": {
       "sriLanka": {
         "name": "Sri Lanka",
-        "description": "A dependable corridor for domestic and care-oriented support roles.",
+        "description": "A dependable corridor for domestic and care-oriented support roles",
         "price": "13,995"
       },
       "ethiopia": {
         "name": "Ethiopia",
-        "description": "A growing source market for household and operational roles.",
+        "description": "A growing source market for household and operational roles",
         "price": "4,666"
       },
       "kenya": {
         "name": "Kenya",
-        "description": "A reliable corridor for domestic support and hospitality-facing roles.",
+        "description": "A reliable corridor for domestic support and hospitality-facing roles",
         "price": "5,495"
       },
       "bangladesh": {
         "name": "Bangladesh",
-        "description": "A well-established corridor for practical household support roles.",
+        "description": "A well-established corridor for practical household support roles",
         "price": "7,299"
       },
       "philippines": {
         "name": "Philippines",
-        "description": "A trusted route for care, hospitality, and domestic support needs.",
+        "description": "A trusted route for care hospitality and domestic support needs",
         "price": "14,299"
       },
       "pakistan": {
         "name": "Pakistan",
-        "description": "A reliable corridor for household and practical support roles.",
+        "description": "A reliable corridor for household and practical support roles",
         "price": "7,995"
       }
     }
@@ -309,30 +309,30 @@
   "request": {
     "ariaLabel": "Masarrah HR recruitment request",
     "eyebrow": "Private request",
-    "title": "Tell us what you need, and we will shape the next step.",
-    "body": "Share the essentials of your household or business need. We will review the request with you before discussing a private recommendation or pricing.",
+    "title": "Tell us what you need and we will shape the next step",
+    "body": "Share the essentials of your household or business need We will review the request with you before discussing a private recommendation or pricing",
     "routeLabel": "Route you are asking about",
     "nameLabel": "Your name",
     "namePlaceholder": "Full name",
     "phoneLabel": "Phone number",
     "phonePlaceholder": "05X XXX XXXX",
     "messageLabel": "What do you need help with?",
-    "messagePlaceholder": "Tell us about the role, timing, and any details that matter.",
+    "messagePlaceholder": "Tell us about the role timing and any details that matter",
     "submit": "Prepare my request",
-    "sending": "Preparing your request...",
-    "error": "Something went wrong while sending your request. Please try again or continue on WhatsApp.",
-    "privateNote": "Your request stays private. We will clarify the requirements before any pricing is discussed.",
+    "sending": "Preparing your request",
+    "error": "Something went wrong while sending your request Please try again or continue on WhatsApp",
+    "privateNote": "Your request stays private We will clarify the requirements before any pricing is discussed",
     "whatsappFallback": "Prefer WhatsApp?",
-    "whatsappMessage": "Hello, I would like to ask about the {route} route at Masarrah HR.",
-    "emailSubject": "Masarrah HR recruitment request — {route}"
+    "whatsappMessage": "Hello I would like to ask about the {route} route at Masarrah HR",
+    "emailSubject": "Masarrah HR recruitment request {route}"
   },
   "packages": {
     "ariaLabel": "Masarrah HR recruitment packages",
     "eyebrow": "Recruitment packages",
-    "title": "See the price — and everything the package brings.",
-    "body": "Each service plan includes its price, and details are determined by submitting your requests and specifying the type of service required ",
+    "title": "See the price and everything the package brings",
+    "body": "Each service plan includes its price and details are determined by submitting your requests and specifying the type of service required ",
     "catalogTitle": "Three paths",
-    "catalogNote": "Pick the closest package and we will refine the details with you.",
+    "catalogNote": "Pick the closest package and we will refine the details with you",
     "popularLabel": "Most requested",
     "previous": "Previous package",
     "next": "Next package",
@@ -341,14 +341,14 @@
     "includedLabel": "Everything included",
     "action": "Start this request",
     "whatsappFallback": "Continue on WhatsApp",
-    "whatsappMessage": "Hello, I would like to ask about the {package} package at Masarrah HR.",
-    "note": "These are starting points. The final price is agreed privately after we understand the role and schedule you need.",
+    "whatsappMessage": "Hello I would like to ask about the {package} package at Masarrah HR",
+    "note": "These are starting points The final price is agreed privately after we understand the role and schedule you need",
     "items": {
       "household": {
         "label": "Household",
         "shortDescription": "Domestic staffing",
-        "title": "Domestic staffing, shaped around your home",
-        "description": "A complete household path — visa, travel, and follow-up handled from one place.",
+        "title": "Domestic staffing shaped around your home",
+        "description": "A complete household path visa travel and follow-up handled from one place",
         "price": "9,900",
         "features": [
           "Visa and residence under a licensed authority",
@@ -362,12 +362,12 @@
         "label": "Care & support",
         "shortDescription": "Nannies and home care",
         "title": "Care support with a brief you can trust",
-        "description": "Childcare and home care with verified references before anyone arrives.",
+        "description": "Childcare and home care with verified references before anyone arrives",
         "price": "11,900",
         "features": [
           "Careworker with verified references",
           "Child-safety and first-aid readiness",
-          "Visa, ticket, and residence handled",
+          "Visa ticket and residence handled",
           "Home orientation call in the first days",
           "Replacement support in the first year"
         ]
@@ -375,13 +375,13 @@
       "driver": {
         "label": "Driver",
         "shortDescription": "Private driver",
-        "title": "A private driver, vetted and ready",
-        "description": "Qualified drivers with clean records and valid licenses, ready to serve your household.",
+        "title": "A private driver vetted and ready",
+        "description": "Qualified drivers with clean records and valid licenses ready to serve your household",
         "price": "7990",
         "features": [
           "Clean driving record and valid license",
           "Route and schedule orientation before you start",
-          "Visa, ticket, and residence handled",
+          "Visa ticket and residence handled",
           "Road-safety and city-familiarity checks",
           "Replacement support in the first months"
         ]
@@ -391,7 +391,7 @@
   "toast": {
     "journalComingSoon": {
       "title": "Coming soon",
-      "message": "Journal articles will be available here soon. Check back shortly."
+      "message": "Journal articles will be available here soon Check back shortly"
     },
     "close": "Dismiss notification"
   },
@@ -413,12 +413,12 @@
     "ledgerLabel": "On the record",
     "suitedForLabel": "Suited for",
     "corridorLabel": "Recruitment corridors",
-    "corridorNote": "Corridors are not fixed in advance — the final choice is agreed with you.",
+    "corridorNote": "Corridors are not fixed in advance the final choice is agreed with you",
     "outcomeLabel": "The outcome",
     "cta": "Request this service",
     "whatsappFallback": "Continue on WhatsApp",
-    "whatsappMessage": "Hello, I would like to ask about the {service} service at Masarrah HR.",
-    "note": "Pricing is agreed privately. No price is printed in this record.",
+    "whatsappMessage": "Hello I would like to ask about the {service} service at Masarrah HR",
+    "note": "Pricing is agreed privately No price is printed in this record",
     "scrollHint": "Scroll to the request form",
     "scrollAria": "Continue to the request form",
     "factsLabel": "Service facts",
@@ -429,40 +429,40 @@
   "recruitmentProcess": {
     "ariaLabel": "The Masarrah HR recruitment process",
     "eyebrow": "A documented route",
-    "title": "From shortlist to handover, your recruitment file moves with clarity.",
-    "body": "We keep every stage in one clear record, so you know what is complete and what comes next.",
+    "title": "From shortlist to handover your recruitment file moves with clarity",
+    "body": "We keep every stage in one clear record so you know what is complete and what comes next",
     "ledgerLabel": "Process record",
-    "ledgerNote": "6 carefully managed stages, from first selection to support after handover.",
+    "ledgerNote": "6 carefully managed stages from first selection to support after handover",
     "steps": {
       "cvSelection": {
         "label": "Matching",
         "title": "We shortlist profiles that fit your needs",
-        "body": "We review each CV and experience record before presenting options suited to the role."
+        "body": "We review each CV and experience record before presenting options suited to the role"
       },
       "fees": {
         "label": "Payment",
         "title": "Fees are paid through Musaned",
-        "body": "We coordinate your payment through Musaned as part of a clear, documented route."
+        "body": "We coordinate your payment through Musaned as part of a clear documented route"
       },
       "procedures": {
         "label": "Procedures",
         "title": "We complete the recruitment formalities",
-        "body": "Our team follows the worker’s official requirements through to completion."
+        "body": "Our team follows the worker’s official requirements through to completion"
       },
       "arrival": {
         "label": "Arrival",
         "title": "We follow the worker’s arrival at the airport",
-        "body": "We stay informed on the arrival journey and coordinate the next step with you."
+        "body": "We stay informed on the arrival journey and coordinate the next step with you"
       },
       "handover": {
         "label": "Handover",
         "title": "Collect the worker from our office",
-        "body": "We arrange the office handover and explain what you need for the next stage."
+        "body": "We arrange the office handover and explain what you need for the next stage"
       },
       "warranty": {
         "label": "Assurance",
         "title": "Peace of mind for 2 months",
-        "body": "We remain available during the assurance period for anything that needs follow-up."
+        "body": "We remain available during the assurance period for anything that needs follow-up"
       }
     }
   },
@@ -474,7 +474,7 @@
         "steps": [
           "A summary of the recruitment procedures",
           "Selecting the candidate's profile",
-          "A copy of the national ID, or the residence permit (Iqama) for residents, and the unified number in Absher",
+          "A copy of the national ID or the residence permit (Iqama) for residents and the unified number in Absher",
           "Conclusion of the recruitment contract via Musaned and payment of the fees"
         ]
       },
@@ -492,7 +492,7 @@
   "licenseSection": {
     "eyebrow": "Officially licensed",
     "title": "A recruitment license approved by the official authority",
-    "body": "Masarah HR is a Saudi recruitment house licensed by the Ministry of Human Resources and Social Development, verifiable through Musaned.",
+    "body": "Masarah HR is a Saudi recruitment house licensed by the Ministry of Human Resources and Social Development verifiable through Musaned",
     "licenseLabel": "Recruitment License",
     "verifyLabel": "Verify via Musaned",
     "verifyHref": "https://musaned.com.sa",
@@ -501,13 +501,13 @@
   "about": {
     "ariaLabel": "About Masarrah HR",
     "meta": {
-      "title": "About Us — Masarrah HR مسرة إتش أر للاستقدام",
-      "description": "Masarrah HR is a licensed Saudi recruitment house developing the Kingdom's human-resources sector with an integrated workforce system, a clear vision, and five working values: teamwork, vision, commitment, passion, and alignment."
+      "title": "About Us Masarrah HR مسرة إتش أر للاستقدام",
+      "description": "Masarrah HR is a licensed Saudi recruitment house developing the Kingdom's human-resources sector with an integrated workforce system a clear vision and five working values teamwork vision commitment passion and alignment"
     },
     "hero": {
       "eyebrow": "About Masarrah HR",
-      "title": "Developing the Kingdom's human-resources sector.",
-      "body": "At Masarrah HR, we aim to develop the human-resources management sector in the Kingdom by providing workforce services for individuals and meeting the needs of the local market through an integrated system built around our clients.",
+      "title": "Developing the Kingdom's human-resources sector",
+      "body": "At Masarrah HR we aim to develop the human-resources management sector in the Kingdom by providing workforce services for individuals and meeting the needs of the local market through an integrated system built around our clients",
       "action": "Start your recruitment request"
     },
     "story": {
@@ -515,53 +515,53 @@
       "title": "About Masarrah HR",
       "panelLabel": "The Masarrah HR charter",
       "paragraphs": [
-        "At Masarrah HR, we strive to provide the market with professional workers who possess advanced skills, alongside innovative human-resources management strategies across multiple fields — so we can deliver the best services to our clients.",
-        "Every placement moves through one integrated system — from request to screening, arrival, and the support that follows — so the promise in our charter is kept at every step."
+        "At Masarrah HR we strive to provide the market with professional workers who possess advanced skills alongside innovative human-resources management strategies across multiple fields so we can deliver the best services to our clients",
+        "Every placement moves through one integrated system from request to screening arrival and the support that follows so the promise in our charter is kept at every step"
       ],
       "vision": {
         "label": "Our vision",
-        "body": "To be the preferred choice for providing qualified and experienced workers across all specialties, supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia."
+        "body": "To be the preferred choice for providing qualified and experienced workers across all specialties supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia"
       },
       "mission": {
         "label": "Our mission",
-        "body": "We fulfil the aspirations of our clients in the Kingdom of Saudi Arabia by providing workforce services with high levels of experience and skills, while focusing on achieving sustainable growth."
+        "body": "We fulfil the aspirations of our clients in the Kingdom of Saudi Arabia by providing workforce services with high levels of experience and skills while focusing on achieving sustainable growth"
       }
     },
     "vision": {
       "ariaLabel": "Our vision and mission",
       "eyebrow": "Our vision",
-      "title": "The preferred choice for qualified workers, in every specialty.",
-      "intro": "Every placement we make is measured against one horizon — supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia.",
+      "title": "The preferred choice for qualified workers in every specialty",
+      "intro": "Every placement we make is measured against one horizon supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia",
       "visionLabel": "Vision",
-      "visionBody": "To be the preferred choice for providing qualified and experienced workers across all specialties, supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia.",
+      "visionBody": "To be the preferred choice for providing qualified and experienced workers across all specialties supporting the achievement of social and economic objectives in the Kingdom of Saudi Arabia",
       "missionLabel": "Mission",
-      "missionBody": "We fulfil the aspirations of our clients in the Kingdom of Saudi Arabia by providing workforce services with high levels of experience and skills, while focusing on achieving sustainable growth."
+      "missionBody": "We fulfil the aspirations of our clients in the Kingdom of Saudi Arabia by providing workforce services with high levels of experience and skills while focusing on achieving sustainable growth"
     },
     "values": {
       "ariaLabel": "Our values",
       "eyebrow": "Our values",
       "title": "The principles behind the work",
-      "introduction": "The principles that guide how we work with our team, partners, and clients.",
+      "introduction": "The principles that guide how we work with our team partners and clients",
       "items": {
         "teamwork": {
           "title": "Teamwork",
-          "body": "We believe teamwork gives us the ability to achieve accomplishments that exceed what each of us could achieve individually, so we follow a collaborative approach to reach our shared goals."
+          "body": "We believe teamwork gives us the ability to achieve accomplishments that exceed what each of us could achieve individually so we follow a collaborative approach to reach our shared goals"
         },
         "visionary": {
           "title": "Visionary",
-          "body": "We encourage a forward-looking vision and attract ambitious individuals who think beyond the present moment, promoting strategic thinking and future planning as we work toward progress and growth."
+          "body": "We encourage a forward-looking vision and attract ambitious individuals who think beyond the present moment promoting strategic thinking and future planning as we work toward progress and growth"
         },
         "commitment": {
           "title": "Commitment",
-          "body": "Commitment is the primary driver of our efforts and the character of our culture. We work to meet and exceed expectations, respect established deadlines, and achieve the desired goals."
+          "body": "Commitment is the primary driver of our efforts and the character of our culture We work to meet and exceed expectations respect established deadlines and achieve the desired goals"
         },
         "passion": {
           "title": "Passion",
-          "body": "Our deep passion for seeing the company excel and progress drives our shared energy and motivates us to achieve our goals with outstanding results."
+          "body": "Our deep passion for seeing the company excel and progress drives our shared energy and motivates us to achieve our goals with outstanding results"
         },
         "alignment": {
           "title": "Alignment",
-          "body": "We work as one team, verifying the effectiveness of our business model and aligning the value our companies add with the use of resources in the interests of stakeholders, investing our diverse expertise to expand our presence in the market and deliver distinctive value to our clients."
+          "body": "We work as one team verifying the effectiveness of our business model and aligning the value our companies add with the use of resources in the interests of stakeholders investing our diverse expertise to expand our presence in the market and deliver distinctive value to our clients"
         }
       }
     }

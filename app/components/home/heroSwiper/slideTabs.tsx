@@ -33,7 +33,7 @@ export function SlideTabs({
             aria-controls="hero-slide-copy"
             aria-label={copy.eyebrow}
             onClick={() => onSelect(index)}
-            className="group relative flex min-h-11 items-center gap-xs px-xs text-start text-label text-parchment/80 transition-colors duration-200 hover:text-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne-gilt sm:min-w-[122px] sm:px-sm"
+            className="group relative flex min-h-11 items-center gap-xs px-xs text-start text-label text-ink-soft transition-colors duration-200 hover:text-embassy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold sm:min-w-[122px] sm:px-sm"
           >
             {isActive && (
               <motion.span
@@ -44,17 +44,17 @@ export function SlideTabs({
               />
             )}
             <span
-              className={`hidden h-1.5 w-1.5 shrink-0 rounded-full sm:block ${isActive ? "bg-court-gold" : "bg-parchment/30"}`}
+              className={`hidden h-1.5 w-1.5 shrink-0 rounded-full sm:block ${isActive ? "bg-court-gold" : "bg-ink-soft/30"}`}
               aria-hidden="true"
             />
             <span
-              className={`font-headline text-base font-bold leading-none sm:hidden ${isActive ? "text-court-gold" : "text-parchment/80"}`}
+              className={`font-headline text-base font-semibold leading-none sm:hidden ${isActive ? "text-court-gold" : "text-ink-soft"}`}
               aria-hidden="true"
             >
               {String(index + 1).padStart(2, "0")}
             </span>
             <span
-              className={`hidden sm:block ${isActive ? "text-parchment" : ""}`}
+              className={`hidden sm:block ${isActive ? "text-embassy" : ""}`}
             >
               {copy.eyebrow}
             </span>

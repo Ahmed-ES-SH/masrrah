@@ -47,30 +47,30 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
       <section
         aria-labelledby="service-detail-title"
         aria-label={`${t.ariaLabel} — ${copy.title}`}
-        className="relative overflow-hidden bg-embassy text-parchment"
+        className="relative overflow-hidden bg-marble text-ink-deep"
       >
-        {/* Navy field decoration */}
+        {/* Field decoration */}
         <div
-          className="pointer-events-none absolute end-[-10rem] top-[-12rem] h-[26rem] w-[26rem] rounded-full border border-champagne-gilt/10"
+          className="pointer-events-none absolute end-[-10rem] top-[-12rem] h-[26rem] w-[26rem] rounded-full border border-ink-deep/10"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute bottom-[-14rem] start-[12%] h-[24rem] w-[24rem] rounded-full border border-champagne-gilt/10"
+          className="pointer-events-none absolute bottom-[-14rem] start-[12%] h-[24rem] w-[24rem] rounded-full border border-ink-deep/10"
           aria-hidden="true"
         />
 
-        {/* Navy apron — sits under the transparent navbar */}
+        {/* Apron — sits under the transparent navbar */}
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={reveal()}
-          className="flex flex-wrap items-center justify-between gap-x-md gap-y-xs border-b border-champagne-gilt/15 px-sm pb-lg pt-20 sm:px-md lg:px-xl"
+          className="flex flex-wrap items-center justify-between gap-x-md gap-y-xs border-b border-ink-deep/10 px-sm pb-lg pt-20 sm:px-md lg:px-xl"
         >
           <Link
             href={`/${locale}/#services`}
             aria-label={t.backAria}
-            className="inline-flex items-center gap-xs rounded-md p-1 text-label font-semibold text-champagne-gilt/80 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+            className="inline-flex items-center gap-xs rounded-md p-1 type-btn text-ink-soft transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
           >
             <FiChevronDown
               className="h-4 w-4 rotate-[-90deg] rtl:rotate-90"
@@ -79,8 +79,8 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             <span>{t.back}</span>
           </Link>
 
-          <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-parchment/80">
-            <span className="text-champagne-gilt" aria-hidden="true">
+          <p className="flex items-center gap-xs type-label uppercase text-ink-soft">
+            <span className="text-court-gold" aria-hidden="true">
               ◆
             </span>
             <span>{t.apronMeta}</span>
@@ -116,26 +116,26 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
               </span>
             </motion.span>
 
-            <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.12em] text-ink-soft">
+            <p className="flex items-center gap-xs type-label uppercase text-ink-soft">
               <span aria-hidden="true">◆</span>
               <span>{copy.eyebrow}</span>
             </p>
 
             <h1
               id="service-detail-title"
-              className="mt-md max-w-[16ch] text-balance font-headline text-display font-bold leading-[1.1] text-embassy lg:max-w-[22ch]"
+              className="mt-md max-w-[16ch] text-balance type-display text-embassy lg:max-w-[22ch]"
             >
               {copy.title}
             </h1>
 
-            <p className="mt-md max-w-[52ch] text-pretty text-body leading-8 text-ink-soft">
+            <p className="mt-md max-w-[52ch] text-pretty type-body-lg text-ink-soft">
               {copy.description}
             </p>
 
             <div className="mt-lg flex flex-col gap-xs sm:flex-row sm:flex-wrap sm:items-center">
               <a
                 href="#request"
-                className="group inline-flex min-h-12 items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                className="group inline-flex min-h-12 items-center justify-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
               >
                 <span>{t.cta}</span>
                 <FiArrowUpRight
@@ -148,7 +148,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-xs rounded-md border border-ink-deep/15 px-md text-label font-semibold text-ink-soft transition-colors duration-200 hover:border-court-gold hover:text-ink-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
+                className="inline-flex min-h-11 items-center justify-center gap-xs rounded-md border border-ink-deep/15 px-md type-btn text-ink-soft transition-colors duration-200 hover:border-court-gold hover:text-ink-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-court-gold"
               >
                 <FiMessageCircle className="h-4 w-4" aria-hidden="true" />
                 <span>{t.whatsappFallback}</span>
@@ -160,7 +160,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                 className="mt-1 h-4 w-4 shrink-0 text-amendment"
                 aria-hidden="true"
               />
-              <p className="text-label leading-6 text-ink-soft">{t.note}</p>
+              <p className="type-label text-ink-soft">{t.note}</p>
             </div>
           </motion.article>
 
@@ -171,25 +171,25 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             viewport={{ once: true, amount: 0.2 }}
             transition={reveal(0.18)}
             aria-labelledby="service-ledger-title"
-            className="flex flex-col rounded-lg border border-champagne-gilt/20 bg-chancery p-md text-parchment sm:p-lg"
+            className="flex flex-col rounded-lg border border-ink-deep/10 bg-parchment p-md text-ink-deep sm:p-lg"
           >
             <div className="flex items-center gap-sm">
               <span
-                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/30 bg-embassy text-champagne-gilt"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-court-gold/30 bg-court-gold/15 text-court-gold"
                 aria-hidden="true"
               >
                 <Icon className="h-5 w-5" />
               </span>
               <div className="min-w-0">
-                <p className="text-label font-semibold">{t.ledgerLabel}</p>
-                <p className="mt-xxs text-label text-parchment/75">
+                <p className="type-label">{t.ledgerLabel}</p>
+                <p className="mt-xxs type-label text-ink-soft">
                   {t.eyebrow}
                 </p>
               </div>
             </div>
 
             <div
-              className="mt-md h-px w-full bg-champagne-gilt/15"
+              className="mt-md h-px w-full bg-ink-deep/10"
               aria-hidden="true"
             />
 
@@ -197,39 +197,39 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
               {copy.clauses.map((clause, index) => (
                 <li
                   key={clause}
-                  className="flex items-start gap-sm border-b border-champagne-gilt/10 py-sm last:border-b-0"
+                  className="flex items-start gap-sm border-b border-ink-deep/10 py-sm last:border-b-0"
                 >
                   <span
-                    className="w-6 shrink-0 pt-1 text-label font-semibold tabular-nums text-champagne-gilt"
+                    className="w-6 shrink-0 pt-1 text-label font-semibold tabular-nums text-embassy"
                     aria-hidden="true"
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span
-                    className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-champagne-gilt/40 bg-embassy"
+                    className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-court-gold/40 bg-parchment"
                     aria-hidden="true"
                   >
-                    <FiCheck className="h-3 w-3 text-champagne-gilt" />
+                    <FiCheck className="h-3 w-3 text-court-gold" />
                   </span>
-                  <span className="text-body leading-6 text-parchment/85">
+                  <span className="type-body text-ink-deep">
                     {clause}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-md border-t border-champagne-gilt/15 pt-md">
-              <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt/85">
+            <div className="mt-md border-t border-ink-deep/10 pt-md">
+              <p className="type-label uppercase text-embassy">
                 {t.suitedForLabel}
               </p>
               <ul className="mt-sm space-y-xs">
                 {copy.suitedFor.map((line) => (
                   <li
                     key={line}
-                    className="flex items-start gap-sm text-body leading-6 text-parchment/80"
+                    className="flex items-start gap-sm type-body text-ink-soft"
                   >
                     <span
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 bg-champagne-gilt/70"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 bg-court-gold"
                       aria-hidden="true"
                     />
                     <span>{line}</span>
@@ -238,21 +238,21 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
               </ul>
             </div>
 
-            <div className="mt-md border-t border-champagne-gilt/15 pt-md">
-              <p className="text-label font-label uppercase tracking-[0.1em] text-champagne-gilt/85">
+            <div className="mt-md border-t border-ink-deep/10 pt-md">
+              <p className="type-label uppercase text-embassy">
                 {t.corridorLabel}
               </p>
               <ul className="mt-sm flex flex-wrap gap-xs">
                 {service.corridors.map((key) => (
                   <li
                     key={key}
-                    className="rounded-sm border border-champagne-gilt/20 bg-embassy/60 px-sm py-xxs text-label text-parchment/85"
+                    className="rounded-sm border border-ink-deep/10 bg-marble px-sm py-xxs type-label text-ink-deep"
                   >
                     {c.items[key].name}
                   </li>
                 ))}
               </ul>
-              <p className="mt-sm text-label leading-5 text-parchment/80">
+              <p className="mt-sm type-label text-ink-soft">
                 {t.corridorNote}
               </p>
             </div>
@@ -269,9 +269,9 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           <a
             href="#request"
             aria-label={t.scrollAria}
-            className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-parchment/80 transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+            className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-ink-soft transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
           >
-            <span className="text-label uppercase tracking-[0.14em]">
+            <span className="type-label uppercase">
               {t.scrollHint}
             </span>
             <FiChevronDown
@@ -289,7 +289,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
       >
         <div className="mx-auto grid w-full gap-md px-sm py-lg sm:px-md lg:grid-cols-3 lg:gap-0 lg:px-xl lg:py-xl">
           <div className="flex flex-col gap-xxs border-t border-embassy/15 pt-md lg:border-t-0 lg:pt-0 lg:first:ps-0">
-            <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+            <p className="type-label uppercase text-ink-soft">
               {t.factsRecordLabel}
             </p>
             <p className="text-title font-semibold tabular-nums text-embassy">
@@ -298,19 +298,19 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           </div>
 
           <div className="flex flex-col gap-xxs border-t border-embassy/15 pt-md lg:border-t-0 lg:pt-0 lg:border-s lg:border-embassy/10 lg:ps-xl">
-            <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+            <p className="type-label uppercase text-ink-soft">
               {t.factsSuitedLabel}
             </p>
-            <p className="text-body leading-7 text-embassy">
+            <p className="type-body text-embassy">
               {copy.suitedFor[0]}
             </p>
           </div>
 
           <div className="flex flex-col gap-xxs border-t border-embassy/15 pt-md lg:border-t-0 lg:pt-0 lg:border-s lg:border-embassy/10 lg:ps-xl">
-            <p className="text-label font-label uppercase tracking-[0.1em] text-ink-soft">
+            <p className="type-label uppercase text-ink-soft">
               {t.factsOutcomeLabel}
             </p>
-            <p className="text-body leading-7 text-embassy">
+            <p className="type-body text-embassy">
               {copy.outcome}
             </p>
           </div>

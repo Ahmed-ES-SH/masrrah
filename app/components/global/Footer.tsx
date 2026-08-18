@@ -78,7 +78,7 @@ export default function Footer() {
             transition={transition}
             className="mx-auto flex max-w-[880px] flex-col items-center text-center"
           >
-            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
+            <div className="flex items-center gap-xs type-label uppercase text-champagne-gilt">
               <span aria-hidden="true">◆</span>
               <span>{lt.eyebrow}</span>
               <span aria-hidden="true">◆</span>
@@ -86,12 +86,12 @@ export default function Footer() {
 
             <h2
               id="footer-license-title"
-              className="mt-md max-w-[26ch] font-headline text-headline font-bold leading-[1.2] text-parchment"
+              className="mt-md max-w-[26ch] type-headline text-parchment"
             >
               {lt.title}
             </h2>
 
-            <p className="mt-sm max-w-[56ch] text-body leading-8 text-parchment/75">
+            <p className="mt-sm max-w-[56ch] type-body-lg text-parchment/75">
               {lt.body}
             </p>
           </motion.div>
@@ -111,7 +111,7 @@ export default function Footer() {
                 height={67}
                 className="h-auto w-44 select-none object-contain sm:w-52"
               />
-              <p className="max-w-[24ch] text-center text-label font-label leading-6 text-parchment/70">
+              <p className="max-w-[24ch] text-center type-label text-parchment/70">
                 {lt.ministryName}
               </p>
             </div>
@@ -141,12 +141,12 @@ export default function Footer() {
                   className="h-5 w-5 text-court-gold"
                   aria-hidden="true"
                 />
-                <p className="text-label font-label uppercase tracking-[0.14em] text-champagne-gilt/90">
+                <p className="type-label uppercase text-champagne-gilt/90">
                   {lt.licenseLabel}
                 </p>
                 <p
                   dir="ltr"
-                  className="select-none font-headline text-[clamp(2.5rem,6vw,3.25rem)] font-bold leading-none tracking-tight text-court-gold tabular-nums drop-shadow-gold-glow"
+                  className="select-none font-headline text-[clamp(2.5rem,6vw,3.25rem)] font-semibold leading-none tracking-tight text-court-gold tabular-nums drop-shadow-gold-glow"
                 >
                   {SITE_LICENSE_NUMBER}
                 </p>
@@ -158,7 +158,7 @@ export default function Footer() {
                 href={lt.verifyHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center gap-xs rounded-md border border-champagne-gilt/30 px-md text-label font-semibold text-parchment transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
+                className="inline-flex min-h-11 items-center gap-xs rounded-md border border-champagne-gilt/30 px-md type-btn text-parchment transition-colors duration-200 hover:border-court-gold hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
               >
                 <span>{lt.verifyLabel}</span>
                 <FiArrowUpRight
@@ -191,17 +191,17 @@ export default function Footer() {
               <div className="pt-xxs">
                 <p
                   id="footer-title"
-                  className="font-title text-title font-semibold text-ink-deep"
+                  className="type-headline text-ink-deep"
                 >
                   {t.title}
                 </p>
-                <p className="mt-xxs text-label font-label uppercase tracking-[0.1em] text-amendment">
+                <p className="mt-xxs type-label uppercase text-amendment">
                   {t.tagline}
                 </p>
               </div>
             </div>
 
-            <p className="mt-lg max-w-[43ch] text-body leading-8 text-ink-soft">
+            <p className="mt-lg max-w-[43ch] type-body-lg text-ink-soft">
               {t.about}
             </p>
 
@@ -212,7 +212,7 @@ export default function Footer() {
               >
                 ◆
               </span>
-              <p className="hidden text-label font-label uppercase tracking-[0.12em] text-ink-soft sm:block">
+              <p className="hidden type-label uppercase text-ink-soft sm:block">
                 {t.socials.heading}
               </p>
               <div className="ms-auto flex items-center gap-xs">
@@ -239,17 +239,17 @@ export default function Footer() {
             transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.08 }}
             className="rounded-lg border border-embassy/15 bg-marble p-md shadow-float sm:p-lg"
           >
-            <div className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-ink-soft">
+            <div className="flex items-center gap-xs type-label uppercase text-ink-soft">
               <span aria-hidden="true">◆</span>
               <span>{t.newsletter.eyebrow}</span>
             </div>
 
             <div className="mt-md grid gap-lg lg:grid-cols-[minmax(0,0.9fr)_minmax(260px,1.1fr)] lg:items-end lg:gap-xl">
               <div>
-                <h2 className="max-w-[18ch] font-title text-title font-semibold leading-8 text-ink-deep">
+                <h2 className="max-w-[18ch] type-title text-ink-deep">
                   {t.newsletter.title}
                 </h2>
-                <p className="mt-sm max-w-[42ch] text-body leading-7 text-ink-soft">
+                <p className="mt-sm max-w-[42ch] type-body text-ink-soft">
                   {t.newsletter.body}
                 </p>
               </div>
@@ -257,7 +257,7 @@ export default function Footer() {
               <form onSubmit={handleSubscribe} className="min-w-0">
                 <label
                   htmlFor="footer-email"
-                  className="text-label font-label text-ink-soft"
+                  className="type-label text-ink-soft"
                 >
                   {t.newsletter.emailLabel}
                 </label>
@@ -269,11 +269,11 @@ export default function Footer() {
                     autoComplete="email"
                     required
                     placeholder={t.newsletter.placeholder}
-                    className="min-h-12 min-w-0 flex-1 rounded-sm border border-embassy/25 bg-parchment px-sm text-body text-ink-deep placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
+                    className="min-h-12 min-w-0 flex-1 rounded-sm border border-embassy/25 bg-parchment px-sm type-body text-ink-deep placeholder:text-ink-soft/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
                   />
                   <button
                     type="submit"
-                    className="inline-flex min-h-12 items-center justify-center gap-xs rounded-md bg-court-gold px-md text-label font-semibold text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
+                    className="inline-flex min-h-12 items-center justify-center gap-xs rounded-md bg-court-gold px-md type-btn text-embassy transition-colors duration-200 hover:bg-gilded-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amendment"
                   >
                     <span>{t.newsletter.submit}</span>
                     <FiArrowUpRight
@@ -296,7 +296,7 @@ export default function Footer() {
                         shouldReduceMotion ? undefined : { opacity: 0, y: -6 }
                       }
                       transition={transition}
-                      className="mt-sm text-label text-success"
+                      className="mt-sm type-label text-success"
                     >
                       {t.newsletter.success}
                     </motion.p>
@@ -310,7 +310,7 @@ export default function Footer() {
         {/*  FooterSocialSection */}
         <FooterSocialSection MAILTO_URL={MAILTO_URL} locale={locale} />
 
-        <div className="mt-xl flex flex-col gap-sm border-t border-embassy/15 pt-md text-label text-ink-soft/80 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-xl flex flex-col gap-sm border-t border-embassy/15 pt-md type-label text-ink-soft/80 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {t.title}. {t.legal.rights}.
           </p>

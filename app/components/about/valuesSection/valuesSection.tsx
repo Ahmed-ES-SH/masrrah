@@ -25,7 +25,7 @@ function CompassRing() {
     <svg
       viewBox="0 0 400 400"
       aria-hidden="true"
-      className="pointer-events-none absolute -end-44 -top-44 w-[560px] max-w-none text-champagne-gilt/10"
+      className="pointer-events-none absolute -end-44 -top-44 w-[560px] max-w-none text-embassy/10"
     >
       <circle cx="200" cy="200" r="176" fill="none" stroke="currentColor" strokeWidth="1" />
       <circle
@@ -80,7 +80,7 @@ export default function ValuesSection() {
       id="about-values"
       ariaLabel={t.values.ariaLabel}
       ariaLabelledBy="about-values-title"
-      className="isolate bg-embassy text-parchment"
+      className="isolate bg-sand text-ink-deep"
       clip
       decor={
         <motion.div
@@ -101,18 +101,18 @@ export default function ValuesSection() {
         viewport={{ once: true, amount: 0.3 }}
         transition={revealTransition(shouldReduceMotion)}
       >
-        <p className="flex items-center gap-xs text-label font-label uppercase tracking-[0.14em] text-champagne-gilt">
+        <p className="flex items-center gap-xs type-label uppercase text-embassy">
           <span aria-hidden="true">◆</span>
           <span>{t.values.eyebrow}</span>
         </p>
         <div className="mt-sm flex flex-wrap items-end justify-between gap-sm">
           <h2
             id="about-values-title"
-            className="max-w-[18ch] font-headline text-display font-bold leading-[1.08] text-parchment"
+            className="max-w-[18ch] type-display text-embassy"
           >
             {t.values.title}
           </h2>
-          <p className="max-w-[42ch] text-body leading-7 text-parchment/75">
+          <p className="max-w-[42ch] type-body text-ink-soft">
             {t.values.introduction}
           </p>
         </div>
