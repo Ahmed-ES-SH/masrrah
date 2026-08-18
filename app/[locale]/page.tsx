@@ -23,7 +23,7 @@ export default async function Home() {
       <FaqSection />
       <GovermentsLogos />
       {/* <TestimonialsSection /> */}
-      <BlogSection />
+      {/* <BlogSection /> */}
     </>
   );
 }
