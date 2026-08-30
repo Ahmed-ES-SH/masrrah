@@ -268,6 +268,8 @@
     "registryNote": "A focused starting register for the launch phase",
     "priceFrom": "Starting",
     "currency": "SAR",
+    "comingSoon": "Coming Soon",
+    "underRegistration": "Under registration",
     "regions": {
       "southAsia": "South Asia",
       "southeastAsia": "Southeast Asia",
@@ -279,30 +281,31 @@
         "description": "A dependable corridor for domestic and care-oriented support roles",
         "price": "13,995"
       },
-      "ethiopia": {
-        "name": "Ethiopia",
-        "description": "A growing source market for household and operational roles",
-        "price": "4,666"
-      },
       "kenya": {
         "name": "Kenya",
         "description": "A reliable corridor for domestic support and hospitality-facing roles",
-        "price": "5,495"
+        "price": "5,199"
       },
       "bangladesh": {
         "name": "Bangladesh",
         "description": "A well-established corridor for practical household support roles",
-        "price": "7,299"
+        "price": "5,999"
       },
+      "ethiopia": {
+        "name": "Ethiopia",
+        "description": "A growing source market for household and operational roles",
+        "price": "Soon"
+      },
+
       "philippines": {
         "name": "Philippines",
         "description": "A trusted route for care hospitality and domestic support needs",
-        "price": "14,299"
+        "price": "Soon"
       },
       "pakistan": {
         "name": "Pakistan",
         "description": "A reliable corridor for household and practical support roles",
-        "price": "7,995"
+        "price": "Soon"
       }
     }
   },

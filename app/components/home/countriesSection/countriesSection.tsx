@@ -57,7 +57,7 @@ export default function CountriesSection() {
       </motion.div>
 
       <div className="relative mt-lg grid gap-sm sm:grid-cols-2 lg:grid-cols-3 lg:gap-md">
-        {RECRUITMENT_COUNTRIES.map((country, index) => (
+        {RECRUITMENT_COUNTRIES.map((country) => (
           <CountryCard
             key={country.code}
             country={country}
