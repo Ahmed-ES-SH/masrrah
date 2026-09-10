@@ -40,7 +40,7 @@ export interface ServiceDetailRecord {
   packageKey: RecruitmentPackageKey;
   featured?: boolean;
   /** Recruitment corridors (keys from countries.ts) that fit this service. */
-  corridors: readonly RecruitmentCountryKey[];
+  corridors: any;
   copy: Record<ServiceLocale, ServiceDetailCopy>;
 }
 
