@@ -10,10 +10,7 @@ import {
   FiMessageCircle,
 } from "react-icons/fi";
 import { SITE_WHATSAPP } from "@/app/constants/site";
-import {
-  getServiceDetail,
-  SERVICE_ICONS,
-} from "@/app/constants/services";
+import { getServiceDetail, SERVICE_ICONS } from "@/app/constants/services";
 import { useLocale } from "@/app/hooks/useLocale";
 import { useTranslation } from "@/app/hooks/useTranslations";
 
@@ -182,9 +179,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
               </span>
               <div className="min-w-0">
                 <p className="type-label">{t.ledgerLabel}</p>
-                <p className="mt-xxs type-label text-ink-soft">
-                  {t.eyebrow}
-                </p>
+                <p className="mt-xxs type-label text-ink-soft">{t.eyebrow}</p>
               </div>
             </div>
 
@@ -211,9 +206,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                   >
                     <FiCheck className="h-3 w-3 text-court-gold" />
                   </span>
-                  <span className="type-body text-ink-deep">
-                    {clause}
-                  </span>
+                  <span className="type-body text-ink-deep">{clause}</span>
                 </li>
               ))}
             </ul>
@@ -243,7 +236,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                 {t.corridorLabel}
               </p>
               <ul className="mt-sm flex flex-wrap gap-xs">
-                {service.corridors.map((key) => (
+                {service.corridors.map((key: keyof typeof c.items) => (
                   <li
                     key={key}
                     className="rounded-sm border border-ink-deep/10 bg-marble px-sm py-xxs type-label text-ink-deep"
@@ -252,9 +245,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-sm type-label text-ink-soft">
-                {t.corridorNote}
-              </p>
+              <p className="mt-sm type-label text-ink-soft">{t.corridorNote}</p>
             </div>
           </motion.aside>
         </div>
@@ -271,9 +262,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             aria-label={t.scrollAria}
             className="group inline-flex flex-col items-center gap-xs px-sm py-1 text-ink-soft transition-colors duration-200 hover:text-court-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-court-gold"
           >
-            <span className="type-label uppercase">
-              {t.scrollHint}
-            </span>
+            <span className="type-label uppercase">{t.scrollHint}</span>
             <FiChevronDown
               className="h-5 w-5 animate-[bounce_2.5s_ease-in-out_infinite] motion-reduce:animate-none"
               aria-hidden="true"
@@ -283,10 +272,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
       </section>
 
       {/* ===== Facts band — three hairline rows of record data ===== */}
-      <section
-        aria-label={t.factsLabel}
-        className="bg-marble text-ink-deep"
-      >
+      <section aria-label={t.factsLabel} className="bg-marble text-ink-deep">
         <div className="mx-auto grid w-full gap-md px-sm py-lg sm:px-md lg:grid-cols-3 lg:gap-0 lg:px-xl lg:py-xl">
           <div className="flex flex-col gap-xxs border-t border-embassy/15 pt-md lg:border-t-0 lg:pt-0 lg:first:ps-0">
             <p className="type-label uppercase text-ink-soft">
@@ -301,18 +287,14 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             <p className="type-label uppercase text-ink-soft">
               {t.factsSuitedLabel}
             </p>
-            <p className="type-body text-embassy">
-              {copy.suitedFor[0]}
-            </p>
+            <p className="type-body text-embassy">{copy.suitedFor[0]}</p>
           </div>
 
           <div className="flex flex-col gap-xxs border-t border-embassy/15 pt-md lg:border-t-0 lg:pt-0 lg:border-s lg:border-embassy/10 lg:ps-xl">
             <p className="type-label uppercase text-ink-soft">
               {t.factsOutcomeLabel}
             </p>
-            <p className="type-body text-embassy">
-              {copy.outcome}
-            </p>
+            <p className="type-body text-embassy">{copy.outcome}</p>
           </div>
         </div>
       </section>
